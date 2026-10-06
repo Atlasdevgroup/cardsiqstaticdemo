@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventory Management | CardsIQ</title>
+  <meta name="description" content="Intake, price, organize, track, and operate collectible inventory from acquisition through fulfillment.">
+  <link rel="icon" href="assets/img/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
+  <link rel="stylesheet" href="assets/css/ciq.css">
+  <link rel="stylesheet" href="assets/css/page-inventory.css">
+</head>
+<body data-page="inventory" data-primary-cta="partner" data-interest="inventory-management">
+<script src="assets/js/shell.js"></script>
+
+<main id="main" class="page">
+
+  <!-- ============================================================ HERO: physical slabs become structured inventory -->
+  <section class="i-hero" data-hero aria-labelledby="hero-title">
+    <div class="ambient ambient--blue" style="width:820px;height:560px;right:-160px;top:220px;opacity:.42"></div>
+    <div class="ambient ambient--violet" style="width:520px;height:420px;left:-120px;top:420px;opacity:.28"></div>
+    <div class="container container--wide">
+      <p class="eyebrow">Inventory Management</p>
+      <h1 class="t-hero i-hero__title" id="hero-title"><span class="line">Manage every card</span> <span class="line"><span class="grad-text">from intake to outcome.</span></span></h1>
+
+      <div class="i-hero__sub">
+        <p class="t-lead">Track every card from structured intake through inventory, product creation, live commerce, fulfillment, and buybacks in one connected workflow.</p>
+        <div class="btn-row" data-hero-cta>
+          <a class="btn btn--primary" data-cta="partner" data-interest="inventory-management" href="become-a-partner.html">Become a partner <span data-ico="arrow"></span></a>
+          <a class="btn btn--secondary" href="#intake">See intake to outcome</a>
+        </div>
+      </div>
+
+      <!-- Physical → structured: each slab crosses the intake line and lands as an inventory record -->
+      <figure class="intake" aria-labelledby="intake-cap">
+        <figcaption class="sr-only" id="intake-cap">Five graded slabs pass through CardsIQ intake and become structured inventory records with grade, certification, market value, and status.</figcaption>
+
+        <div class="intake__tray" data-tilt="3" aria-hidden="true">
+          <div class="intake__slab" style="--i:4"><div class="slab"><img src="assets/img/slabs/mantle-1958-topps-psa4.webp" alt="" width="720" height="1200"></div></div>
+          <div class="intake__slab" style="--i:3"><div class="slab"><img src="assets/img/slabs/brady-2000-bowman-psa8.webp" alt="" width="723" height="1200"></div></div>
+          <div class="intake__slab" style="--i:2"><div class="slab"><img src="assets/img/slabs/edwards-2020-prizm-blue-ice-psa10.webp" alt="" width="465" height="781"></div></div>
+          <div class="intake__slab" style="--i:1"><div class="slab"><img src="assets/img/slabs/mahomes-2017-optic-lime-psa9.webp" alt="" width="721" height="1200"></div></div>
+          <div class="intake__slab" style="--i:0"><div class="slab" data-depth="1.4"><span class="slab__glow"></span><img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638"><span class="slab__floor"></span></div></div>
+          <span class="intake__floor"></span>
+        </div>
+
+        <div class="intake__line" aria-hidden="true"><span class="intake__line-label">CardsIQ intake</span></div>
+
+        <div class="intake__records">
+          <div class="intake__head">
+            <span class="t-label">Inventory</span>
+            <span class="demo-tag">Illustrative product view</span>
+          </div>
+          <ol class="intake__list" data-sequence data-interval="540" aria-label="Structured inventory records, fair market value from ALT">
+            <li class="irow" data-step>
+              <img class="irow__thumb" src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638">
+              <span class="irow__id"><span class="irow__name">Joe Burrow Downtown! #D4</span><span class="irow__meta"><span class="chip chip--grade">PSA 9</span><span class="t-mono">103207853</span></span></span>
+              <span class="irow__val"><span class="chip chip--alt">ALT</span><span class="ui-num">$1,040</span></span>
+              <span class="status status--product">In product</span>
+            </li>
+            <li class="irow" data-step>
+              <img class="irow__thumb" src="assets/img/slabs/mahomes-2017-optic-lime-psa9.webp" alt="" width="721" height="1200">
+              <span class="irow__id"><span class="irow__name">Patrick Mahomes II Lime #177</span><span class="irow__meta"><span class="chip chip--grade">PSA 9</span><span class="t-mono">159117071</span></span></span>
+              <span class="irow__val"><span class="chip chip--alt">ALT</span><span class="ui-num">$4,180</span></span>
+              <span class="status status--ok">Available</span>
+            </li>
+            <li class="irow" data-step>
+              <img class="irow__thumb" src="assets/img/slabs/edwards-2020-prizm-blue-ice-psa10.webp" alt="" width="465" height="781">
+              <span class="irow__id"><span class="irow__name">Anthony Edwards Blue Ice #258</span><span class="irow__meta"><span class="chip chip--grade">PSA 10</span><span class="t-mono">62098915</span></span></span>
+              <span class="irow__val"><span class="chip chip--alt">ALT</span><span class="ui-num">$780</span></span>
+              <span class="status status--ok">Available</span>
+            </li>
+            <li class="irow" data-step>
+              <img class="irow__thumb" src="assets/img/slabs/brady-2000-bowman-psa8.webp" alt="" width="723" height="1200">
+              <span class="irow__id"><span class="irow__name">Tom Brady #236</span><span class="irow__meta"><span class="chip chip--grade">PSA 8</span><span class="t-mono">82389068</span></span></span>
+              <span class="irow__val"><span class="chip chip--alt">ALT</span><span class="ui-num">$1,180</span></span>
+              <span class="status status--product">In product</span>
+            </li>
+            <li class="irow" data-step>
+              <img class="irow__thumb" src="assets/img/slabs/mantle-1958-topps-psa4.webp" alt="" width="720" height="1200">
+              <span class="irow__id"><span class="irow__name">Mickey Mantle #150</span><span class="irow__meta"><span class="chip chip--grade">PSA 4</span><span class="t-mono">69974937</span></span></span>
+              <span class="irow__val"><span class="chip chip--alt">ALT</span><span class="ui-num">$2,240</span></span>
+              <span class="status status--ok">Available</span>
+            </li>
+          </ol>
+        </div>
+      </figure>
+
+      <div class="i-hero__metrics">
+        <p class="i-hero__metrics-label"><span class="t-label">One inventory workspace</span><span class="demo-tag">Illustrative</span></p>
+        <div class="metrics">
+          <div class="metric"><div class="metric__v" data-count="184">184</div><div class="metric__k">Cards in catalog</div></div>
+          <div class="metric"><div class="metric__v" data-count="126">126</div><div class="metric__k">Available to assign</div></div>
+          <div class="metric"><div class="metric__v" data-count="42">42</div><div class="metric__k">Assigned to product</div></div>
+          <div class="metric"><div class="metric__v" data-count="84420" data-prefix="$">$84,420</div><div class="metric__k">Inventory value</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ STATEMENT -->
+  <section class="section section--tight i-statement" aria-labelledby="identity-title">
+    <div class="container container--wide">
+      <div class="i-statement__text" data-reveal><h2 class="i-statement__h" id="identity-title">Every card enters with an identity.</h2> <p class="i-statement__dim">CardsIQ treats inventory as an operating record, not a static spreadsheet row. Each movement updates the same card history.</p></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ SCAN → AVAILABLE: one record fills in -->
+  <section class="section i-intake" id="intake" aria-labelledby="intake-title">
+    <div class="container container--wide">
+      <div class="i-intake__head" data-reveal>
+        <h2 class="t-h2" id="intake-title">From scan <span class="grad-text">to available.</span></h2>
+        <p class="t-lead">Turn physical card intake into a structured, searchable record before inventory begins moving.</p>
+      </div>
+
+      <div class="build" data-reveal>
+        <div class="build__asset" aria-hidden="true">
+          <div class="build__slab">
+            <img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638">
+            <span class="build__scan"></span>
+          </div>
+          <span class="build__asset-id"><span class="build__asset-k">Intake record</span><span class="build__asset-n">2023 Donruss Optic Joe Burrow Downtown! #D4</span></span>
+          <span class="build__asset-state status status--ok">Available</span>
+        </div>
+
+        <div class="build__track">
+          <ol class="lifecycle build__rail" data-sequence data-interval="1500" aria-label="Intake of the 2023 Donruss Optic Joe Burrow Downtown! PSA 9, from scan to available">
+            <li class="lc-stage" data-step>
+              <span class="lc-node t-mono">1</span>
+              <span class="lc-text"><span class="lc-name">Scan card</span><span class="lc-meta">Capture graded cert data or a raw intake record.</span></span>
+              <span class="cell"><span class="cell__k">Certification</span><span class="cell__v t-mono">103207853</span><span class="cell__s">PSA 9 MINT</span></span>
+            </li>
+            <li class="lc-stage" data-step>
+              <span class="lc-node t-mono">2</span>
+              <span class="lc-text"><span class="lc-name">Match + identify</span><span class="lc-meta">Attach card identity, attributes, and source.</span></span>
+              <span class="cell"><span class="cell__k">Identity</span><span class="cell__v">Joe Burrow Downtown! #D4</span><span class="cell__s">2023 Donruss Optic · Graded intake</span></span>
+            </li>
+            <li class="lc-stage" data-step>
+              <span class="lc-node t-mono">3</span>
+              <span class="lc-text"><span class="lc-name">Create SKU</span><span class="lc-meta">Generate the internal inventory identifier.</span></span>
+              <span class="cell"><span class="cell__k">SKU</span><span class="cell__v t-mono">CIQ-P123891</span><span class="cell__s">Internal identifier</span></span>
+            </li>
+            <li class="lc-stage" data-step>
+              <span class="lc-node t-mono">4</span>
+              <span class="lc-text"><span class="lc-name">Value + cost</span><span class="lc-meta">Attach pricing context and cost basis.</span></span>
+              <span class="cell"><span class="cell__k">Market / cost</span><span class="cell__v t-mono">$1,030 / $540</span><span class="cell__s">ALT + Card Ladder</span></span>
+            </li>
+            <li class="lc-stage" data-step>
+              <span class="lc-node t-mono">5</span>
+              <span class="lc-text"><span class="lc-name">Available</span><span class="lc-meta">Release the card into operational inventory.</span></span>
+              <span class="cell"><span class="cell__k">State</span><span class="cell__v"><span class="status status--ok">Available</span></span><span class="cell__s">Operational inventory</span></span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ DIRECTORY: large, searchable -->
+  <section class="section i-dir" id="directory" aria-labelledby="dir-title">
+    <div class="ambient ambient--blue" style="width:900px;height:520px;left:20%;top:26%;opacity:.2"></div>
+    <div class="container container--wide">
+      <div class="i-dir__head" data-reveal>
+        <h2 class="t-h2" id="dir-title">Graded and raw. <span class="t-dim">One directory.</span></h2>
+        <p class="t-lead">Graded slabs sit beside raw-card SKUs, each with ALT + Card Ladder market data, cost basis, and operational status. Search by card, cert, or SKU.</p>
+      </div>
+
+      <div class="ui ui--glow dir" data-reveal>
+        <div class="dir__bar">
+          <div class="dir__title">
+            <span class="ui__kicker">Inventory catalog</span>
+            <span class="ui__title">Inventory directory</span>
+          </div>
+          <span class="ui-btn dir__add" aria-hidden="true"><span data-ico="plus"></span>Add Cards</span>
+        </div>
+
+        <div class="dir__tools">
+          <div class="dir__tabs" role="group" aria-label="Filter inventory">
+            <button type="button" class="dir__tab" data-filter="all" aria-pressed="true">All Cards <span class="dir__tab-n">8</span></button>
+            <button type="button" class="dir__tab" data-filter="slab" aria-pressed="false">Slabs <span class="dir__tab-n">7</span></button>
+            <button type="button" class="dir__tab" data-filter="raw" aria-pressed="false">Raw / Sealed <span class="dir__tab-n">1</span></button>
+            <button type="button" class="dir__tab" data-filter="review" aria-pressed="false">Review <span class="dir__tab-n">1</span></button>
+            <button type="button" class="dir__tab" data-filter="team" aria-pressed="false">Missing Team <span class="dir__tab-n">0</span></button>
+          </div>
+          <div class="dir__search">
+            <label class="sr-only" for="dir-q">Search inventory by card, cert, or SKU</label>
+            <span data-ico="search"></span>
+            <input id="dir-q" type="search" placeholder="Search card, cert, or SKU" autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+
+        <div class="dir__table" role="table" aria-label="Inventory directory" aria-describedby="dir-count">
+          <div class="dir__row dir__row--head" role="row">
+            <span role="columnheader">Card</span>
+            <span role="columnheader">Certification</span>
+            <span role="columnheader">Fair market value <span class="dir__src">ALT / CL</span></span>
+            <span role="columnheader">Last sale <span class="dir__src">ALT / CL</span></span>
+            <span role="columnheader" class="dir__r">Cost</span>
+            <span role="columnheader">Status</span>
+          </div>
+
+          <div class="dir__row" role="row" data-kind="slab" data-q="2023 donruss optic joe burrow downtown d4 psa 9 103207853 ciq-p123891">
+            <span role="cell" class="dir__card"><img class="dir__thumb" src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638" loading="lazy"><span><span class="dir__name">2023 Donruss Optic Joe Burrow Downtown! #D4</span></span></span>
+            <span role="cell" class="dir__cert"><span class="chip chip--grade">PSA 9</span><span class="chip"><span class="dir__ck">Cert </span>103207853</span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">FMV</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$1,040</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$1,020</span></span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">Last sale</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$1,065</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$995</span></span></span>
+            <span role="cell" class="dir__cost"><span class="dir__k">Cost</span><span class="ui-num">$540</span></span>
+            <span role="cell" class="dir__st"><span class="status status--product">In product</span></span>
+          </div>
+
+          <div class="dir__row" role="row" data-kind="slab" data-q="2017 panini donruss optic patrick mahomes ii lime 177 psa 9 159117071">
+            <span role="cell" class="dir__card"><img class="dir__thumb" src="assets/img/slabs/mahomes-2017-optic-lime-psa9.webp" alt="" width="721" height="1200" loading="lazy"><span><span class="dir__name">2017 Panini Donruss Optic Patrick Mahomes II Lime #177</span></span></span>
+            <span role="cell" class="dir__cert"><span class="chip chip--grade">PSA 9</span><span class="chip"><span class="dir__ck">Cert </span>159117071</span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">FMV</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$4,180</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$4,125</span></span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">Last sale</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$4,250</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$4,175</span></span></span>
+            <span role="cell" class="dir__cost"><span class="dir__k">Cost</span><span class="ui-num">$3,620</span></span>
+            <span role="cell" class="dir__st"><span class="status status--ok">Available</span></span>
+          </div>
+
+          <div class="dir__row" role="row" data-kind="slab" data-q="2000 bowman tom brady 236 psa 8 82389068">
+            <span role="cell" class="dir__card"><img class="dir__thumb" src="assets/img/slabs/brady-2000-bowman-psa8.webp" alt="" width="723" height="1200" loading="lazy"><span><span class="dir__name">2000 Bowman Tom Brady #236</span></span></span>
+            <span role="cell" class="dir__cert"><span class="chip chip--grade">PSA 8</span><span class="chip"><span class="dir__ck">Cert </span>82389068</span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">FMV</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$1,180</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$1,150</span></span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">Last sale</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$1,210</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$1,140</span></span></span>
+            <span role="cell" class="dir__cost"><span class="dir__k">Cost</span><span class="ui-num">$1,040</span></span>
+            <span role="cell" class="dir__st"><span class="status status--product">In product</span></span>
+          </div>
+
+          <div class="dir__row" role="row" data-kind="slab" data-q="1958 topps mickey mantle 150 psa 4 69974937">
+            <span role="cell" class="dir__card"><img class="dir__thumb" src="assets/img/slabs/mantle-1958-topps-psa4.webp" alt="" width="720" height="1200" loading="lazy"><span><span class="dir__name">1958 Topps Mickey Mantle #150</span></span></span>
+            <span role="cell" class="dir__cert"><span class="chip chip--grade">PSA 4</span><span class="chip"><span class="dir__ck">Cert </span>69974937</span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">FMV</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$2,240</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$2,180</span></span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">Last sale</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$2,300</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$2,150</span></span></span>
+            <span role="cell" class="dir__cost"><span class="dir__k">Cost</span><span class="ui-num">$1,860</span></span>
+            <span role="cell" class="dir__st"><span class="status status--ok">Available</span></span>
+          </div>
+
+          <div class="dir__row" role="row" data-kind="slab" data-q="2020 panini prizm anthony edwards blue ice 258 psa 10 62098915">
+            <span role="cell" class="dir__card"><img class="dir__thumb" src="assets/img/slabs/edwards-2020-prizm-blue-ice-psa10.webp" alt="" width="465" height="781" loading="lazy"><span><span class="dir__name">2020 Panini Prizm Anthony Edwards Blue Ice #258</span></span></span>
+            <span role="cell" class="dir__cert"><span class="chip chip--grade">PSA 10</span><span class="chip"><span class="dir__ck">Cert </span>62098915</span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">FMV</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$780</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$760</span></span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">Last sale</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$805</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$745</span></span></span>
+            <span role="cell" class="dir__cost"><span class="dir__k">Cost</span><span class="ui-num">$610</span></span>
+            <span role="cell" class="dir__st"><span class="status status--ok">Available</span></span>
+          </div>
+
+          <div class="dir__row" role="row" data-kind="slab review" data-q="2022 bowman university best victor wembanyama auto-refractor boavw psa 10 78900062">
+            <span role="cell" class="dir__card"><img class="dir__thumb" src="assets/img/slabs/wembanyama-2022-bowman-u-best-auto-psa10.webp" alt="" width="469" height="799" loading="lazy"><span><span class="dir__name">2022 Bowman University Best Victor Wembanyama Auto-Refractor #BOAVW</span></span></span>
+            <span role="cell" class="dir__cert"><span class="chip chip--grade">PSA 10</span><span class="chip"><span class="dir__ck">Cert </span>78900062</span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">FMV</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$1,650</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$1,600</span></span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">Last sale</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$1,700</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$1,580</span></span></span>
+            <span role="cell" class="dir__cost"><span class="dir__k">Cost</span><span class="ui-num">$1,280</span></span>
+            <span role="cell" class="dir__st"><span class="status status--pending">In review</span></span>
+          </div>
+
+          <div class="dir__row" role="row" data-kind="slab" data-q="2022 select stephen curry signature sscy psa 9 83289827">
+            <span role="cell" class="dir__card"><img class="dir__thumb" src="assets/img/slabs/curry-2022-select-signature-psa9.webp" alt="" width="449" height="784" loading="lazy"><span><span class="dir__name">2022 Select Stephen Curry Signature #SSCY</span></span></span>
+            <span role="cell" class="dir__cert"><span class="chip chip--grade">PSA 9</span><span class="chip"><span class="dir__ck">Cert </span>83289827</span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">FMV</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$410</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$395</span></span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">Last sale</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$425</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num">$380</span></span></span>
+            <span role="cell" class="dir__cost"><span class="dir__k">Cost</span><span class="ui-num">$300</span></span>
+            <span role="cell" class="dir__st"><span class="status status--ok">Available</span></span>
+          </div>
+
+          <div class="dir__row" role="row" data-kind="raw" data-q="2024 panini prizm bo nix silver raw aamint-412 aa mint cards tcg">
+            <span role="cell" class="dir__card"><span class="dir__thumb dir__thumb--raw" aria-hidden="true"></span><span><span class="dir__name">2024 Panini Prizm Bo Nix Silver</span><span class="dir__from">Source · AA Mint Cards/TCG</span></span></span>
+            <span role="cell" class="dir__cert"><span class="chip chip--raw">RAW</span><span class="chip"><span class="dir__ck">SKU </span>AAMINT-412</span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">FMV</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$165</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num dir__na">—</span></span></span>
+            <span role="cell" class="dir__px"><span class="dir__k">Last sale</span><span><span class="chip chip--alt">ALT</span><span class="ui-num">$170</span></span><span><span class="chip chip--cl">CL</span><span class="ui-num dir__na">—</span></span></span>
+            <span role="cell" class="dir__cost"><span class="dir__k">Cost</span><span class="ui-num">$95</span></span>
+            <span role="cell" class="dir__st"><span class="status status--ok">Available</span></span>
+          </div>
+
+          <div class="dir__empty" role="row" hidden><span role="cell"><span class="dir__empty-dot dot" aria-hidden="true"></span><span class="dir__empty-t">No cards match this search.</span></span></div>
+        </div>
+
+        <div class="dir__foot">
+          <p id="dir-count" aria-live="polite"><span class="dir__n">8</span> cards shown</p>
+          <span class="demo-tag">Illustrative product view · 184 cards in catalog</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ PRODUCT: the same identities become Football Premium 02 -->
+  <section class="section i-prod" aria-labelledby="prod-title">
+    <div class="container container--wide">
+      <div class="i-prod__head" data-reveal>
+        <h2 class="t-h2" id="prod-title"><span class="line">Inventory becomes product</span> <span class="line t-dim">without losing its history.</span></h2>
+        <p class="t-lead">Build cases and break products from live inventory while keeping card-level economics and status connected.</p>
+      </div>
+
+      <div class="prod" data-reveal>
+        <!-- Physical cards that left the directory as "In product" -->
+        <div class="prod__from" aria-hidden="true">
+          <div class="prod__slabs" data-tilt="4">
+            <div class="slab prod__slab prod__slab--back"><img src="assets/img/slabs/brady-2000-bowman-psa8.webp" alt="" width="723" height="1200" loading="lazy"></div>
+            <div class="slab prod__slab prod__slab--front" data-depth="1.3"><span class="slab__glow"></span><img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638" loading="lazy"><span class="slab__floor"></span></div>
+          </div>
+          <p class="prod__from-note"><span class="dot dot--product"></span><span>Brady and Burrow move in from inventory with cert and cost attached.</span></p>
+        </div>
+
+        <div class="prod__sheet">
+          <div class="prod__top">
+            <p class="prod__kicker"><span class="status status--product">Break product</span></p>
+            <h3 class="prod__name">Football Premium 02</h3>
+          </div>
+
+          <dl class="prod__totals">
+            <div><dt>Cards</dt><dd class="t-mono">10</dd></div>
+            <div><dt>Cost</dt><dd class="t-mono">$4,820</dd></div>
+            <div><dt>Market</dt><dd class="t-mono">$5,430</dd></div>
+            <div class="is-spread"><dt>Spread</dt><dd class="t-mono">+$610</dd></div>
+            <div><dt>Chase</dt><dd class="t-mono">$1,420</dd></div>
+          </dl>
+
+          <div class="mix" aria-hidden="true">
+            <p class="mix__label t-label">Market value by card</p>
+            <div class="mix__bar">
+              <span class="mix__seg mix__seg--chase" style="--v:1420;--n:0" data-k="0"><b>Nabers</b></span>
+              <span class="mix__seg mix__seg--linked" style="--v:1180;--n:1" data-k="1"><b>Brady</b></span>
+              <span class="mix__seg mix__seg--linked" style="--v:1030;--n:2" data-k="2"><b>Burrow</b></span>
+              <span class="mix__seg" style="--v:380;--n:3" data-k="3"></span>
+              <span class="mix__seg" style="--v:310;--n:4" data-k="4"></span>
+              <span class="mix__seg" style="--v:285;--n:5" data-k="5"></span>
+              <span class="mix__seg" style="--v:240;--n:6" data-k="6"></span>
+              <span class="mix__seg" style="--v:230;--n:7" data-k="7"></span>
+              <span class="mix__seg" style="--v:190;--n:8" data-k="8"></span>
+              <span class="mix__seg" style="--v:165;--n:9" data-k="9"></span>
+            </div>
+          </div>
+
+          <table class="manifest">
+            <caption class="sr-only">Football Premium 02: ten cards with grade, certification, cost, and market value</caption>
+            <thead>
+              <tr><th scope="col">Card</th><th scope="col">Grade</th><th scope="col" class="manifest__r">Cost</th><th scope="col" class="manifest__r">Market</th></tr>
+            </thead>
+            <tbody>
+              <tr data-k="0" class="is-chase">
+                <td><span class="mf-card"><span class="mf-art mf-art--gold" aria-hidden="true"></span><span class="mf-id"><span class="mf-name">2024 Panini Prizm Malik Nabers Gold /10</span><span class="mf-sub"><span class="mf-chase">Chase</span></span></span></span></td>
+                <td><span class="chip chip--grade">PSA 10</span></td>
+                <td class="manifest__r ui-num">$1,260</td><td class="manifest__r ui-num">$1,420</td>
+              </tr>
+              <tr data-k="1" class="is-linked">
+                <td><span class="mf-card"><img class="mf-thumb" src="assets/img/slabs/brady-2000-bowman-psa8.webp" alt="" width="723" height="1200" loading="lazy"><span class="mf-id"><span class="mf-name">2000 Bowman Tom Brady #236</span><span class="mf-sub"><span class="dot dot--product" aria-hidden="true"></span>Cert <span class="t-mono">82389068</span></span></span></span></td>
+                <td><span class="chip chip--grade">PSA 8</span></td>
+                <td class="manifest__r ui-num">$1,040</td><td class="manifest__r ui-num">$1,180</td>
+              </tr>
+              <tr data-k="2" class="is-linked is-focus">
+                <td><span class="mf-card"><img class="mf-thumb" src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638" loading="lazy"><span class="mf-id"><span class="mf-name">2023 Donruss Optic Joe Burrow Downtown! #D4</span><span class="mf-sub"><span class="dot dot--product" aria-hidden="true"></span>Cert <span class="t-mono">103207853</span><span aria-hidden="true">·</span><span class="t-mono">CIQ-P123891</span></span></span></span></td>
+                <td><span class="chip chip--grade">PSA 9</span></td>
+                <td class="manifest__r ui-num">$540</td><td class="manifest__r ui-num">$1,030</td>
+              </tr>
+            </tbody>
+            <tbody class="manifest__group">
+              <tr class="manifest__rest" data-k="3 4 5 6 7 8 9">
+                <td><span class="mf-card"><span class="mf-stack" aria-hidden="true"><span class="mf-art mf-art--silver"></span><span class="mf-art mf-art--holo"></span><span class="mf-art"></span></span><span class="mf-id"><span class="mf-name">7 more cards</span><button type="button" class="mf-more" aria-expanded="false" aria-controls="mf-rest">Show all 10 cards</button></span></span></td>
+                <td><span class="chip chip--grade">PSA 10</span></td>
+                <td class="manifest__r ui-num">$1,980</td><td class="manifest__r ui-num">$1,800</td>
+              </tr>
+            </tbody>
+            <tbody class="manifest__more" id="mf-rest" hidden>
+              <tr data-k="3">
+                <td><span class="mf-card"><span class="mf-art" aria-hidden="true"></span><span class="mf-name">2021 Donruss Optic Ja'Marr Chase Rated Rookie</span></span></td>
+                <td><span class="chip chip--grade">PSA 10</span></td>
+                <td class="manifest__r ui-num">$420</td><td class="manifest__r ui-num">$380</td>
+              </tr>
+              <tr data-k="4">
+                <td><span class="mf-card"><span class="mf-art mf-art--silver" aria-hidden="true"></span><span class="mf-name">2024 Panini Prizm Caleb Williams Silver</span></span></td>
+                <td><span class="chip chip--grade">PSA 10</span></td>
+                <td class="manifest__r ui-num">$340</td><td class="manifest__r ui-num">$310</td>
+              </tr>
+              <tr data-k="5">
+                <td><span class="mf-card"><span class="mf-art" aria-hidden="true"></span><span class="mf-name">2024 Donruss Optic Jayden Daniels Rated Rookie</span></span></td>
+                <td><span class="chip chip--grade">PSA 10</span></td>
+                <td class="manifest__r ui-num">$300</td><td class="manifest__r ui-num">$285</td>
+              </tr>
+              <tr data-k="6">
+                <td><span class="mf-card"><span class="mf-art mf-art--silver" aria-hidden="true"></span><span class="mf-name">2023 Panini Prizm C.J. Stroud Silver</span></span></td>
+                <td><span class="chip chip--grade">PSA 10</span></td>
+                <td class="manifest__r ui-num">$265</td><td class="manifest__r ui-num">$240</td>
+              </tr>
+              <tr data-k="7">
+                <td><span class="mf-card"><span class="mf-art mf-art--silver" aria-hidden="true"></span><span class="mf-name">2022 Panini Prizm Garrett Wilson Silver</span></span></td>
+                <td><span class="chip chip--grade">PSA 10</span></td>
+                <td class="manifest__r ui-num">$250</td><td class="manifest__r ui-num">$230</td>
+              </tr>
+              <tr data-k="8">
+                <td><span class="mf-card"><span class="mf-art mf-art--holo" aria-hidden="true"></span><span class="mf-name">2023 Donruss Optic Bijan Robinson Holo</span></span></td>
+                <td><span class="chip chip--grade">PSA 10</span></td>
+                <td class="manifest__r ui-num">$215</td><td class="manifest__r ui-num">$190</td>
+              </tr>
+              <tr data-k="9">
+                <td><span class="mf-card"><span class="mf-art mf-art--select" aria-hidden="true"></span><span class="mf-name">2024 Panini Select Brock Bowers Concourse</span></span></td>
+                <td><span class="chip chip--grade">PSA 10</span></td>
+                <td class="manifest__r ui-num">$190</td><td class="manifest__r ui-num">$165</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr><th scope="row" colspan="2">10 cards</th><td class="manifest__r ui-num">$4,820</td><td class="manifest__r ui-num">$5,430</td></tr>
+            </tfoot>
+          </table>
+          <p class="prod__note"><span class="demo-tag">Illustrative product view</span><span>Spread = market value − cost, summed card by card.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ LEDGER: one record, every movement -->
+  <section class="section i-ledger" id="ledger" aria-labelledby="ledger-title">
+    <div class="ambient ambient--violet" style="width:620px;height:620px;left:-180px;top:30%;opacity:.25"></div>
+    <div class="container container--wide">
+      <div class="i-ledger__head" data-reveal>
+        <p class="eyebrow">The card history</p>
+        <h2 class="t-h2" id="ledger-title">One card. One record. <span class="grad-text">Every movement.</span></h2>
+        <p class="t-lead">Intake, valuation, product assignment, break activity, fulfillment, and buybacks remain visible as one operational history.</p>
+      </div>
+
+      <div class="ledger">
+        <aside class="ledger__record" aria-label="Current state of record CIQ-P123891">
+          <div class="ledger__slab">
+            <div class="slab"><span class="slab__glow"></span><img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="2023 Donruss Optic Joe Burrow Downtown! #D4, PSA 9 MINT, cert 103207853" width="380" height="638" loading="lazy"><span class="slab__floor"></span></div>
+          </div>
+          <div class="ledger__state">
+            <p class="ledger__sku"><span class="t-label">Record</span> <span class="t-mono">CIQ-P123891</span></p>
+            <p class="ledger__pill"><span class="status status--ok" data-r="state">Settled</span></p>
+            <dl class="ledger__fields">
+              <div><dt>Where</dt><dd data-r="where">Buyback complete</dd></div>
+              <div><dt>Value</dt><dd data-r="value" class="tnum">$927 settled</dd></div>
+              <div><dt>Ledger</dt><dd data-r="count" class="t-mono">6 of 6</dd></div>
+            </dl>
+          </div>
+        </aside>
+
+        <ol class="events" aria-label="Event history for CIQ-P123891">
+          <li class="ev" data-state="info|Identified" data-where="Intake" data-value="PSA 9 · Cert 103207853">
+            <span class="ev__node" aria-hidden="true"><span data-ico="scan"></span></span>
+            <time class="ev__time t-mono" datetime="08:42">08:42 AM</time>
+            <h3 class="ev__name">Intake</h3>
+            <p class="ev__detail">PSA cert matched · SKU <span class="t-mono">CIQ-P123891</span></p>
+          </li>
+          <li class="ev" data-state="ok|Available" data-where="Inventory" data-value="$1,030 · cost $540">
+            <span class="ev__node" aria-hidden="true"><span data-ico="value"></span></span>
+            <time class="ev__time t-mono" datetime="09:14">09:14 AM</time>
+            <h3 class="ev__name">Priced</h3>
+            <p class="ev__detail"><span class="t-mono">$1,030</span> market · <span class="t-mono">$540</span> cost <span class="ev__tag">ALT + Card Ladder</span></p>
+          </li>
+          <li class="ev" data-state="product|In product" data-where="Football Premium 02" data-value="$1,030 · cost $540">
+            <span class="ev__node" aria-hidden="true"><span data-ico="product"></span></span>
+            <time class="ev__time t-mono" datetime="11:37">11:37 AM</time>
+            <h3 class="ev__name">Added to product</h3>
+            <p class="ev__detail">Football Premium 02 <span class="ev__tag">10 cards</span></p>
+          </li>
+          <li class="ev" data-state="info|In break" data-where="Stream #1842 · Break 04" data-value="$1,030 · cost $540">
+            <span class="ev__node" aria-hidden="true"><span data-ico="streamiq"></span></span>
+            <time class="ev__time t-mono" datetime="20:31">08:31 PM</time>
+            <h3 class="ev__name">Break started</h3>
+            <p class="ev__detail">Stream <span class="t-mono">#1842</span> · Break 04 <span class="ev__tag">2026 NFL Mixer</span></p>
+          </li>
+          <li class="ev" data-state="info|Assigned" data-where="@northstarcards · Bengals spot" data-value="$1,030 · cost $540">
+            <span class="ev__node" aria-hidden="true"><span data-ico="buyer"></span></span>
+            <time class="ev__time t-mono" datetime="20:32">08:32 PM</time>
+            <h3 class="ev__name">Buyer assigned</h3>
+            <p class="ev__detail"><span class="handle"><span class="avatar" aria-hidden="true">N</span>@northstarcards</span> · Bengals spot</p>
+          </li>
+          <li class="ev ev--outcome" data-state="ok|Settled" data-where="Buyback complete" data-value="$927 settled">
+            <span class="ev__node" aria-hidden="true"><span data-ico="settle"></span></span>
+            <time class="ev__time t-mono" datetime="20:54">08:54 PM</time>
+            <h3 class="ev__name">Outcome recorded</h3>
+            <p class="ev__detail">Buyback accepted · settled <span class="t-mono">$927</span></p>
+          </li>
+        </ol>
+        <p class="i-next">Follow the same record through <a class="link-arrow" href="streamiq.html">StreamIQ <span data-ico="arrow"></span></a> and <a class="link-arrow" href="instant-buybacks.html">Instant Buybacks <span data-ico="arrow"></span></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FAQ -->
+  <section class="section i-faq" aria-labelledby="faq-title">
+    <div class="container i-faq__wrap">
+      <div class="i-faq__head" data-reveal>
+        <h2 class="t-h2" id="faq-title">Inventory questions.</h2>
+        <p class="t-lead">Start with the cards you already hold, graded or raw.</p>
+      </div>
+      <div class="faq" data-reveal>
+        <details open>
+          <summary>Can we bring in the inventory we already have?</summary>
+          <div class="faq__a">Yes. Cards enter through structured intake from graded certification data, raw-card SKUs, <strong>imports</strong>, or integrated intake workflows. Each card gets an identity and an internal SKU before it moves.</div>
+        </details>
+        <details>
+          <summary>Does it handle raw cards as well as graded slabs?</summary>
+          <div class="faq__a">Yes. Graded cards are matched from <strong>PSA, BGS, and SGC</strong> cert data. Raw cards enter with a raw intake record, their own SKU, and their source attached, then sit in the same directory as your slabs.</div>
+        </details>
+        <details>
+          <summary>Where does market value come from?</summary>
+          <div class="faq__a">Each card carries <strong>ALT + Card Ladder</strong> market data: fair market value and last sale from both sources, alongside your own cost basis.</div>
+        </details>
+        <details>
+          <summary>What happens to card-level economics inside a product?</summary>
+          <div class="faq__a">They stay attached. When you build a case or break product from live inventory, every card keeps its cert, cost basis, market value, and status, so the product's totals are the sum of the cards inside it.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FINAL CTA: a shelf of cards, each wearing its record -->
+  <section class="cta-final i-cta" aria-labelledby="cta-title">
+    <div class="ambient ambient--blue" style="width:900px;height:460px;left:50%;bottom:-60px;margin-left:-450px;opacity:.4"></div>
+    <div class="container container--wide">
+      <div class="i-cta__copy" data-reveal>
+        <p class="eyebrow">Inventory Management</p>
+        <h2 class="cta-final__title u-mt" id="cta-title">Operate inventory <span class="grad-text">from intake to outcome.</span></h2>
+        <p class="cta-final__sub">Give every card a structured identity, cost history, operational state, and transaction trail that survives every workflow.</p>
+        <div class="cta-final__actions btn-row">
+          <a class="btn btn--primary btn--lg" data-cta="partner" data-interest="inventory-management" href="become-a-partner.html">Become a partner <span data-ico="arrow"></span></a>
+        </div>
+        <p class="cta-note u-mt">Collecting? <a data-cta="create-account" href="#create-account">Create account</a></p>
+      </div>
+
+      <ul class="shelf" data-reveal aria-label="Cards on CardsIQ, each with its record">
+        <li class="shelf__item" style="--d:3"><div class="slab"><img src="assets/img/slabs/mantle-1958-topps-psa4.webp" alt="1958 Topps Mickey Mantle #150, PSA 4 VG-EX, cert 69974937" width="720" height="1200" loading="lazy"></div><span class="tag"><span class="dot dot--ok" aria-hidden="true"></span><span class="t-mono">69974937</span><span class="sr-only">Available</span></span></li>
+        <li class="shelf__item" style="--d:2"><div class="slab"><img src="assets/img/slabs/brady-2000-bowman-psa8.webp" alt="2000 Bowman Tom Brady #236, PSA 8 NM-MT, cert 82389068" width="723" height="1200" loading="lazy"></div><span class="tag"><span class="dot dot--product" aria-hidden="true"></span><span class="t-mono">82389068</span><span class="sr-only">In product</span></span></li>
+        <li class="shelf__item" style="--d:1"><div class="slab"><img src="assets/img/slabs/mahomes-2017-optic-lime-psa9.webp" alt="2017 Panini Donruss Optic Patrick Mahomes II Lime #177, PSA 9 MINT, cert 159117071" width="721" height="1200" loading="lazy"></div><span class="tag"><span class="dot dot--ok" aria-hidden="true"></span><span class="t-mono">159117071</span><span class="sr-only">Available</span></span></li>
+        <li class="shelf__item shelf__item--hero" style="--d:0"><div class="slab"><span class="slab__glow"></span><img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="2023 Donruss Optic Joe Burrow Downtown! #D4, PSA 9 MINT, cert 103207853" width="380" height="638" loading="lazy"></div><span class="tag"><span class="dot dot--product" aria-hidden="true"></span><span class="t-mono">CIQ-P123891</span><span class="sr-only">In product</span></span></li>
+        <li class="shelf__item" style="--d:1"><div class="slab"><img src="assets/img/slabs/wembanyama-2022-bowman-u-best-auto-psa10.webp" alt="2022 Bowman University Best Victor Wembanyama Auto-Refractor #BOAVW, PSA 10 GEM MT, cert 78900062" width="469" height="799" loading="lazy"></div><span class="tag"><span class="dot dot--pending" aria-hidden="true"></span><span class="t-mono">78900062</span><span class="sr-only">In review</span></span></li>
+        <li class="shelf__item" style="--d:2"><div class="slab"><img src="assets/img/slabs/edwards-2020-prizm-blue-ice-psa10.webp" alt="2020 Panini Prizm Anthony Edwards Blue Ice #258, PSA 10 GEM MT, cert 62098915" width="465" height="781" loading="lazy"></div><span class="tag"><span class="dot dot--ok" aria-hidden="true"></span><span class="t-mono">62098915</span><span class="sr-only">Available</span></span></li>
+        <li class="shelf__item" style="--d:3"><div class="slab"><img src="assets/img/slabs/curry-2022-select-signature-psa9.webp" alt="2022 Select Stephen Curry Signature #SSCY, PSA 9 MINT, cert 83289827" width="449" height="784" loading="lazy"></div><span class="tag"><span class="dot dot--ok" aria-hidden="true"></span><span class="t-mono">83289827</span><span class="sr-only">Available</span></span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/ciq.js" defer></script>
+<script src="assets/js/page-inventory.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "cardsiq-design-demo-tools",
+  "private": true,
+  "type": "module",
+  "description": "Screenshot helper for reviewing the CardsIQ design demo (uses local Edge/Chrome).",
+  "scripts": {
+    "shoot": "node shoot.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.0.0"
+  }
+}

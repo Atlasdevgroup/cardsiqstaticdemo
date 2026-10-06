@@ -1,0 +1,272 @@
+/* About — trust page. Type-led manifesto: problem → one record → beliefs (+ evidence) → why identity → who → two sides → close.
+   Layout breakpoints respond to the content column (@container main), not the viewport. */
+
+/* page palette: ciq.css tokens plus the few light "ink" tints this page uses for text on dark (one place to change them) */
+:root {
+  --ab-ink-cyan: #7fdcf0;                       /* cyan data label text */
+  --ab-ink-blue: #8fb8ff;                       /* blue hairline / outline numerals */
+  --ab-ink-blue-2: #7db4ff;                     /* lit weave node */
+  --ab-glow-blue: rgba(79, 124, 255, 0.6);
+  --ab-cyan-soft: rgba(53, 208, 238, 0.14);
+  --ab-thread-dim: rgba(140, 156, 214, 0.4);
+}
+
+/* ------------------------------------------------------------ hero */
+.ab-hero { position: relative; padding: clamp(40px, 5vw, 80px) 0 clamp(72px, 7vw, 112px); overflow: hidden; }
+.ab-hero__grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr); gap: 48px; align-items: center; }
+/* Title size follows the copy column so "The hobby grew" always holds on one line. */
+.ab-hero__title { margin-top: 26px; font-size: min(var(--fs-hero), calc((100cqi - 2 * var(--gutter) - 48px) * 0.56 / 7)); }
+.ab-hero__lead { margin-top: 28px; max-width: 34em; }
+.ab-hero__claim { position: relative; margin-top: 26px; padding-left: 20px; max-width: 30em; font-size: clamp(1.1875rem, 1.05rem + 0.45vw, 1.4375rem); line-height: 1.4; font-weight: 500; letter-spacing: -0.015em; color: var(--text); }
+.ab-hero__claim::before { content: ""; position: absolute; left: 0; top: 0.18em; bottom: 0.18em; width: 2px; border-radius: 2px; background: var(--grad-v); box-shadow: 0 0 14px var(--ab-glow-blue); }
+.ab-hero__cta { margin-top: 38px; }
+
+/* the artifact: one slab, its label read into an identity, then into a record */
+.ab-artifact { position: relative; margin: 0; display: grid; grid-template-columns: minmax(0, 0.54fr) minmax(0, 0.46fr); gap: 28px; align-items: start; padding-bottom: 40px; }
+.ab-artifact__year { position: absolute; right: -10%; top: calc(100% + 10px); z-index: -1; font-size: clamp(7rem, 16cqi, 14rem); font-weight: 600; line-height: 0.8; letter-spacing: -0.06em; color: transparent; -webkit-text-stroke: 1px rgba(143, 184, 255, 0.16); user-select: none; pointer-events: none; }
+.ab-artifact__card { position: relative; }
+.ab-artifact__card .slab { width: 100%; }
+/* label scan (inside .slab so it tilts with the card): brackets stay (the label is now data), the beam passes once */
+.ab-artifact__scan { position: absolute; left: 5%; right: 5%; top: 3%; height: 17.4%; border-radius: 4px; pointer-events: none; overflow: hidden;
+  background:
+    linear-gradient(var(--cyan), var(--cyan)) left top / 14px 1.5px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) left top / 1.5px 14px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) right top / 14px 1.5px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) right top / 1.5px 14px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) left bottom / 14px 1.5px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) left bottom / 1.5px 14px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) right bottom / 14px 1.5px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) right bottom / 1.5px 14px no-repeat;
+  box-shadow: 0 0 0 1px var(--ab-cyan-soft), 0 0 30px rgba(53, 208, 238, 0.12); }
+.ab-artifact__scan::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 34%; background: linear-gradient(90deg, transparent, rgba(53, 208, 238, 0.32) 70%, rgba(170, 240, 255, 0.7) 96%, transparent); transform: translateX(-110%); animation: ab-scan 1.5s var(--ease) 0.35s 1 both; }
+@keyframes ab-scan { 0% { transform: translateX(-110%); opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(310%); opacity: 0; } }
+
+.ab-artifact__read { position: relative; padding-top: calc(var(--slab-w, 220px) * 1.667 * 0.115 - 7px); }
+.ab-artifact__read::before { content: ""; position: absolute; left: -28px; width: 20px; top: calc(var(--slab-w, 220px) * 1.667 * 0.115); height: 1.5px; background: linear-gradient(90deg, rgba(53, 208, 238, 0.2), var(--cyan)); }
+.ab-artifact__head { color: var(--ab-ink-cyan); }
+.ab-artifact__fields { margin-top: 18px; border-top: 1px solid var(--line); }
+.ab-artifact__fields > div { padding: 13px 0 14px; border-bottom: 1px solid var(--line); transition: opacity .6s var(--ease); }
+.ab-artifact__fields dt { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); font-weight: 500; transition: color .5s; }
+.ab-artifact__fields dd { margin-top: 5px; font-size: 1.0625rem; line-height: 1.35; font-weight: 500; letter-spacing: -0.01em; color: var(--text); }
+html.js .ab-artifact__fields .is-upcoming { opacity: 0.28; }
+.ab-artifact__fields .is-active dt { color: var(--ab-ink-cyan); }
+/* final step: the label becomes a record (violet = product relationship / the record) */
+.ab-artifact__fields > .ab-artifact__record { border-bottom: 0; background: linear-gradient(90deg, var(--blue), var(--purple) 70%, transparent) left bottom / 100% 1px no-repeat; }
+.ab-artifact__fields .ab-artifact__record dt,
+.ab-artifact__fields .ab-artifact__record.is-active dt { color: var(--violet-s); }
+.ab-artifact__link { display: inline; padding-block: 10px; color: var(--text); text-decoration: underline; text-decoration-color: rgba(179, 133, 255, 0.4); text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.ab-artifact__link .ico { display: inline-block; vertical-align: -3px; margin-left: 6px; width: 16px; height: 16px; color: var(--violet-s); transition: transform .25s var(--ease); }
+.ab-artifact__link:hover .ico { transform: translateX(4px); }
+
+@container main (max-width: 899px) {
+  .ab-hero { padding-bottom: clamp(48px, 6vw, 72px); }
+  .ab-hero__grid { grid-template-columns: minmax(0, 1fr); gap: 48px; }
+  .ab-hero__title { font-size: var(--fs-hero); }
+  .ab-hero__copy { max-width: 720px; }
+  .ab-hero__claim { margin-top: 20px; }
+  .ab-hero__cta { margin-top: 28px; }
+  .ab-artifact { width: min(100%, 560px); grid-template-columns: minmax(0, 0.5fr) minmax(0, 0.5fr); padding-bottom: 16px; }
+}
+@container main (max-width: 479px) {
+  .ab-hero__title .line { display: inline; }
+  .ab-hero__lead { margin-top: 22px; }
+  .ab-hero__cta .btn { flex: 1 1 100%; }
+  .ab-hero__grid { gap: 40px; }
+  .ab-artifact { gap: 20px; grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr); }
+  .ab-artifact__read::before { left: -20px; width: 14px; }
+  .ab-artifact__fields { margin-top: 12px; }
+  .ab-artifact__fields > div { padding: 9px 0 10px; }
+  .ab-artifact__fields dd { font-size: 0.9375rem; }
+  .ab-artifact__year { font-size: 5.5rem; right: 0; top: calc(100% + 4px); }
+}
+
+/* ------------------------------------------------------------ fragmented → one record (weave)
+   Above the CardsIQ threshold each tool stands alone: short dashed stubs that stop short of the line.
+   Below it the threads are solid and converge on one record. Before and after coexist at rest. */
+.ab-frag { padding-block: calc(var(--section) * 0.6) calc(var(--section) * 0.8); }
+.ab-frag__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr); gap: clamp(32px, 5vw, 80px); align-items: end; }
+.ab-frag__head .t-lead { max-width: 30em; }
+
+.weave { --weave-dir: down; position: relative; margin: clamp(56px, 6vw, 88px) 0 0; display: grid; justify-items: center; }
+.weave__lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 0; }
+.weave__lines .w-stub { fill: none; stroke: var(--ab-thread-dim); stroke-width: 1.2; stroke-dasharray: 2 6; stroke-linecap: round; }
+.weave__lines .w-stub-node { fill: var(--bg); stroke: rgba(140, 156, 214, 0.45); stroke-width: 1; }
+.weave__lines .w-base { fill: none; stroke: rgba(140, 156, 214, 0.16); stroke-width: 1; }
+.weave__lines .w-lit { fill: none; stroke: url(#weave-grad); stroke-width: 1.6; stroke-linecap: round; transition: stroke-dashoffset 1.3s var(--ease-out); transition-delay: calc(var(--i, 0) * 110ms + 250ms); }
+.weave__lines .w-trunk { stroke-width: 2.4; filter: drop-shadow(0 0 6px rgba(79, 124, 255, 0.8)); transition-delay: 1.05s; transition-duration: .7s; }
+.weave__lines .w-node { fill: var(--bg); stroke: rgba(140, 156, 214, 0.45); stroke-width: 1; transition: fill .5s, stroke .5s, stroke-width .5s; transition-delay: calc(var(--i, 0) * 110ms + 250ms); }
+.weave.is-on .w-node { fill: var(--ab-ink-blue-2); stroke: rgba(125, 180, 255, 0.35); stroke-width: 5; }
+
+.weave__sources { position: relative; z-index: 1; width: 100%; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.weave__sources li { display: flex; justify-content: center; }
+.weave__sources span { font-size: clamp(1rem, 0.9rem + 0.35vw, 1.25rem); font-weight: 500; letter-spacing: -0.015em; color: var(--text-2); white-space: nowrap; }
+
+/* the threshold band */
+.weave__gate { position: relative; z-index: 1; width: 100%; margin-top: clamp(60px, 6vw, 88px); display: flex; align-items: center; gap: 18px; }
+.weave__gate-line { position: relative; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--line-3) 12%); }
+.weave__gate-line:last-child { background: linear-gradient(90deg, var(--line-3) 88%, transparent); }
+.weave__gate-line::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, var(--blue-2) 12%, #4f7cff); opacity: 0; transition: opacity 1s var(--ease) .1s; }
+.weave__gate-line:last-child::after { background: linear-gradient(90deg, #4f7cff, var(--purple) 88%, transparent); }
+.weave.is-on .weave__gate-line::after { opacity: 0.55; }
+.weave__gate-name { color: var(--text-3); padding: 6px 2px; transition: color .8s; }
+.weave.is-on .weave__gate-name { color: var(--ab-ink-blue); }
+
+.weave__record { position: relative; z-index: 1; margin-top: clamp(140px, 13vw, 184px); display: flex; flex-direction: column; align-items: center; text-align: center; }
+.weave__mark { width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 50% 35%, #111a4a, #070b26 70%); box-shadow: inset 0 0 0 1px rgba(124, 140, 255, 0.35); transition: box-shadow 1s var(--ease) 1.3s; }
+.weave__mark img { width: 44px; height: auto; }
+.weave.is-on .weave__mark { box-shadow: inset 0 0 0 1px rgba(124, 140, 255, 0.7), 0 0 0 10px rgba(79, 124, 255, 0.07), 0 0 70px rgba(79, 124, 255, 0.55); }
+.weave__name { margin-top: 22px; font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.75rem); line-height: 1.05; font-weight: 600; letter-spacing: -0.03em; color: var(--text-3); transition: color .8s 1.4s; }
+.weave.is-on .weave__name { color: var(--text); }
+
+@container main (max-width: 899px) {
+  .ab-frag__head { grid-template-columns: 1fr; gap: 0; }
+  .ab-frag__head .t-lead { margin-top: 22px; }
+}
+/* phone: the same split on the horizontal axis. Labels left, dashed stubs, a vertical CardsIQ line, threads converge right. */
+@container main (max-width: 639px) {
+  .weave { --weave-dir: right; margin-top: 40px; grid-template-columns: max-content minmax(20px, 1fr) 1px minmax(56px, 1.5fr) minmax(0, 112px); grid-template-rows: auto auto; justify-items: stretch; align-items: center; }
+  .weave__gate { display: contents; }
+  .weave__gate-name { grid-column: 3; grid-row: 1; justify-self: center; white-space: nowrap; padding: 0 0 10px; }
+  .weave__gate-line { grid-column: 3; grid-row: 2; align-self: stretch; width: 1px; height: auto; background: linear-gradient(180deg, var(--line-3), var(--line-3) 85%, transparent); }
+  .weave__gate-line::after { background: linear-gradient(180deg, var(--blue-2), #4f7cff 50%, var(--purple) 85%, transparent); }
+  .weave__gate-line:last-child { display: none; }
+  .weave__sources { grid-column: 1; grid-row: 2; grid-template-columns: 1fr; gap: 4px; }
+  .weave__sources li { justify-content: flex-start; padding: 8px 0; }
+  .weave__sources span { font-size: 1.0625rem; }
+  .weave__record { grid-column: 5; grid-row: 2; margin-top: 0; align-items: flex-end; text-align: right; }
+  .weave__mark { width: 64px; height: 64px; }
+  .weave__mark img { width: 34px; }
+  .weave__name { margin-top: 14px; font-size: 1.25rem; }
+}
+
+/* ------------------------------------------------------------ principles (descending staircase) + the evidence under 04 */
+.ab-prin__title { max-width: 12ch; }
+.ab-prin { padding-block: calc(var(--section) * 0.7) calc(var(--section) * 0.6); }
+.prin { --w: 60%; margin-top: clamp(40px, 4vw, 60px); display: grid; gap: clamp(26px, 3vw, 44px); }
+.prin__item { width: var(--w); margin-left: calc((100% - var(--w)) / 4.5 * var(--i, 0)); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(20px, 2.4vw, 36px); align-items: start; padding-top: 26px; border-top: 1px solid var(--line); }
+.prin__item:nth-child(1) { --i: 0; } .prin__item:nth-child(2) { --i: 1; } .prin__item:nth-child(3) { --i: 2; } .prin__item:nth-child(4) { --i: 3; }
+.prin__num { font-size: clamp(3.75rem, 2.4rem + 4.2vw, 7rem); line-height: 0.78; font-weight: 300; letter-spacing: -0.05em; color: transparent; -webkit-text-stroke: 1.2px rgba(143, 184, 255, 0.6); font-variant-numeric: tabular-nums; min-width: 1.15em; }
+.prin__name { font-size: clamp(1.5rem, 1.15rem + 1vw, 2.125rem); line-height: 1.1; font-weight: 600; letter-spacing: -0.028em; }
+.prin__text { margin-top: 10px; font-size: var(--fs-lead); line-height: 1.5; color: var(--text-2); max-width: 26em; }
+/* evidence: what CardsIQ already works with, as type on a hairline (no logos, no boxes) */
+.prin__proof { margin-top: 24px; padding-top: 18px; display: grid; grid-template-columns: repeat(2, minmax(0, max-content)); gap: 16px clamp(28px, 3.4vw, 52px); background: linear-gradient(90deg, var(--blue), rgba(124, 92, 255, 0.5) 40%, transparent) left top / 100% 1px no-repeat; }
+.prin__proof dt { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); font-weight: 500; }
+.prin__proof dd > span { white-space: nowrap; }
+.prin__proof dd { margin-top: 5px; font-family: var(--mono); font-size: 0.9375rem; line-height: 1.4; color: var(--text); white-space: nowrap; }
+@container main (max-width: 899px) { .prin { --w: 78%; } }
+@container main (max-width: 639px) {
+  .prin { --w: 100%; gap: 30px; }
+  .prin__item { margin-left: 0; grid-template-columns: 1fr; gap: 14px; padding-top: 22px; }
+  .prin__num { font-size: 3.5rem; }
+  .prin__proof { gap: 14px 20px; }
+  .prin__proof dd { font-size: 0.875rem; white-space: normal; }
+}
+
+/* ------------------------------------------------------------ manifesto: one card, one record, every movement */
+.ab-mani { position: relative; padding-block: calc(var(--section) * 0.8); overflow: hidden; background: linear-gradient(180deg, transparent, rgba(9, 14, 43, 0.75) 22%, rgba(9, 14, 43, 0.75) 78%, transparent); }
+.mani { position: relative; margin-top: 30px; padding-left: clamp(24px, 3vw, 44px); }
+.mani__rail { position: absolute; left: 0; top: 0.4em; bottom: 0; width: 2px; border-radius: 2px; background: rgba(140, 156, 214, 0.14); }
+.mani__rail::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 0; border-radius: inherit; background: var(--grad-v); box-shadow: 0 0 14px rgba(79, 124, 255, 0.7); transition: height 1s var(--ease-out); }
+html:not(.js) .mani__rail::after,
+.mani[data-index="2"] .mani__rail::after { height: 100%; }
+.mani[data-index="0"] .mani__rail::after { height: 24%; }
+.mani[data-index="1"] .mani__rail::after { height: 48%; }
+.mani__title { font-size: clamp(2.5rem, calc((100cqi - 2 * var(--gutter) - 52px) / 7.9), 8.5rem); line-height: 1.02; letter-spacing: -0.048em; font-weight: 600; }
+/* dimmed only once JS can light them; without JS the H2 and notes stay at full contrast */
+.mani__line { display: block; width: fit-content; color: var(--text); transition: opacity 1s var(--ease); }
+html.js .mani__line { opacity: 0.16; }
+html.js .mani__line.is-active, html.js .mani__line.is-done { opacity: 1; }
+.mani__line--last { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: 0.06em; }
+
+.mani__notes { margin-top: clamp(36px, 4vw, 56px); display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr) minmax(0, 1.25fr); border-top: 1px solid var(--line); }
+.mani__note { padding: 22px 28px 0 0; transition: opacity .8s var(--ease); }
+html.js .mani__note { opacity: 0.3; }
+.mani__note + .mani__note { padding-left: 28px; border-left: 1px solid var(--line); }
+.mani__note dt { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-3); font-weight: 500; }
+.mani__note dd { margin-top: 8px; font-size: 1rem; line-height: 1.5; color: var(--text); }
+.mani__note dd.t-mono { font-size: 0.9375rem; }
+.mani__note dd > span { white-space: nowrap; }
+html.js .mani[data-index="0"] .mani__note:nth-child(1),
+html.js .mani[data-index="1"] .mani__note:nth-child(-n + 2),
+html.js .mani[data-index="2"] .mani__note { opacity: 1; }
+
+@container main (max-width: 899px) {
+  .mani__notes { grid-template-columns: 1fr; }
+  .mani__note, .mani__note + .mani__note { padding: 16px 0; border-left: 0; }
+  .mani__note + .mani__note { border-top: 1px solid var(--line); }
+}
+
+/* ------------------------------------------------------------ who it serves */
+.roles-type { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.1em 0; font-size: clamp(2rem, 1.1rem + 3.4vw, 4.25rem); line-height: 1.12; font-weight: 500; letter-spacing: -0.035em; color: var(--text); }
+.roles-type li { white-space: nowrap; }
+.roles-type li:not(:last-child)::after { content: "/"; margin: 0 0.32em 0 0.3em; font-weight: 300; color: rgba(125, 150, 230, 0.5); }
+.ab-roles__sub { margin-top: clamp(28px, 3vw, 40px); max-width: 36em; }
+
+/* ------------------------------------------------------------ two sides of one card */
+.ab-sides { overflow: hidden; padding-block: calc(var(--section) * 0.7); }
+.sides { display: grid; grid-template-columns: minmax(0, 1fr) clamp(150px, 20cqi, 250px) minmax(0, 1fr); gap: clamp(32px, 4.4vw, 64px); align-items: start; }
+.sides__card { position: relative; align-self: center; }
+.sides__card .slab { width: 100%; }
+.side__title { margin-top: 14px; font-size: clamp(1.875rem, 1.3rem + 1.6vw, 2.75rem); line-height: 1.05; letter-spacing: -0.032em; font-weight: 600; text-wrap: balance; }
+.side__list { margin-top: 28px; border-top: 1px solid var(--line); }
+.side__list li { position: relative; display: flex; align-items: center; gap: 14px; min-height: 52px; border-bottom: 1px solid var(--line); font-size: 1.125rem; font-weight: 500; letter-spacing: -0.01em; color: var(--text); }
+.side__list li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; flex: none; background: var(--blue); box-shadow: 0 0 10px rgba(47, 139, 255, 0.7); }
+/* module names that have their own page are plain links */
+.side__list a { flex: 1; align-self: stretch; display: flex; align-items: center; color: inherit; text-decoration: underline; text-decoration-color: rgba(143, 184, 255, 0.35); text-decoration-thickness: 1px; text-underline-offset: 6px; transition: text-decoration-color .25s, color .25s; }
+.side__list a:hover { color: #fff; text-decoration-color: var(--ab-ink-blue); }
+.side__cta { margin-top: 22px; min-height: 44px; }
+/* mirror: the business side faces the card from the left */
+.side--biz { text-align: right; }
+.side--biz .side__list li { flex-direction: row-reverse; }
+.side--biz .side__list a { justify-content: flex-end; }
+.side--col .side__list li::before { background: var(--violet-s); box-shadow: 0 0 10px rgba(162, 88, 247, 0.6); }
+.side--col .side__cta .ico { color: var(--violet-s); }
+.sides__card::before, .sides__card::after { content: ""; position: absolute; top: 50%; width: clamp(18px, 3.4vw, 52px); height: 1px; }
+.sides__card::before { right: calc(100% + 8px); background: linear-gradient(90deg, rgba(47, 139, 255, 0.1), rgba(47, 139, 255, 0.8)); }
+.sides__card::after { left: calc(100% + 8px); background: linear-gradient(90deg, rgba(162, 88, 247, 0.8), rgba(162, 88, 247, 0.1)); }
+
+/* tablet: keep the mirror (business ← card → collector) — the card stays the hinge */
+@container main (max-width: 899px) {
+  .sides { grid-template-columns: minmax(0, 1fr) 150px minmax(0, 1fr); gap: 36px; }
+  .sides__card::before, .sides__card::after { width: 20px; }
+  .side__title { font-size: clamp(1.75rem, 1.2rem + 1.4vw, 2.25rem); }
+  .side__list li { min-height: 48px; font-size: 1.0625rem; }
+}
+/* phone: business → card → collector, read top to bottom; short vertical threads tie each side to the card */
+@container main (max-width: 639px) {
+  .ab-sides { padding-top: calc(var(--section) * 0.6); }
+  .sides { grid-template-columns: 1fr; grid-template-areas: "biz" "card" "col"; gap: 56px; }
+  .side--biz { grid-area: biz; text-align: left; }
+  .side--biz .side__list li { flex-direction: row; }
+  .side--biz .side__list a { justify-content: flex-start; }
+  .side--col { grid-area: col; }
+  .sides__card { grid-area: card; width: 120px; justify-self: center; }
+  .sides__card::before, .sides__card::after { top: auto; left: calc(50% - 1px); right: auto; width: 2px; height: 36px; border-radius: 2px; }
+  .sides__card::before { bottom: calc(100% + 10px); background: linear-gradient(180deg, rgba(47, 139, 255, 0.35), var(--blue-2)); box-shadow: 0 0 8px rgba(47, 139, 255, 0.5); }
+  .sides__card::after { top: calc(100% + 14px); background: linear-gradient(180deg, var(--purple), rgba(162, 88, 247, 0.35)); box-shadow: 0 0 8px rgba(162, 88, 247, 0.5); }
+  .side__list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; }
+  .side__list li { min-height: 48px; font-size: 1rem; }
+  .side__list li { gap: 10px; }
+}
+
+/* ------------------------------------------------------------ final CTA: centered, the hobby's cards rising beneath */
+.ab-cta { padding-top: calc(var(--section) * 0.8); padding-bottom: 0; border-top: 1px solid rgba(140, 156, 214, 0.08); text-align: center; }
+.ab-cta__inner { display: flex; flex-direction: column; align-items: center; }
+.ab-cta .cta-final__title .line { display: block; }
+.ab-cta .cta-final__sub { margin-inline: auto; }
+.ab-cta .cta-final__actions { justify-content: center; }
+.ab-cta__art { position: relative; width: min(100%, 600px); height: clamp(200px, 24vw, 300px); margin: clamp(48px, 5vw, 72px) auto 0; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 45%, transparent); mask-image: linear-gradient(180deg, #000 45%, transparent); }
+.ab-cta__art img { width: 100%; height: auto; filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.6)) saturate(0.95); }
+
+/* phone: tighter section rhythm overall */
+@container main (max-width: 639px) {
+  .ab-frag { padding-block: calc(var(--section) * 0.5) calc(var(--section) * 0.7); }
+  .ab-prin { padding-block: calc(var(--section) * 0.6) calc(var(--section) * 0.5); }
+  .ab-mani { padding-block: calc(var(--section) * 0.75); }
+  .ab-sides { padding-bottom: calc(var(--section) * 0.75); }
+  .ab-cta { padding-top: calc(var(--section) * 0.8); }
+  .ab-cta .cta-final__title .line { display: inline; }
+}
+@container main (max-width: 479px) {
+  .ab-cta .cta-final__actions .btn { flex: 1 1 100%; }
+}
