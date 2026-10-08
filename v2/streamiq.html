@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreamIQ | CardsIQ</title>
+  <meta name="description" content="Live-break production infrastructure for team assignments, scenes, overlays, offers, and stream operations.">
+  <link rel="icon" href="assets/img/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..800&family=Geist+Mono:wght@400..600&display=swap">
+  <link rel="stylesheet" href="assets/css/ciq.css">
+  <link rel="stylesheet" href="assets/css/live-ui.css">
+  <link rel="stylesheet" href="assets/css/page-streamiq.css">
+</head>
+<body data-page="streamiq" data-primary-cta="partner" data-interest="streamiq">
+<script src="assets/js/shell.js"></script>
+<main id="main" class="page">
+
+  <!-- ============================================================ HERO: the show, with the real stream header on it -->
+  <section class="sq-hero" data-hero aria-labelledby="hero-title">
+    <div class="ambient ambient--blue sq-hero__amb" aria-hidden="true"></div>
+    <div class="sq-hero__air" aria-hidden="true"></div>
+    <div class="container container--wide sq-hero__grid">
+      <div class="sq-hero__head">
+        <p class="eyebrow eyebrow--pill eyebrow--live">StreamIQ</p>
+        <h1 class="t-hero" id="hero-title"><span class="line">Run every break</span> <span class="line grad-text">from show to settlement.</span></h1>
+        <p class="t-lead sq-hero__lead">Connect shows, products, fills, buyer assignments, production, card hits, buybacks, and fulfillment inside one live operating workspace.</p>
+        <div class="btn-row sq-hero__cta" data-hero-cta>
+          <a class="btn btn--primary" data-cta="partner" data-interest="streamiq" href="become-a-partner.html">Become a partner <span data-ico="arrow"></span></a>
+          <a class="btn btn--secondary sq-watch" href="#break-run"><span data-ico="play"></span>Watch a break run</a>
+        </div>
+      </div>
+
+      <figure class="sq-stage" aria-labelledby="stage-cap">
+        <figcaption class="sr-only" id="stage-cap">A breaker's desk during a live show, with the CardsIQ StreamIQ stream header: 2026 NFL MIXER is live on Whatnot, run by Jordan and Sam, stream label STR-1842, 4 breaks so far. The latest hit is a 2024 Panini Prizm Malik Nabers Gold /10, PSA 10, in the Giants spot for nycards, with a buyback offer of $1,278.00 sent.</figcaption>
+
+        <div class="sq-stage__photo">
+          <img src="assets/img/photos/break-desk.webp" alt="" width="800" height="800">
+        </div>
+
+        <!-- Current hit: a break-offer row (Screenshot 181204), condensed to user / offer / status -->
+        <div class="lv-panel sq-hit" data-state="offer">
+          <div class="sq-hit__bar">
+            <span class="lv-eyebrow sq-hit__k">Card hit</span>
+            <span class="sq-hit__t">08:41:14 PM · Break 04</span>
+          </div>
+          <div class="sq-hit__body">
+            <div class="lv-desc-cell">
+              <span class="lv-thumb sq-gold" aria-hidden="true"></span>
+              <div>
+                <p class="lv-name">2024 Panini Prizm Malik Nabers Gold /10</p>
+                <div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 10.0</span><span class="lv-pill lv-pill--team lv-team--giants">Giants</span></div>
+              </div>
+            </div>
+            <p class="sq-hit__row sq-hit__offer"><span class="lv-handle">nycards</span><span class="lv-pill lv-pill--offer">$1,278.00</span><span class="lv-status lv-status--sent lv-status--sm"><span data-ico="send"></span>Offer Sent</span></p>
+          </div>
+        </div>
+
+        <!-- Stream header (Screenshots 180938 / 181033), recomposed into two rows -->
+        <div class="lv-panel sq-live">
+          <div class="sq-live__top">
+            <span class="lv-iconbtn lv-iconbtn--muted sq-back" aria-hidden="true"><span data-ico="chevron"></span></span>
+            <div class="sq-live__id">
+              <p class="sq-live__name"><span class="lv-status lv-status--live lv-status--caps">Live</span><span class="lv-name lv-name--caps">2026 NFL Mixer</span></p>
+              <p class="sq-live__sub">Live stream in progress</p>
+            </div>
+            <div class="sq-live__end">
+              <span class="lv-barcode sq-label"><span class="lv-barcode__bars"></span><span class="lv-barcode__id"><small>Whatnot</small>STR-1842</span></span>
+              <span class="lv-btn lv-btn--danger lv-btn--sm sq-live__stop">End stream</span>
+            </div>
+          </div>
+          <div class="sq-live__tiles">
+            <div class="lv-tile sq-tp">
+              <p class="lv-tile__k">Team &amp; Platform</p>
+              <div class="sq-tp__v"><span class="lv-people"><span class="lv-av">JD</span><span class="lv-av">SM</span>Jordan, Sam<span data-ico="down"></span></span><span class="sq-tp__sep" aria-hidden="true"></span><span class="lv-platform">Whatnot</span></div>
+            </div>
+            <div class="lv-tile"><p class="lv-tile__k">Time elapsed</p><p class="lv-tile__v"><span role="timer" aria-label="Time elapsed" data-elapsed>01:41:15</span></p></div>
+            <div class="lv-tile"><p class="lv-tile__k">Breaks</p><p class="lv-tile__v">4</p></div>
+          </div>
+        </div>
+
+        <div class="sq-stage__foot">
+          <span class="demo-tag">Illustrative stream · real CardsIQ components</span>
+          <button type="button" class="seq-ctl sq-clockctl" data-clock-ctl hidden><span class="seq-ctl__ico"></span><span class="seq-ctl__label">Pause clock</span></button>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================================================ EVENT RAIL: two lanes on one timecode spine -->
+  <section class="section sq-run" id="break-run" aria-labelledby="run-title">
+    <div class="container container--wide">
+      <div class="sq-run__head" data-reveal>
+        <p class="sq-preface">The livestream is not separate from the business system.</p>
+        <h2 class="t-h2" id="run-title"><span class="line">Every event in the stream</span> <span class="line grad-text">updates CardsIQ.</span></h2>
+        <p class="t-lead">StreamIQ connects what happens during a live show to what happens operationally after it.</p>
+      </div>
+
+      <div class="sq-rail" data-reveal>
+        <div class="sq-rail__bar">
+          <p class="sq-rail__id"><span class="lv-status lv-status--live lv-status--caps lv-status--sm">Live</span><b>Break 04</b><span>Football Premium 02</span><span class="sq-mono">08:31:02 – 08:46:31</span></p>
+          <p class="sq-rail__now"><span class="sq-rail__nowk">Show clock</span><time class="sq-mono" data-rail-now>08:46:31 PM</time></p>
+          <button type="button" class="seq-ctl" data-seq-control="#rail-events"><span class="seq-ctl__ico"></span><span class="seq-ctl__label">Pause</span></button>
+        </div>
+
+        <div class="sq-lanes" aria-hidden="true">
+          <span class="sq-lanes__ph">Phase</span>
+          <span class="sq-lane sq-lane--stream">On stream</span>
+          <span class="sq-lanes__t">Time</span>
+          <span class="sq-lane sq-lane--ciq"><img src="assets/img/brand/cardsiq-mark.png" alt="" width="16" height="16">In CardsIQ</span>
+        </div>
+
+        <ol class="sq-evs" id="rail-events" data-sequence data-interval="1500" aria-label="Break 04 events: what happened on stream, and the CardsIQ update each one caused">
+          <li class="sq-ev" data-step data-phase="show" data-first>
+            <p class="sq-ev__ph" aria-hidden="true">Show</p>
+            <div class="sq-ev__stream"><p><span class="sr-only">On stream: </span><b>Break created</b><span>Break 04 opens on stream</span></p></div>
+            <div class="sq-ev__tc"><time class="sq-ev__t">08:31:02</time></div>
+            <div class="sq-ev__ciq"><p class="sq-ev__ui"><span class="sr-only">In CardsIQ: </span><span class="sq-id">BRK-1842-04</span><span class="lv-status lv-status--amber lv-status--sm"><span data-ico="box"></span>Filling</span><span class="lv-sub">Football Premium 02 · 32 spots</span></p></div>
+          </li>
+          <li class="sq-ev" data-step data-phase="break" data-first>
+            <p class="sq-ev__ph" aria-hidden="true">Break</p>
+            <div class="sq-ev__stream"><p><span class="sr-only">On stream: </span><b>Buyer assigned</b><span>Giants spot claimed</span></p></div>
+            <div class="sq-ev__tc"><time class="sq-ev__t">08:32:11</time></div>
+            <div class="sq-ev__ciq"><p class="sq-ev__ui"><span class="sr-only">In CardsIQ: </span><span class="lv-handle">nycards</span><span class="lv-pill lv-pill--team lv-team--giants">Giants</span><span class="lv-status lv-status--teal lv-status--sm">Assigned</span></p></div>
+          </li>
+          <li class="sq-ev" data-step data-phase="break">
+            <p class="sq-ev__ph" aria-hidden="true"></p>
+            <div class="sq-ev__stream"><p><span class="sr-only">On stream: </span><b>Product opened</b><span>Football Premium 02 on camera</span></p></div>
+            <div class="sq-ev__tc"><time class="sq-ev__t">08:34:05</time></div>
+            <div class="sq-ev__ciq"><p class="sq-ev__ui"><span class="sr-only">In CardsIQ: </span><span class="lv-status lv-status--live lv-status--caps lv-status--sm">Live</span><span class="lv-status lv-status--teal lv-status--sm">32/32 assigned</span></p></div>
+          </li>
+          <li class="sq-ev sq-ev--hit" data-step data-phase="production" data-first>
+            <p class="sq-ev__ph" aria-hidden="true">Production</p>
+            <div class="sq-ev__stream"><p><span class="sr-only">On stream: </span><b>Card hit</b><span>Malik Nabers · Prizm Gold /10</span></p></div>
+            <div class="sq-ev__tc"><time class="sq-ev__t">08:41:14</time></div>
+            <div class="sq-ev__ciq"><p class="sq-ev__ui"><span class="sr-only">In CardsIQ: </span><span class="lv-thumb lv-thumb--sm sq-gold" aria-hidden="true"></span><span class="lv-pill lv-pill--grade">PSA 10.0</span><span class="lv-pill lv-pill--team lv-team--giants">Giants</span><span class="lv-sub">Spot 24 → nycards</span></p></div>
+          </li>
+          <li class="sq-ev" data-step data-phase="post" data-first>
+            <p class="sq-ev__ph" aria-hidden="true">Post-Break</p>
+            <div class="sq-ev__stream"><p><span class="sr-only">On stream: </span><b>Offer Sent</b><span>Instant buyback offer to nycards</span></p></div>
+            <div class="sq-ev__tc"><time class="sq-ev__t">08:41:15</time></div>
+            <div class="sq-ev__ciq"><p class="sq-ev__ui"><span class="sr-only">In CardsIQ: </span><span class="lv-pill lv-pill--fmv">$1,420.00</span><span class="sq-op" aria-hidden="true">×</span><span class="lv-pill lv-pill--rate">90.0%</span><span class="sq-op" aria-hidden="true">=</span><span class="lv-pill lv-pill--offer">$1,278.00</span><span class="lv-status lv-status--sent lv-status--sm"><span data-ico="send"></span>Offer Sent</span></p></div>
+          </li>
+          <li class="sq-ev" data-step data-phase="post">
+            <p class="sq-ev__ph" aria-hidden="true"></p>
+            <div class="sq-ev__stream"><p><span class="sr-only">On stream: </span><b>Offer accepted</b><span>nycards takes the offer</span></p></div>
+            <div class="sq-ev__tc"><time class="sq-ev__t">08:43:02</time></div>
+            <div class="sq-ev__ciq"><p class="sq-ev__ui"><span class="sr-only">In CardsIQ: </span><span class="lv-handle">nycards</span><span class="lv-pill lv-pill--offer">$1,278.00</span><span class="lv-status lv-status--teal lv-status--caps lv-status--sm">Live break</span></p></div>
+          </li>
+          <li class="sq-ev" data-step data-phase="post">
+            <p class="sq-ev__ph" aria-hidden="true"></p>
+            <div class="sq-ev__stream"><p><span class="sr-only">On stream: </span><b>Verification passed</b><span>Identity, card, account, duplicate</span></p></div>
+            <div class="sq-ev__tc"><time class="sq-ev__t">08:44:10</time></div>
+            <div class="sq-ev__ciq"><p class="sq-ev__ui"><span class="sr-only">In CardsIQ: </span><span class="lv-status lv-status--ok lv-status--sm"><span data-ico="checkc"></span>Verified</span><span class="lv-sub">Identity · Card · Account · Duplicate</span></p></div>
+          </li>
+          <li class="sq-ev sq-ev--end" data-step data-phase="post">
+            <p class="sq-ev__ph" aria-hidden="true"></p>
+            <div class="sq-ev__stream"><p><span class="sr-only">On stream: </span><b>Completed</b><span>Transaction record closed</span></p></div>
+            <div class="sq-ev__tc"><time class="sq-ev__t">08:46:31</time></div>
+            <div class="sq-ev__ciq"><p class="sq-ev__ui"><span class="sr-only">In CardsIQ: </span><span class="lv-status lv-status--ok"><span data-ico="dcheck"></span>Completed</span><span class="lv-link">View Transaction <span data-ico="external"></span></span></p></div>
+          </li>
+        </ol>
+
+        <ol class="sq-phases" aria-label="StreamIQ phases">
+          <li data-phase="show"><b>Show</b><span>Create the live production session and connect the products, people, and operational context that belong to it.</span></li>
+          <li data-phase="break"><b>Break</b><span>Open a break, assign products, and map every spot to a buyer.</span></li>
+          <li data-phase="production"><b>Production</b><span>Bridge scenes and program output into the live workspace.</span></li>
+          <li data-phase="post"><b>Post-Break</b><span>Turn hits into offers, fulfillment, and settled history.</span></li>
+        </ol>
+      </div>
+      <p class="sq-note"><span class="demo-tag">Illustrative Break 04 record · real CardsIQ status pills</span></p>
+    </div>
+  </section>
+
+  <!-- ============================================================ WORKSPACE: Product & Break Workspace (180938 / 180947 / 181011) -->
+  <section class="section sq-wsec" id="workspace" aria-labelledby="ws-title">
+    <div class="container container--wide">
+      <div class="sq-head" data-reveal>
+        <div class="sq-kicker"><p class="eyebrow">Product &amp; Break Workspace</p><p class="sq-stamp"><time>8:44 PM</time><b>Staging Break #5</b></p></div>
+        <h2 class="t-h2" id="ws-title">Build every break <span class="grad-text">from real inventory.</span></h2>
+        <p class="t-lead">Assign products to the show, stage the next break, and start it without leaving production. Products arrive from inventory with their cards, floor, and ceiling already attached.</p>
+      </div>
+
+      <ol class="sq-caps" aria-hidden="true">
+        <li><span>01</span>Products and breaks in one show</li>
+        <li><span>02</span>The current break and what's next</li>
+      </ol>
+
+      <div class="lv-panel sq-ws" data-sequence data-interval="1100" data-reveal>
+        <div class="lv-panel__head sq-ws__head">
+          <div>
+            <span class="sq-pilleye">StreamIQ Production</span>
+            <p class="lv-title">Product &amp; Break Workspace</p>
+            <p class="lv-desc">This is the source of truth for the stream. Assign products to the show, stage the next break, and review completed products without leaving production.</p>
+          </div>
+          <p class="sq-cnts"><span class="sq-cnt is-on">2 Assigned</span><span class="sq-cnt">1 Available</span><span class="sq-cnt">3 Completed</span></p>
+        </div>
+
+        <div class="sq-ws__cols">
+          <!-- Products for this show -->
+          <div class="sq-ws__prod">
+            <div class="sq-ws__sub">
+              <div>
+                <p class="lv-eyebrow lv-eyebrow--teal">Stream products</p>
+                <p class="sq-ws__h">Products for this show</p>
+                <p class="lv-desc">Assigned products can move directly into the next break. Available products must be assigned to the show first.</p>
+              </div>
+              <span class="sq-cnt sq-cnt--sm">6 products</span>
+            </div>
+
+            <div class="sq-grp"><p class="sq-grp__k">Assigned to show <span class="lv-count">2</span></p><span class="sq-grp__hint">Select to stage →</span></div>
+            <ul class="sq-prods">
+              <li class="sq-prod sq-prod--pick" data-step>
+                <div class="sq-prod__main">
+                  <p class="sq-prod__name"><span class="lv-name lv-name--caps">Football Premium 03</span><span class="sq-tag">Assigned</span></p>
+                  <div class="lv-chips"><span class="lv-tier lv-tier--closed">Closed Break</span><span class="lv-tier lv-tier--floor"><b>Floor</b> $150.00–$400.00</span><span class="lv-tier lv-tier--ceiling"><b>Ceiling</b> $1,000.00–$1,500.00</span></div>
+                </div>
+                <span class="sq-prod__act">
+                  <span class="lv-btn lv-btn--teal lv-btn--sm sq-pre">Add to Break →</span>
+                  <span class="lv-btn lv-btn--solid lv-btn--sm sq-post">In Next Break</span>
+                </span>
+              </li>
+              <li class="sq-prod">
+                <div class="sq-prod__main">
+                  <p class="sq-prod__name"><span class="lv-name lv-name--caps">Football Rookies 03</span><span class="sq-tag">Assigned</span></p>
+                  <div class="lv-chips"><span class="lv-tier lv-tier--closed">Closed Break</span><span class="lv-tier lv-tier--floor"><b>Floor</b> $100.00–$250.00</span><span class="lv-tier lv-tier--ceiling"><b>Ceiling</b> $500.00–$1,000.00</span></div>
+                </div>
+                <span class="sq-prod__act"><span class="lv-btn lv-btn--teal lv-btn--sm">Add to Break →</span></span>
+              </li>
+            </ul>
+
+            <div class="sq-grp"><p class="sq-grp__k">Available <span class="lv-count">1</span></p><span class="sq-grp__hint">Click to assign · drag to next break →</span></div>
+            <ul class="sq-prods">
+              <li class="sq-prod">
+                <div class="sq-prod__main">
+                  <p class="sq-prod__name"><span class="lv-name lv-name--caps">Football Slots 01</span></p>
+                  <div class="lv-chips"><span class="lv-tier lv-tier--open">Open Break</span><span class="lv-tier lv-tier--floor"><b>Floor</b> $100.00–$300.00</span><span class="lv-tier lv-tier--ceiling"><b>Ceiling</b> $800.00–$1,200.00</span></div>
+                </div>
+                <span class="sq-prod__act"><span class="lv-btn lv-btn--teal lv-btn--sm">Assign to Show</span></span>
+              </li>
+            </ul>
+
+            <div class="sq-grp"><p class="sq-grp__k">Completed <span class="lv-count">3</span></p><span class="sq-grp__hint">Read only</span></div>
+            <ul class="sq-prods sq-prods--done">
+              <li class="sq-prod"><p class="sq-prod__name"><span class="lv-name lv-name--caps">Football Rookies 02</span><span class="sq-tag sq-tag--ok">Completed</span></p><span class="lv-sub">Break 03</span></li>
+              <li class="sq-prod"><p class="sq-prod__name"><span class="lv-name lv-name--caps">Football Premium 01</span><span class="sq-tag sq-tag--ok">Completed</span></p><span class="lv-sub">Break 02</span></li>
+              <li class="sq-prod"><p class="sq-prod__name"><span class="lv-name lv-name--caps">Football Rookies 01</span><span class="sq-tag sq-tag--ok">Completed</span></p><span class="lv-sub">Break 01</span></li>
+            </ul>
+          </div>
+
+          <!-- Build Next Break -->
+          <div class="sq-ws__next">
+            <div class="sq-ws__sub">
+              <div>
+                <p class="lv-eyebrow sq-ws__k">Next break</p>
+                <p class="sq-ws__h">Build Next Break</p>
+                <p class="lv-desc">Move assigned products from the left into this staging area. When the break is ready, start it and this workspace remains the stream source of truth.</p>
+              </div>
+              <span class="lv-status lv-status--violet">Break #5</span>
+            </div>
+
+            <div class="lv-tiles sq-ws__tiles" style="--tiles: 3">
+              <div class="lv-tile"><p class="lv-tile__k">Products</p><p class="lv-tile__v"><span class="sq-pre">0</span><span class="sq-post">1</span></p></div>
+              <div class="lv-tile"><p class="lv-tile__k">Cards</p><p class="lv-tile__v"><span class="sq-pre">0</span><span class="sq-post">10</span></p></div>
+              <div class="lv-tile sq-tile--cyan"><p class="lv-tile__k">Spots</p><p class="lv-tile__v">32</p></div>
+            </div>
+
+            <div class="sq-fill">
+              <p class="lv-eyebrow lv-eyebrow--teal">Fill type</p>
+              <div class="sq-fill__row">
+                <span class="lv-input sq-fill__sel">NFL Teams · 32 spots<span data-ico="down"></span></span>
+                <span class="lv-btn sq-fill__btn"><span data-ico="plus"></span>Customize</span>
+              </div>
+              <div class="sq-fill__preset"><div><p class="sq-fill__name">NFL Teams</p><p class="lv-sub">32 NFL teams</p></div><span class="sq-cnt sq-cnt--sm sq-cnt--teal">32 spots</span></div>
+            </div>
+
+            <div class="sq-zone sq-pre">
+              <span class="sq-zone__ico"><span data-ico="arrow"></span></span>
+              <p class="sq-zone__t">Stage the next break</p>
+              <p class="lv-sub">Click Add to Break or drag any product here.</p>
+            </div>
+            <ol class="sq-staged sq-post" data-step>
+              <li>
+                <span class="sq-staged__n">1</span>
+                <div>
+                  <p class="lv-name lv-name--caps">Football Premium 03</p>
+                  <div class="lv-chips"><span class="lv-tier lv-tier--closed">Closed Break</span><span class="lv-tier lv-tier--floor"><b>Floor</b> $150.00–$400.00</span><span class="lv-tier lv-tier--ceiling"><b>Ceiling</b> $1,000.00–$1,500.00</span></div>
+                </div>
+                <span class="sq-staged__rm">Remove</span>
+              </li>
+            </ol>
+
+            <div class="sq-start" data-step>
+              <span class="lv-btn lv-btn--solid sq-start__btn"><span data-ico="playc"></span><span class="sq-pre">Start Break</span><span class="sq-post">Start Break · 1 product</span></span>
+              <p class="lv-sub">Starting the break moves these products into the live break workflow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="sq-note"><span class="demo-tag">Illustrative show products · real CardsIQ workspace</span></p>
+    </div>
+  </section>
+
+  <!-- ============================================================ TEAM BOARD: Break #5 team assignments (181033 / 181234) -->
+  <section class="section sq-bsec" id="team-board" aria-labelledby="board-title">
+    <div class="container container--wide">
+      <div class="sq-split" data-reveal>
+        <div>
+          <div class="sq-kicker"><p class="eyebrow">Team assignments</p><p class="sq-stamp"><time>8:51 PM</time><b>Break #5 filling</b></p></div>
+          <h2 class="t-h2" id="board-title">Every spot <span class="grad-text">mapped to a buyer.</span></h2>
+        </div>
+        <div class="sq-split__copy">
+          <p class="t-lead">Assign a marketplace username to every team spot, then mark the break ready to go live.</p>
+          <p class="sq-cap"><span>03</span>Buyers linked to teams and hits</p>
+        </div>
+      </div>
+
+      <div class="lv-panel sq-board" data-reveal>
+        <div class="sq-board__head">
+          <div class="sq-board__id">
+            <p class="sq-board__pills"><span class="lv-status lv-status--amber lv-status--caps lv-status--sm"><span class="sq-dot sq-dot--amber"></span>Filling</span><span class="lv-status lv-status--teal lv-status--caps lv-status--sm">Team assignments</span></p>
+            <p class="lv-title">2026 NFL MIXER - Break #5</p>
+            <p class="sq-prodgrp"><span class="sq-prodgrp__name">Football Premium 03</span><span class="lv-tier lv-tier--floor"><b>Floor</b> $150.00–$400.00</span><span class="lv-tier lv-tier--ceiling"><b>Ceiling</b> $1,000.00–$1,500.00</span></p>
+          </div>
+          <span class="lv-barcode sq-label"><span class="lv-barcode__bars"></span><span class="lv-barcode__id"><small>Whatnot</small>BRK-1842-05</span></span>
+        </div>
+
+        <ul class="sq-teams" aria-label="32 team spots, 28 assigned. Open spots: Carolina, Jacksonville, Miami, Tennessee.">
+          <li>ARI</li><li>ATL</li><li>BAL</li><li>BUF</li><li class="is-open">CAR<span class="sr-only"> open</span></li><li>CHI</li><li>CIN</li><li>CLE</li>
+          <li>DAL</li><li>DEN</li><li>DET</li><li>GB</li><li>HOU</li><li>IND</li><li class="is-open">JAX<span class="sr-only"> open</span></li><li>KC</li>
+          <li>LV</li><li>LAC</li><li>LAR</li><li class="is-open">MIA<span class="sr-only"> open</span></li><li>MIN</li><li>NE</li><li>NO</li><li>NYG</li>
+          <li>NYJ</li><li>PHI</li><li>PIT</li><li>SF</li><li>SEA</li><li>TB</li><li class="is-open">TEN<span class="sr-only"> open</span></li><li>WAS</li>
+        </ul>
+
+        <div class="lv-toolbar sq-board__bar">
+          <p class="sq-fillprog"><b>Fill progress</b><span class="sq-cnt sq-cnt--sm sq-cnt--teal">28/32 assigned</span><span class="sq-cnt sq-cnt--sm sq-cnt--ok">26 verified</span></p>
+          <span class="lv-btn lv-btn--sm sq-hide-s"><span data-ico="eye"></span>Quick View</span>
+          <span class="lv-search sq-board__search sq-hide-s"><span data-ico="search"></span>Find team or username</span>
+          <div class="lv-toolbar__end">
+            <span class="lv-iconbtn sq-hide-m" aria-hidden="true"><span data-ico="gift"></span></span>
+            <span class="lv-iconbtn lv-iconbtn--muted sq-hide-m" aria-hidden="true"><span data-ico="download"></span></span>
+            <span class="lv-iconbtn sq-hide-m" aria-hidden="true"><span data-ico="upload"></span></span>
+            <span class="lv-btn is-disabled"><span data-ico="radio"></span>Start Live Break</span>
+          </div>
+        </div>
+
+        <div class="sq-board__tables">
+          <table class="lv-table sq-spots">
+            <caption class="sr-only">Break #5 team assignments, spots 1 to 8</caption>
+            <thead><tr><th scope="col">Team</th><th scope="col">Whatnot username</th><th scope="col">Verified</th></tr></thead>
+            <tbody>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">ARI</span><div><p class="lv-name">Arizona Cardinals</p><p class="lv-sub">Spot 1</p></div></div></td><td><span class="lv-handle">ripking</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">ATL</span><div><p class="lv-name">Atlanta Falcons</p><p class="lv-sub">Spot 2</p></div></div></td><td><span class="lv-handle">slabhaus</span></td><td><span class="lv-status lv-status--teal lv-status--sm">Assigned</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">BAL</span><div><p class="lv-name">Baltimore Ravens</p><p class="lv-sub">Spot 3</p></div></div></td><td><span class="lv-handle">vaultcollects</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">BUF</span><div><p class="lv-name">Buffalo Bills</p><p class="lv-sub">Spot 4</p></div></div></td><td><span class="lv-handle">buffalocards</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+              <tr class="sq-spot--open"><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">CAR</span><div><p class="lv-name">Carolina Panthers</p><p class="lv-sub">Spot 5</p></div></div></td><td><span class="sq-uname">username</span></td><td><span class="lv-status lv-status--muted lv-status--sm">Unassigned</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">CHI</span><div><p class="lv-name">Chicago Bears</p><p class="lv-sub">Spot 6</p></div></div></td><td><span class="lv-handle">slabcity</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">CIN</span><div><p class="lv-name">Cincinnati Bengals</p><p class="lv-sub">Spot 7</p></div></div></td><td><span class="lv-handle">northstarcards</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">CLE</span><div><p class="lv-name">Cleveland Browns</p><p class="lv-sub">Spot 8</p></div></div></td><td><span class="lv-handle">waxroom</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+            </tbody>
+          </table>
+          <table class="lv-table sq-spots sq-spots--b">
+            <caption class="sr-only">Break #5 team assignments, spots 24 to 31</caption>
+            <thead><tr><th scope="col">Team</th><th scope="col">Whatnot username</th><th scope="col">Verified</th></tr></thead>
+            <tbody>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">NYG</span><div><p class="lv-name">New York Giants</p><p class="lv-sub">Spot 24</p></div></div></td><td><span class="lv-handle">nycards</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">NYJ</span><div><p class="lv-name">New York Jets</p><p class="lv-sub">Spot 25</p></div></div></td><td><span class="lv-handle">hobbyhouse</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">PHI</span><div><p class="lv-name">Philadelphia Eagles</p><p class="lv-sub">Spot 26</p></div></div></td><td><span class="lv-handle">vaultcollects</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">PIT</span><div><p class="lv-name">Pittsburgh Steelers</p><p class="lv-sub">Spot 27</p></div></div></td><td><span class="lv-handle">casehits</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">SF</span><div><p class="lv-name">San Francisco 49ers</p><p class="lv-sub">Spot 28</p></div></div></td><td><span class="lv-handle">collector92</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">SEA</span><div><p class="lv-name">Seattle Seahawks</p><p class="lv-sub">Spot 29</p></div></div></td><td><span class="lv-handle">slabcity</span></td><td><span class="lv-status lv-status--ok lv-status--sm">Verified</span></td></tr>
+              <tr><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">TB</span><div><p class="lv-name">Tampa Bay Buccaneers</p><p class="lv-sub">Spot 30</p></div></div></td><td><span class="lv-handle">packwarrior</span></td><td><span class="lv-status lv-status--teal lv-status--sm">Assigned</span></td></tr>
+              <tr class="sq-spot--open"><td><div class="sq-team"><span class="sq-team__ab" aria-hidden="true">TEN</span><div><p class="lv-name">Tennessee Titans</p><p class="lv-sub">Spot 31</p></div></div></td><td><span class="sq-uname">username</span></td><td><span class="lv-status lv-status--muted lv-status--sm">Unassigned</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="lv-foot"><span class="sq-foot-a">Showing spots 1–8 and 24–31 of 32</span><span class="sq-foot-b">Showing spots 1–8 of 32</span><span class="demo-tag">Illustrative break · real CardsIQ team board</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ OUTCOMES: the break becomes data -->
+  <section class="section sq-data" aria-labelledby="data-title">
+    <div class="ambient ambient--violet sq-data__amb" aria-hidden="true"></div>
+    <div class="container container--wide">
+      <div class="sq-data__grid">
+        <figure class="sq-data__card" data-tilt="3" data-reveal>
+          <span class="slab sq-data__slab"><span class="slab__glow"></span><img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="2023 Donruss Optic Joe Burrow Downtown! #D4, graded PSA 9 MINT, cert 103207853" width="380" height="638" loading="lazy"><span class="slab__floor"></span></span>
+          <figcaption class="sq-data__cap">
+            <span class="sq-stamp"><time>8:52:03 PM</time><b>Card hit · Break 04</b></span>
+            <span class="sq-data__chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #103207853</span></span>
+          </figcaption>
+        </figure>
+
+        <div class="sq-data__copy">
+          <div class="sq-head" data-reveal>
+            <p class="eyebrow">From the Break 04 record</p>
+            <h2 class="t-h2" id="data-title">The break <span class="grad-text">becomes data.</span></h2>
+          </div>
+          <ol class="sq-outs" data-reveal>
+            <li class="sq-out">
+              <span class="sq-out__n">01</span>
+              <div>
+                <h3 class="sq-out__name">Fewer manual handoffs</h3>
+                <p class="sq-out__line">Fills, assignments, hits, and offers write to CardsIQ as they happen.</p>
+                <p class="sq-out__ev"><span class="sq-mono">8:52:03 PM</span><span class="sq-out__k">Card hit</span><span class="sq-op" aria-hidden="true">→</span><span class="sq-mono">8:52:04 PM</span><span class="lv-status lv-status--sent lv-status--sm"><span data-ico="send"></span>Offer Sent</span></p>
+              </div>
+            </li>
+            <li class="sq-out">
+              <span class="sq-out__n">02</span>
+              <div>
+                <h3 class="sq-out__name">Buyer context preserved</h3>
+                <p class="sq-out__line">Every spot is mapped to a buyer, so every hit already knows who owns it.</p>
+                <p class="sq-out__ev"><span class="lv-handle">northstarcards</span><span class="lv-pill lv-pill--team lv-team--bengals">Bengals</span><span class="sq-out__k">Spot 7</span><span class="lv-status lv-status--ok lv-status--sm">Verified</span></p>
+              </div>
+            </li>
+            <li class="sq-out">
+              <span class="sq-out__n">03</span>
+              <div>
+                <h3 class="sq-out__name">Instant Buybacks</h3>
+                <p class="sq-out__line">Eligible hits become buyback offers while the break is still live.</p>
+                <p class="sq-out__ev"><span class="lv-pill lv-pill--fmv">$1,030.00</span><span class="sq-op" aria-hidden="true">×</span><span class="lv-pill lv-pill--rate">90.0%</span><span class="sq-op" aria-hidden="true">=</span><span class="lv-pill lv-pill--offer">$927.00</span><span class="lv-status lv-status--ok lv-status--sm"><span data-ico="dcheck"></span>Completed</span></p>
+              </div>
+            </li>
+            <li class="sq-out">
+              <span class="sq-out__n">04</span>
+              <div>
+                <h3 class="sq-out__name">Clean break history</h3>
+                <p class="sq-out__line">Every break keeps its own ledger, from first spot to settled offer.</p>
+                <p class="sq-out__ev"><span class="sq-id">BRK-1842-04</span><span class="sq-out__k">Acquisition #7C41B2E9</span><span class="sq-op" aria-hidden="true">→</span><span class="sq-dest">Destination: Inventory</span></p>
+              </div>
+            </li>
+            <li class="sq-out">
+              <span class="sq-out__n">05</span>
+              <div>
+                <h3 class="sq-out__name">Better operational visibility</h3>
+                <p class="sq-out__line">Shows, products, fills, production, and hits in one live workspace.</p>
+                <p class="sq-out__ev"><span class="lv-status lv-status--live lv-status--caps lv-status--sm">Live</span><span class="sq-id">STR-1842</span><span class="sq-out__k">5 breaks · 6 products</span><span class="lv-platform">Whatnot</span></p>
+              </div>
+            </li>
+          </ol>
+          <p class="sq-note sq-note--left"><span class="demo-tag">Illustrative record · real CardsIQ components</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ STREAM HISTORY: one show, separate ledgers (181131 / 181138 / 181204) -->
+  <section class="section sq-hsec" id="history" aria-labelledby="hist-title">
+    <div class="container container--wide">
+      <div class="section-head section-head--center sq-hsec__head" data-reveal>
+        <div class="sq-kicker sq-kicker--center"><p class="eyebrow">Stream History</p><p class="sq-stamp"><time>8:55 PM</time><b>Still live</b></p></div>
+        <h2 class="t-h2" id="hist-title"><span class="line">One show. Multiple breaks.</span> <span class="line t-dim">Separate ledgers.</span></h2>
+        <p class="t-lead">Every break remains independently auditable while still belonging to the larger show and production session.</p>
+      </div>
+
+      <div class="lv-panel sq-hist" data-reveal>
+        <div class="lv-panel__head">
+          <div>
+            <p class="lv-eyebrow">StreamIQ</p>
+            <p class="lv-title">Stream History</p>
+            <p class="lv-desc">Review scheduled, active, and completed streams by platform with products, breaks, cards, and offer totals.</p>
+          </div>
+        </div>
+        <div class="sq-hist__tabs">
+          <div class="lv-tabs" aria-hidden="true"><span class="lv-tab is-on">All Streams <span class="lv-count">18</span></span><span class="lv-tab">Scheduled <span class="lv-count">1</span></span><span class="lv-tab">Live <span class="lv-count">1</span></span><span class="lv-tab">Awaiting Fulfillment <span class="lv-count">2</span></span><span class="lv-tab">Completed <span class="lv-count">14</span></span></div>
+        </div>
+
+        <table class="lv-table sq-streams">
+          <caption class="sr-only">Stream History for today: 2026 NFL MIXER is live with 5 breaks, and a TikTok LIVE stream is scheduled</caption>
+          <thead><tr><th scope="col">Status</th><th scope="col">Stream</th><th scope="col">Breaker(s)</th><th scope="col">Platform</th><th scope="col" class="lv-num">Products</th><th scope="col" class="lv-num">Breaks</th><th scope="col"><span class="sr-only">Expand</span></th></tr></thead>
+          <tbody>
+            <tr class="sq-dayrow"><td colspan="7"><p class="lv-dayhead">Today · Friday · October 2nd <span class="sq-dayn">2026 <span class="sq-cnt sq-cnt--sm">2 shows</span></span></p></td></tr>
+            <tr class="sq-srow sq-srow--live">
+              <td><span class="lv-status lv-status--live">Live</span></td>
+              <td><span class="lv-k">Stream</span><p class="lv-name lv-name--caps">2026 NFL Mixer</p><p class="lv-sub sq-mono">STR-1842</p></td>
+              <td><span class="lv-k">Breaker(s)</span><span class="lv-people"><span class="lv-av">JD</span><span class="lv-av">SM</span>Jordan, Sam</span></td>
+              <td><span class="lv-k">Platform</span><span class="lv-platform">Whatnot</span></td>
+              <td class="lv-num"><span class="lv-k">Products</span><b class="sq-n">6</b></td>
+              <td class="lv-num"><span class="lv-k">Breaks</span><b class="sq-n">5</b></td>
+              <td><span class="lv-iconbtn sq-exp" aria-hidden="true"><span data-ico="up"></span></span></td>
+            </tr>
+            <tr class="sq-xrow">
+              <td colspan="7">
+                <div class="sq-x">
+                  <div class="sq-x__top">
+                    <div class="lv-tiles sq-x__tiles" style="--tiles: 6">
+                      <div class="lv-tile"><p class="lv-tile__k">Breaks</p><p class="lv-tile__v">5</p></div>
+                      <div class="lv-tile"><p class="lv-tile__k">Stream cost</p><p class="lv-tile__v">$22,210.00</p></div>
+                      <div class="lv-tile"><p class="lv-tile__k">Sales</p><p class="lv-tile__v">N/A</p></div>
+                      <div class="lv-tile"><p class="lv-tile__k">Profit</p><p class="lv-tile__v">N/A</p></div>
+                      <div class="lv-tile lv-tile--teal"><p class="lv-tile__k">Buybacks</p><p class="lv-tile__v">10</p></div>
+                      <div class="lv-tile lv-tile--teal"><p class="lv-tile__k">Buyback volume</p><p class="lv-tile__v">$6,002.10</p></div>
+                    </div>
+                    <p class="sq-x__btns"><span class="lv-btn lv-btn--teal lv-btn--sm"><span data-ico="dollar"></span>See Full Breakdown</span><span class="lv-btn lv-btn--white lv-btn--sm">Hide Products <span data-ico="up"></span></span></p>
+                  </div>
+
+                  <table class="lv-table sq-breaks">
+                    <caption class="sr-only">Breaks in 2026 NFL MIXER, each with its own ledger</caption>
+                    <thead><tr><th scope="col">Break / Product</th><th scope="col" class="lv-num">Offers</th><th scope="col">Breaker cost</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead>
+                    <tbody>
+                      <tr>
+                        <td><p class="sq-brk"><span class="sq-brk__n">Break 01</span><span class="sq-brk__d">Oct 2, 2026, 7:04 PM</span></p><p class="lv-name">Football Rookies 01</p><p class="lv-sub">32 buyers · 10 cards</p></td>
+                        <td class="lv-num"><span class="lv-k">Offers</span><b class="sq-n">4</b></td>
+                        <td><span class="lv-k">Breaker cost</span><b class="sq-n">$3,960.00</b></td>
+                        <td><span class="lv-k">Status</span><span class="lv-status lv-status--ok lv-status--sm"><span data-ico="checkc"></span>Completed</span></td>
+                        <td><span class="sq-acts" aria-hidden="true"><span class="lv-iconbtn sq-act"><span data-ico="printer"></span></span><span class="lv-iconbtn sq-act"><span data-ico="share"></span></span><span class="lv-iconbtn sq-act"><span data-ico="gift"></span></span><span class="lv-iconbtn"><span data-ico="down"></span></span></span></td>
+                      </tr>
+                      <tr>
+                        <td><p class="sq-brk"><span class="sq-brk__n">Break 02</span><span class="sq-brk__d">Oct 2, 2026, 7:31 PM</span></p><p class="lv-name">Football Premium 01</p><p class="lv-sub">29 buyers · 10 cards</p></td>
+                        <td class="lv-num"><span class="lv-k">Offers</span><b class="sq-n">3</b></td>
+                        <td><span class="lv-k">Breaker cost</span><b class="sq-n">$4,610.00</b></td>
+                        <td><span class="lv-k">Status</span><span class="lv-status lv-status--ok lv-status--sm"><span data-ico="checkc"></span>Completed</span></td>
+                        <td><span class="sq-acts" aria-hidden="true"><span class="lv-iconbtn sq-act"><span data-ico="printer"></span></span><span class="lv-iconbtn sq-act"><span data-ico="share"></span></span><span class="lv-iconbtn sq-act"><span data-ico="gift"></span></span><span class="lv-iconbtn"><span data-ico="down"></span></span></span></td>
+                      </tr>
+                      <tr>
+                        <td><p class="sq-brk"><span class="sq-brk__n">Break 03</span><span class="sq-brk__d">Oct 2, 2026, 7:58 PM</span></p><p class="lv-name">Football Rookies 02</p><p class="lv-sub">32 buyers · 10 cards</p></td>
+                        <td class="lv-num"><span class="lv-k">Offers</span><b class="sq-n">5</b></td>
+                        <td><span class="lv-k">Breaker cost</span><b class="sq-n">$3,880.00</b></td>
+                        <td><span class="lv-k">Status</span><span class="lv-status lv-status--ok lv-status--sm"><span data-ico="checkc"></span>Completed</span></td>
+                        <td><span class="sq-acts" aria-hidden="true"><span class="lv-iconbtn sq-act"><span data-ico="printer"></span></span><span class="lv-iconbtn sq-act"><span data-ico="share"></span></span><span class="lv-iconbtn sq-act"><span data-ico="gift"></span></span><span class="lv-iconbtn"><span data-ico="down"></span></span></span></td>
+                      </tr>
+                      <tr class="lv-row--hi sq-brow--live">
+                        <td><p class="sq-brk"><span class="sq-brk__n">Break 04</span><span class="sq-brk__d">Oct 2, 2026, 8:31 PM</span></p><p class="lv-name">Football Premium 02</p><p class="lv-sub">32/32 assigned · 10 cards</p></td>
+                        <td class="lv-num"><span class="lv-k">Offers</span><b class="sq-n">6</b></td>
+                        <td><span class="lv-k">Breaker cost</span><b class="sq-n">$4,820.00</b></td>
+                        <td><span class="lv-k">Status</span><span class="lv-status lv-status--live lv-status--sm">Live</span></td>
+                        <td><span class="sq-acts" aria-hidden="true"><span class="lv-iconbtn sq-act"><span data-ico="printer"></span></span><span class="lv-iconbtn sq-act"><span data-ico="share"></span></span><span class="lv-iconbtn sq-act"><span data-ico="gift"></span></span><span class="lv-iconbtn sq-exp"><span data-ico="up"></span></span></span></td>
+                      </tr>
+                      <tr class="sq-orow">
+                        <td colspan="5">
+                          <table class="lv-table sq-offers">
+                            <caption class="sr-only">Break 04 buyback offers, 3 of 6</caption>
+                            <thead><tr><th scope="col">User</th><th scope="col">Description</th><th scope="col">Reference price</th><th scope="col">Buyback %</th><th scope="col">Offer</th><th scope="col">Status</th></tr></thead>
+                            <tbody>
+                              <tr>
+                                <td><span class="lv-handle">nycards</span></td>
+                                <td><div class="lv-desc-cell"><span class="lv-thumb lv-thumb--sm sq-gold" aria-hidden="true"></span><div><p class="lv-name">2024 Panini Prizm Malik Nabers Gold /10</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 10.0</span><span class="lv-pill lv-pill--team lv-team--giants">Giants</span></div></div></div></td>
+                                <td><span class="lv-k">Reference price</span><span class="lv-pill lv-pill--fmv">$1,420.00</span></td>
+                                <td><span class="lv-k">Buyback %</span><span class="lv-pill lv-pill--rate">90.0%</span></td>
+                                <td><span class="lv-k">Offer</span><span class="lv-pill lv-pill--offer">$1,278.00</span></td>
+                                <td><span class="lv-k">Status</span><span class="sq-st"><span class="lv-status lv-status--ok lv-status--sm"><span data-ico="dcheck"></span>Completed</span><span class="lv-link">View Transaction <span data-ico="external"></span></span></span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="lv-handle">hobbyhouse</span></td>
+                                <td><div class="lv-desc-cell"><img class="lv-thumb lv-thumb--sm" src="assets/img/slabs/brady-2000-bowman-psa8.webp" alt="" width="900" height="1495" loading="lazy"><div><p class="lv-name">2000 Bowman Tom Brady #236</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 8.0</span><span class="lv-pill lv-pill--cert">Cert #82389068</span><span class="lv-pill lv-pill--team lv-team--patriots">Patriots</span></div></div></div></td>
+                                <td><span class="lv-k">Reference price</span><span class="lv-pill lv-pill--fmv">$1,180.00</span></td>
+                                <td><span class="lv-k">Buyback %</span><span class="lv-pill lv-pill--rate">90.0%</span></td>
+                                <td><span class="lv-k">Offer</span><span class="lv-pill lv-pill--offer">$1,062.00</span></td>
+                                <td><span class="lv-k">Status</span><span class="lv-status lv-status--sent lv-status--sm"><span data-ico="send"></span>Offer Sent</span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="lv-handle">northstarcards</span></td>
+                                <td><div class="lv-desc-cell"><img class="lv-thumb lv-thumb--sm" src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638" loading="lazy"><div><p class="lv-name">2023 Donruss Optic Joe Burrow Downtown! #D4</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #103207853</span><span class="lv-pill lv-pill--team lv-team--bengals">Bengals</span></div></div></div></td>
+                                <td><span class="lv-k">Reference price</span><span class="lv-pill lv-pill--fmv">$1,030.00</span></td>
+                                <td><span class="lv-k">Buyback %</span><span class="lv-pill lv-pill--rate">90.0%</span></td>
+                                <td><span class="lv-k">Offer</span><span class="lv-pill lv-pill--offer">$927.00</span></td>
+                                <td><span class="lv-k">Status</span><span class="sq-st"><span class="lv-status lv-status--ok lv-status--sm"><span data-ico="dcheck"></span>Completed</span><span class="lv-link">View Transaction <span data-ico="external"></span></span></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p class="sq-offers__more">Showing 3 of 6 offers in Break 04</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p class="sq-brk"><span class="sq-brk__n">Break 05</span><span class="sq-brk__d">Oct 2, 2026, 8:45 PM</span></p><p class="lv-name">Football Premium 03</p><p class="lv-sub">28/32 assigned · 10 cards</p></td>
+                        <td class="lv-num"><span class="lv-k">Offers</span><b class="sq-n">0</b></td>
+                        <td><span class="lv-k">Breaker cost</span><b class="sq-n">$4,940.00</b></td>
+                        <td><span class="lv-k">Status</span><span class="lv-status lv-status--amber lv-status--sm"><span data-ico="box"></span>Filling</span></td>
+                        <td><span class="sq-acts" aria-hidden="true"><span class="lv-iconbtn sq-act"><span data-ico="printer"></span></span><span class="lv-iconbtn sq-act"><span data-ico="share"></span></span><span class="lv-iconbtn sq-act"><span data-ico="gift"></span></span><span class="lv-iconbtn"><span data-ico="down"></span></span></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr class="sq-srow">
+              <td><span class="lv-status lv-status--teal lv-status--sm"><span data-ico="calendar"></span>Scheduled</span></td>
+              <td><span class="lv-k">Stream</span><p class="lv-name lv-name--caps">Late Night NFL Mixer</p><p class="lv-sub">Oct 2 · 11:00 PM</p></td>
+              <td><span class="lv-k">Breaker(s)</span><span class="lv-people"><span class="lv-av">SM</span>Sam</span></td>
+              <td><span class="lv-k">Platform</span><span class="lv-platform lv-platform--tiktok">TikTok LIVE</span></td>
+              <td class="lv-num"><span class="lv-k">Products</span><b class="sq-n">2</b></td>
+              <td class="lv-num"><span class="lv-k">Breaks</span><b class="sq-n">0</b></td>
+              <td><span class="lv-iconbtn sq-exp" aria-hidden="true"><span data-ico="down"></span></span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="lv-foot"><span>Showing 2 of 18 streams</span><span class="demo-tag">Illustrative show · real CardsIQ Stream History</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FAQ -->
+  <section class="section sq-faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="split-head">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Questions</p>
+          <h2 class="t-h2" id="faq-title">StreamIQ questions.</h2>
+          <p class="t-body">StreamIQ runs beside the platforms you already stream on.</p>
+          <p class="sq-connects"><span>Whatnot</span><span>TikTok LIVE</span><span>OBS program bridge</span><span>ALT + Card Ladder</span></p>
+        </div>
+        <div class="faq" data-reveal>
+          <details open>
+            <summary>Will StreamIQ slow the show down?</summary>
+            <div class="faq__a">No. The workspace is <strong>the source of truth for the stream</strong>. Spots, buyers, hits, and offers are captured as they happen, so nothing has to be re-keyed after the show.</div>
+          </details>
+          <details>
+            <summary>How does StreamIQ connect to our production?</summary>
+            <div class="faq__a">Through the <strong>OBS program bridge</strong>. StreamIQ bridges scenes and program output into the live workspace, alongside fills, buyer assignments, and card hits.</div>
+          </details>
+          <details>
+            <summary>Does each break keep its own records?</summary>
+            <div class="faq__a">Yes. One show can run multiple breaks, and <strong>every break keeps its own ledger</strong>. Each one remains independently auditable while still belonging to the larger show and production session.</div>
+          </details>
+          <details>
+            <summary>What happens after a card is hit?</summary>
+            <div class="faq__a">The hit is written to the break with its buyer already attached. StreamIQ turns hits into <strong>offers, fulfillment, and settled history</strong>, so eligible cards can become instant buybacks without rebuilding the transaction after the stream. <a class="link-arrow" href="instant-buybacks.html">See Instant Buybacks <span data-ico="arrow"></span></a></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FINAL CTA: the stream bin -->
+  <section class="cta-final sq-final" aria-labelledby="final-title">
+    <div class="container container--wide">
+      <div class="sq-final__banner">
+        <div class="sq-final__copy">
+          <p class="eyebrow">Built on CardsIQ</p>
+          <h2 class="cta-final__title" id="final-title"><span class="line">Run the stream</span> <span class="line grad-text">and the operation together.</span></h2>
+          <p class="cta-final__sub">Connect products, breaks, buyer assignments, scenes, hits, offers, fulfillment, and history inside one live production system.</p>
+          <div class="cta-final__actions btn-row">
+            <a class="btn btn--primary btn--lg" data-cta="partner" data-interest="streamiq" href="become-a-partner.html">Become a partner <span data-ico="arrow"></span></a>
+          </div>
+          <p class="cta-note sq-final__note">Watching breaks as a collector? <a data-cta="create-account" href="#create-account">Create account</a></p>
+        </div>
+
+        <figure class="sq-bin" aria-labelledby="bin-cap">
+          <div class="sq-bin__slabs" aria-hidden="true">
+            <span class="slab sq-bin__s sq-bin__s--1"><img src="assets/img/slabs/maye-2024-prizm-red-sparkle-psa10.webp" alt="" width="535" height="900" loading="lazy"></span>
+            <span class="slab sq-bin__s sq-bin__s--2"><img src="assets/img/slabs/brady-2000-bowman-psa8.webp" alt="" width="900" height="1495" loading="lazy"></span>
+            <span class="slab sq-bin__s sq-bin__s--3"><span class="slab__glow"></span><img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638" loading="lazy"></span>
+          </div>
+          <div class="sq-bin__label" aria-hidden="true">
+            <span class="lv-barcode__bars"></span>
+            <span class="lv-barcode__id"><small>Whatnot</small>STR-1842</span>
+            <span class="sq-bin__meta">5 breaks · 50 cards<small>Stick on stream bin</small></span>
+          </div>
+          <figcaption class="sq-bin__cap" id="bin-cap">
+            <span class="sq-bin__k">After the show, every card from STR-1842 is reconciled</span>
+            <span class="sq-bin__dispo"><span class="lv-status lv-status--sent lv-status--sm"><span data-ico="truck"></span>Ship</span><span class="lv-status lv-status--amber lv-status--sm"><span data-ico="pausec"></span>Hold</span><span class="lv-status lv-status--ok lv-status--sm"><span data-ico="box"></span>Inventory</span></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="assets/js/ciq.js" defer></script>
+<script src="assets/js/page-streamiq.js" defer></script>
+
+<nav id="ciq-ver" aria-label="Design prototype version"><span>Design prototype</span><a href="../v1/streamiq.html" title="First CRO demo" aria-label="v1: First CRO demo">v1</a><a href="../v2/streamiq.html" title="Combined demo, Oct 6" aria-label="v2: Combined demo, Oct 6" aria-current="page">v2</a><a href="../v2.1/streamiq.html" title="Acquisitions + StreamIQ, current" aria-label="v2.1: Acquisitions + StreamIQ, current">v2.1</a></nav>
+<style>
+#ciq-ver{position:fixed;right:16px;bottom:16px;z-index:80;display:flex;align-items:center;gap:4px;padding:4px 4px 4px 14px;border-radius:999px;background:rgba(8,12,28,.92);box-shadow:0 0 0 1px rgba(148,163,200,.28),0 18px 40px -12px rgba(0,0,0,.8);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 13px/1 Outfit,system-ui,-apple-system,"Segoe UI",sans-serif}
+#ciq-ver span{margin-right:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8d97b5;white-space:nowrap}
+#ciq-ver a{display:inline-grid;place-items:center;min-width:44px;height:34px;padding:0 12px;border-radius:999px;color:#c9d1ea;text-decoration:none}
+#ciq-ver a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#ciq-ver a:focus-visible{outline:2px solid #2fd3e6;outline-offset:2px}
+#ciq-ver a[aria-current]{color:#fff;background:linear-gradient(135deg,#2f7bff,#7b5cff)}
+@media (max-width:420px){#ciq-ver span{display:none}#ciq-ver{padding-left:4px}}
+@media print{#ciq-ver{display:none}}
+</style>
+<script>(function(){var q=location.search+location.hash;if(!q)return;document.querySelectorAll('#ciq-ver a').forEach(function(a){a.setAttribute('href',a.getAttribute('href')+q)})})();</script>
+</body>
+</html>

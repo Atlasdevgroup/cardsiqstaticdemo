@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instant Buybacks | CardsIQ</title>
+  <meta name="description" content="Card acquisition, instant offers, verification, and settlement infrastructure powered by CardsIQ.">
+  <link rel="icon" href="assets/img/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
+  <link rel="stylesheet" href="assets/css/ciq.css">
+  <link rel="stylesheet" href="assets/css/page-buybacks.css">
+</head>
+<body data-page="buybacks" data-primary-cta="partner" data-interest="instant-buybacks" data-primary-label="Become a buyback partner">
+<script src="assets/js/shell.js"></script>
+
+<main id="main" class="page">
+
+  <!-- ============================================================ HERO: the transaction, shown -->
+  <section class="b-hero" data-hero aria-labelledby="hero-title">
+    <div class="ambient ambient--blue" style="width:820px;height:560px;right:-160px;top:280px;opacity:.5"></div>
+    <div class="ambient ambient--violet" style="width:520px;height:460px;left:18%;top:520px;opacity:.28"></div>
+    <div class="container container--wide">
+      <p class="eyebrow">Instant Buybacks</p>
+      <h1 class="t-hero b-hero__title" id="hero-title"><span class="line">Turn break hits into</span> <span class="line"><span class="grad-text">instant buyer liquidity.</span></span></h1>
+
+      <div class="b-hero__row">
+        <p class="t-lead b-hero__lead">Turn eligible cards into immediate buyback opportunities while keeping the buyer, card, transaction, verification, and settlement record connected.</p>
+        <div class="btn-row" data-hero-cta>
+          <a class="btn btn--primary" data-cta="partner" data-interest="instant-buybacks" href="become-a-partner.html">Become a buyback partner <span data-ico="arrow"></span></a>
+          <a class="btn btn--secondary" href="#hit-to-settlement">See hit to settlement</a>
+        </div>
+      </div>
+
+      <!-- The hit and the offer it created: card, buyer, break, market value, offer on one ticket -->
+      <figure class="b-deal" data-tilt="3" aria-labelledby="deal-cap">
+        <figcaption class="sr-only" id="deal-cap">Instant offer ticket. Status: offer available.</figcaption>
+        <span class="b-deal__wire" aria-hidden="true"></span>
+        <div class="b-deal__card">
+          <div class="slab" data-depth="1">
+            <span class="slab__glow"></span>
+            <img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" width="380" height="638" alt="2023 Donruss Optic Joe Burrow Downtown! #D4, PSA 9 MINT, cert 103207853">
+            <span class="slab__floor"></span>
+          </div>
+        </div>
+
+        <div class="ui ui--glow b-ticket" data-state="0">
+          <div class="b-ticket__head">
+            <div class="b-ticket__id">
+              <span class="b-ticket__mark" aria-hidden="true"><span data-ico="buybacks"></span></span>
+              <div>
+                <p class="ui__title">Instant offer</p>
+                <p class="ui__sub t-mono">SKU CIQ-P123891</p>
+              </div>
+            </div>
+            <span class="status status--pending b-ticket__status" aria-hidden="true">Offer available</span>
+          </div>
+
+          <ol class="b-chain">
+            <li class="b-chain__i b-chain__i--card">
+              <span class="b-chain__node" aria-hidden="true"></span>
+              <span class="b-chain__k">Card</span>
+              <span class="b-chain__v">2023 Donruss Optic Joe Burrow Downtown! #D4</span>
+              <span class="b-chain__s"><span class="chip chip--grade">PSA 9</span><span class="t-mono">Cert 103207853</span></span>
+            </li>
+            <li class="b-chain__i">
+              <span class="b-chain__node" aria-hidden="true"></span>
+              <span class="b-chain__k">Buyer</span>
+              <span class="b-chain__v"><span class="handle"><span class="avatar" aria-hidden="true">N</span>@northstarcards</span></span>
+              <span class="b-chain__s">Bengals spot</span>
+            </li>
+            <li class="b-chain__i">
+              <span class="b-chain__node" aria-hidden="true"></span>
+              <span class="b-chain__k">Break</span>
+              <span class="b-chain__v">Break 04</span>
+              <span class="b-chain__s b-chain__s--stack"><span>Stream <span class="t-mono">#1842</span></span><span>Hit <span class="t-mono">08:52:03 PM</span></span></span>
+            </li>
+            <li class="b-chain__i b-chain__i--mkt">
+              <span class="b-chain__node" aria-hidden="true"></span>
+              <span class="b-chain__k">Market value</span>
+              <span class="b-chain__v t-mono">$1,030</span>
+              <span class="b-chain__s"><span class="chip chip--alt">ALT $1,040</span><span class="chip chip--cl">CL $1,020</span></span>
+              <span class="b-chain__rate t-mono" aria-hidden="true">× 90%</span>
+            </li>
+            <li class="b-chain__i b-chain__i--offer">
+              <span class="b-chain__node" aria-hidden="true"></span>
+              <span class="b-chain__k b-ticket__offer-k">Instant offer</span>
+              <span class="b-chain__v b-offer">$927</span>
+              <span class="b-chain__s">90% of market value</span>
+            </li>
+          </ol>
+
+          <ol class="b-states" aria-hidden="true">
+            <li class="is-on"><span class="b-states__n">Offer available</span><span class="b-states__t t-mono">08:52:04 PM</span></li>
+            <li><span class="b-states__n">Accepted</span><span class="b-states__t t-mono">08:52:41 PM</span></li>
+            <li><span class="b-states__n">Verified</span><span class="b-states__t t-mono">08:54:09 PM</span></li>
+            <li><span class="b-states__n">Settled</span><span class="b-states__t t-mono">08:54:12 PM</span></li>
+          </ol>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================================================ HIT → OFFER → VERIFY → SETTLE -->
+  <section class="section b-flow" id="hit-to-settlement" aria-labelledby="flow-title">
+    <div class="ambient ambient--blue" style="width:900px;height:420px;left:12%;top:46%;opacity:.22"></div>
+    <div class="container container--wide">
+      <div class="b-flow__head" data-reveal>
+        <h2 class="t-h2" id="flow-title">The card never leaves <span class="grad-text">the workflow.</span></h2>
+        <p class="t-lead">From the moment a card is hit, CardsIQ keeps buyer identity, break context, pricing, offer status, verification, and settlement attached to one transaction record.</p>
+      </div>
+
+      <ol class="lifecycle lifecycle--ok b-rail" data-sequence data-interval="1800" aria-label="Hit to settlement on one transaction record" data-reveal>
+        <li class="lc-stage" data-step>
+          <span class="lc-node"><span data-ico="bolt"></span></span>
+          <span class="lc-text">
+            <span class="lc-name">Break hit</span>
+            <span class="lc-copy">Card stays attached to buyer and transaction record.</span>
+          </span>
+        </li>
+        <li class="lc-stage" data-step>
+          <span class="lc-node"><span data-ico="offer"></span></span>
+          <span class="lc-text">
+            <span class="lc-name">Offer</span>
+            <span class="lc-copy">Generate instant buyer offer.</span>
+          </span>
+        </li>
+        <li class="lc-stage" data-step>
+          <span class="lc-node"><span data-ico="verify"></span></span>
+          <span class="lc-text">
+            <span class="lc-name">Verify</span>
+            <span class="lc-copy">Check identity, card, and eligibility.</span>
+          </span>
+        </li>
+        <li class="lc-stage" data-step>
+          <span class="lc-node"><span data-ico="settle"></span></span>
+          <span class="lc-text">
+            <span class="lc-name">Settle</span>
+            <span class="lc-copy">Complete payout and close record.</span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <!-- The record itself: one event trail, written by the stages above -->
+    <div class="container container--wide b-trail__grid b-trail">
+      <div class="b-trail__intro" data-reveal>
+        <p class="eyebrow">The transaction record</p>
+        <h3 class="b-trail__title" id="trail-title"><span class="line">One event trail</span> <span class="line">from hit to paid.</span></h3>
+        <p class="t-lead">Every state change is written to the same record, so the history is complete without reconciliation.</p>
+        <div class="b-trail__id">
+          <img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638" loading="lazy">
+          <div>
+            <p class="b-trail__card">2023 Donruss Optic Joe Burrow Downtown! #D4</p>
+            <p class="b-trail__meta"><span class="chip chip--grade">PSA 9</span><span class="chip">SKU CIQ-P123891</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="b-trail__log" data-reveal>
+        <p class="t-label b-trail__group">Before the hit</p>
+        <ol class="b-log b-log--before">
+          <li><span class="b-log__t t-mono">08:42 AM</span><span class="b-log__dot" aria-hidden="true"></span><span class="b-log__e"><span class="b-log__n">Intake</span><span class="b-log__d">PSA cert matched · SKU <span class="t-mono">CIQ-P123891</span></span></span></li>
+          <li><span class="b-log__t t-mono">09:14 AM</span><span class="b-log__dot" aria-hidden="true"></span><span class="b-log__e"><span class="b-log__n">Priced</span><span class="b-log__d"><span class="t-mono">$1,030</span> market · <span class="t-mono">$540</span> cost</span></span></li>
+          <li><span class="b-log__t t-mono">11:37 AM</span><span class="b-log__dot" aria-hidden="true"></span><span class="b-log__e"><span class="b-log__n">Added to product</span><span class="b-log__d">Football Premium 02</span></span></li>
+          <li><span class="b-log__t t-mono">08:31 PM</span><span class="b-log__dot" aria-hidden="true"></span><span class="b-log__e"><span class="b-log__n">Break started</span><span class="b-log__d">Stream <span class="t-mono">#1842</span> · Break 04</span></span></li>
+          <li><span class="b-log__t t-mono">08:32 PM</span><span class="b-log__dot" aria-hidden="true"></span><span class="b-log__e"><span class="b-log__n">Buyer assigned</span><span class="b-log__d">@northstarcards · Bengals spot</span></span></li>
+        </ol>
+
+        <p class="t-label b-trail__group b-trail__group--hot">Hit to paid</p>
+        <div class="b-hot" data-sequence data-interval="900">
+          <ol class="b-log b-log--hot">
+            <li data-step><span class="b-log__t t-mono">08:52:03 PM</span><span class="b-log__dot" aria-hidden="true"></span><span class="b-log__e"><span class="b-log__n">Card hit</span><span class="b-log__d">Break 04 · @northstarcards</span></span></li>
+            <li data-step><span class="b-log__t t-mono">08:52:04 PM</span><span class="b-log__dot" aria-hidden="true"></span><span class="b-log__e"><span class="b-log__n">Offer created</span><span class="b-log__d"><span class="t-mono">$927</span> · 90% of market</span></span></li>
+            <li data-step><span class="b-log__t t-mono">08:52:41 PM</span><span class="b-log__dot" aria-hidden="true"></span><span class="b-log__e"><span class="b-log__n">Offer accepted</span><span class="b-log__d">Buyer confirmed transaction</span></span></li>
+            <li data-step><span class="b-log__t t-mono">08:54:09 PM</span><span class="b-log__dot" aria-hidden="true"></span><span class="b-log__e"><span class="b-log__n">Verification passed</span><span class="b-log__d">Identity / card / account / duplicate checks</span></span></li>
+            <li data-step><span class="b-log__t t-mono">08:54:12 PM</span><span class="b-log__dot" aria-hidden="true"></span><span class="b-log__e"><span class="b-log__n">Settlement complete</span><span class="b-log__d">Transaction record closed</span></span></li>
+          </ol>
+          <div class="b-total">
+            <p class="b-total__k">Hit to settled <span class="demo-tag">Derived from this record</span></p>
+            <p class="b-total__v t-mono">2m 09s</p>
+          </div>
+        </div>
+        <p class="b-next">The same record started in <a class="link-arrow" href="inventory-management.html">Inventory Management <span data-ico="arrow"></span></a> and went live in <a class="link-arrow" href="streamiq.html">StreamIQ <span data-ico="arrow"></span></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ OBJECTION: eligibility rules -->
+  <section class="section b-rules" aria-labelledby="rules-title">
+    <div class="container container--wide">
+      <div class="b-rules__head" data-reveal>
+        <p class="b-rules__quote"><span aria-hidden="true" class="b-rules__qm">“</span>We don't want to buy every hit.<span aria-hidden="true" class="b-rules__qm">”</span></p>
+        <h2 class="t-h2" id="rules-title"><span class="line">Decide what you buy.</span> <span class="line t-dim">CardsIQ handles what happens next.</span></h2>
+        <p class="t-lead">Control eligibility and economics at the business level, then carry those rules into every eligible offer.</p>
+      </div>
+
+      <div class="ui b-sheet" data-sequence data-interval="720" data-reveal>
+        <div class="ui__bar b-sheet__bar">
+          <span class="b-sheet__ico" aria-hidden="true"><span data-ico="rule"></span></span>
+          <div>
+            <p class="ui__title">Buyback rules</p>
+            <p class="ui__sub">Evaluating the Burrow hit · Stream <span class="t-mono">#1842</span> · Break 04</p>
+          </div>
+          <span class="demo-tag b-sheet__tag">Illustrative product view</span>
+        </div>
+        <table class="b-rtable" role="table">
+          <caption class="sr-only">Buyback rules evaluated against the 2023 Donruss Optic Joe Burrow Downtown! PSA 9 hit</caption>
+          <thead role="rowgroup">
+            <tr role="row"><th scope="col" role="columnheader">Rule</th><th scope="col" role="columnheader">Your setting</th><th scope="col" role="columnheader">This hit</th><th scope="col" role="columnheader" class="b-rtable__r">Result</th></tr>
+          </thead>
+          <tbody role="rowgroup">
+            <tr role="row" data-step>
+              <th scope="row" role="rowheader">Eligible graders</th>
+              <td role="cell" data-label="Setting">PSA / BGS / SGC</td>
+              <td role="cell" data-label="This hit">PSA 9 · <span class="t-mono">Cert 103207853</span></td>
+              <td role="cell" class="b-rtable__r"><span class="b-res"><span class="b-res__wait" aria-hidden="true">Checking</span><span class="b-res__ok"><span data-ico="check"></span>Pass</span></span></td>
+            </tr>
+            <tr role="row" data-step>
+              <th scope="row" role="rowheader">Value range</th>
+              <td role="cell" data-label="Setting"><span class="t-mono">$100 – $5,000</span></td>
+              <td role="cell" data-label="This hit"><span class="t-mono">$1,030</span> market value</td>
+              <td role="cell" class="b-rtable__r"><span class="b-res"><span class="b-res__wait" aria-hidden="true">Checking</span><span class="b-res__ok"><span data-ico="check"></span>In range</span></span></td>
+            </tr>
+            <tr role="row" data-step>
+              <th scope="row" role="rowheader">Buyback rate</th>
+              <td role="cell" data-label="Setting"><span class="t-mono">90%</span> of market</td>
+              <td role="cell" data-label="This hit"><span class="t-mono">$1,030 × 90% = $927</span></td>
+              <td role="cell" class="b-rtable__r"><span class="b-res"><span class="b-res__wait" aria-hidden="true">Checking</span><span class="b-res__ok"><span data-ico="check"></span>Applied</span></span></td>
+            </tr>
+            <tr role="row" data-step>
+              <th scope="row" role="rowheader">Duplicate handling</th>
+              <td role="cell" data-label="Setting">Check every cert for duplicates</td>
+              <td role="cell" data-label="This hit">No other offer on <span class="t-mono">103207853</span></td>
+              <td role="cell" class="b-rtable__r"><span class="b-res"><span class="b-res__wait" aria-hidden="true">Checking</span><span class="b-res__ok"><span data-ico="check"></span>Clear</span></span></td>
+            </tr>
+            <tr role="row" data-step>
+              <th scope="row" role="rowheader">Identity checks</th>
+              <td role="cell" data-label="Setting">Identity required</td>
+              <td role="cell" data-label="This hit">@northstarcards</td>
+              <td role="cell" class="b-rtable__r"><span class="b-res"><span class="b-res__wait" aria-hidden="true">Checking</span><span class="b-res__ok"><span data-ico="check"></span>Verified</span></span></td>
+            </tr>
+            <tr role="row" data-step>
+              <th scope="row" role="rowheader">Business rules</th>
+              <td role="cell" data-label="Setting">Carry into every eligible offer</td>
+              <td role="cell" data-label="This hit">Graders, range, and rate carried into the offer</td>
+              <td role="cell" class="b-rtable__r"><span class="b-res"><span class="b-res__wait" aria-hidden="true">Checking</span><span class="b-res__ok"><span data-ico="check"></span>Applied</span></span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="b-sheet__result" data-step>
+          <span class="status status--ok">Eligible</span>
+          <p class="b-sheet__out">Offer <span class="t-mono">$927</span> created</p>
+          <p class="b-sheet__when">for @northstarcards · <span class="t-mono">08:52:04 PM</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ PRODUCT PROOF: partner console -->
+  <section class="section b-proof" id="console" aria-labelledby="console-title">
+    <div class="ambient ambient--violet" style="width:760px;height:520px;right:-120px;top:22%;opacity:.26"></div>
+    <div class="container container--wide">
+      <div class="b-proof__head" data-reveal>
+        <div>
+          <p class="eyebrow">Buyback partner console</p>
+          <h2 class="t-h2 u-mt" id="console-title"><span class="line">Every eligible offer.</span> <span class="line t-dim">One review queue.</span></h2>
+        </div>
+        <p class="t-lead">Offer logic, approvals, verification, and settlement infrastructure for acquisitions. Each offer keeps its buyer, card, and market value attached.</p>
+      </div>
+
+      <div class="ui ui--glow b-console" data-reveal>
+        <div class="ui__bar b-console__bar">
+          <div>
+            <p class="ui__kicker">Buybacks</p>
+            <p class="ui__title">Review queue</p>
+          </div>
+          <div class="ui-tabs b-console__tabs" role="group" aria-label="Filter offers by status">
+            <button type="button" class="is-on" aria-pressed="true" data-filter="all">All offers</button>
+            <button type="button" aria-pressed="false" data-filter="pending">Pending</button>
+            <button type="button" aria-pressed="false" data-filter="info">Verification</button>
+            <button type="button" aria-pressed="false" data-filter="ok">Settled</button>
+          </div>
+          <label class="ui-input b-console__search"><span data-ico="search"></span><span class="sr-only">Search buyer or cert</span><input type="search" placeholder="Search buyer or cert" autocomplete="off" spellcheck="false"></label>
+        </div>
+
+        <dl class="b-kpis">
+          <div><dt><span class="dot b-dot--blue"></span>Buying power</dt><dd class="b-kpis__v" data-count="62400" data-prefix="$">$62,400</dd><dd class="b-kpis__s">Available capital</dd></div>
+          <div><dt><span class="dot dot--pending"></span>Pending</dt><dd class="b-kpis__v" data-count="12775" data-prefix="$">$12,775</dd><dd class="b-kpis__s">5 transactions</dd></div>
+          <div><dt><span class="dot dot--info"></span>Verification</dt><dd class="b-kpis__v" data-count="9680" data-prefix="$">$9,680</dd><dd class="b-kpis__s">In review</dd></div>
+          <div><dt><span class="dot dot--ok"></span>Settled</dt><dd class="b-kpis__v" data-count="126540" data-prefix="$">$126,540</dd><dd class="b-kpis__s">Lifetime volume</dd></div>
+        </dl>
+
+        <div class="b-console__body">
+          <div class="b-queue-wrap">
+            <table class="ui-table b-queue" role="table">
+              <caption class="sr-only">Buyback review queue, 5 most recent offers. Select a buyer to see the offer detail.</caption>
+              <thead role="rowgroup">
+                <tr role="row"><th scope="col" role="columnheader">Buyer</th><th scope="col" role="columnheader">Card</th><th scope="col" role="columnheader" class="b-num">Offer · 90% of market</th><th scope="col" role="columnheader">Status</th></tr>
+              </thead>
+              <tbody role="rowgroup">
+                <tr role="row" data-row="0" data-tone="ok">
+                  <td role="cell" class="b-q__buyer"><button type="button" class="b-q__btn" aria-controls="offer-detail"><span class="handle"><span class="avatar" aria-hidden="true">N</span>@northstarcards</span></button></td>
+                  <td role="cell" class="b-q__card"><span class="b-q__name">Burrow Optic Downtown!</span><span class="b-q__sub">PSA 9 · <span class="t-mono">103207853</span></span></td>
+                  <td role="cell" class="b-num b-q__offer"><span class="ui-num">$927</span><span class="b-q__of">of <span class="t-mono">$1,030</span></span></td>
+                  <td role="cell" class="b-q__st"><span class="status status--ok">Settled</span></td>
+                </tr>
+                <tr role="row" class="is-sel" data-row="1" data-tone="info">
+                  <td role="cell" class="b-q__buyer"><button type="button" class="b-q__btn" aria-controls="offer-detail" aria-current="true"><span class="handle"><span class="avatar" aria-hidden="true">V</span>@vaultcollects</span></button></td>
+                  <td role="cell" class="b-q__card"><span class="b-q__name">Mahomes Optic Lime</span><span class="b-q__sub">PSA 9 · <span class="t-mono">159117071</span></span></td>
+                  <td role="cell" class="b-num b-q__offer"><span class="ui-num">$3,762</span><span class="b-q__of">of <span class="t-mono">$4,180</span></span></td>
+                  <td role="cell" class="b-q__st"><span class="status status--info">Verification</span></td>
+                </tr>
+                <tr role="row" data-row="2" data-tone="pending">
+                  <td role="cell" class="b-q__buyer"><button type="button" class="b-q__btn" aria-controls="offer-detail"><span class="handle"><span class="avatar" aria-hidden="true">N</span>@nycards</span></button></td>
+                  <td role="cell" class="b-q__card"><span class="b-q__name">Nabers Prizm Gold /10</span><span class="b-q__sub">PSA 10</span></td>
+                  <td role="cell" class="b-num b-q__offer"><span class="ui-num">$1,278</span><span class="b-q__of">of <span class="t-mono">$1,420</span></span></td>
+                  <td role="cell" class="b-q__st"><span class="status b-status--accepted">Offer accepted</span></td>
+                </tr>
+                <tr role="row" data-row="3" data-tone="pending">
+                  <td role="cell" class="b-q__buyer"><button type="button" class="b-q__btn" aria-controls="offer-detail"><span class="handle"><span class="avatar" aria-hidden="true">C</span>@cardroom</span></button></td>
+                  <td role="cell" class="b-q__card"><span class="b-q__name">1958 Topps Mantle</span><span class="b-q__sub">PSA 4 · <span class="t-mono">69974937</span></span></td>
+                  <td role="cell" class="b-num b-q__offer"><span class="ui-num">$2,007</span><span class="b-q__of">of <span class="t-mono">$2,230</span></span></td>
+                  <td role="cell" class="b-q__st"><span class="status status--pending">Awaiting approval</span></td>
+                </tr>
+                <tr role="row" data-row="4" data-tone="pending">
+                  <td role="cell" class="b-q__buyer"><button type="button" class="b-q__btn" aria-controls="offer-detail"><span class="handle"><span class="avatar" aria-hidden="true">C</span>@collector92</span></button></td>
+                  <td role="cell" class="b-q__card"><span class="b-q__name">2000 Bowman Brady</span><span class="b-q__sub">PSA 8 · <span class="t-mono">82389068</span></span></td>
+                  <td role="cell" class="b-num b-q__offer"><span class="ui-num">$1,062</span><span class="b-q__of">of <span class="t-mono">$1,180</span></span></td>
+                  <td role="cell" class="b-q__st"><span class="status status--pending">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="b-queue__empty" hidden>No recent offers match.</p>
+            <p class="b-queue__foot"><span class="b-queue__count">Showing 5 most recent offers</span></p>
+          </div>
+
+          <!-- Offer detail for the selected row (re-rendered by page-buybacks.js) -->
+          <aside class="b-detail" id="offer-detail" aria-label="Offer detail">
+            <p class="ui__kicker">Offer detail</p>
+            <p class="b-detail__card">2017 Panini Donruss Optic Patrick Mahomes II Lime #177</p>
+            <p class="b-detail__id"><span class="chip chip--grade">PSA 9</span><span class="chip">Cert 159117071</span></p>
+            <div class="b-detail__money">
+              <div><span class="b-detail__k">Market value</span><span class="b-detail__mv t-mono">$4,180</span></div>
+              <span class="b-detail__x t-mono" aria-hidden="true">× 90%</span>
+              <div><span class="b-detail__k">Instant offer</span><span class="b-detail__ov t-mono">$3,762</span></div>
+            </div>
+            <ol class="b-detail__steps">
+              <li class="is-done">Offer</li><li class="is-done">Accepted</li><li class="is-on is-info">Verifying</li><li>Settled</li>
+            </ol>
+            <dl class="b-detail__meta">
+              <div><dt>Buyer</dt><dd>@vaultcollects</dd></div>
+              <div><dt>Context</dt><dd>Identity · card · account · duplicate checks in review</dd></div>
+              <div><dt>Rules</dt><dd><span class="b-nw">PSA / BGS / SGC</span> · <span class="b-nw">$100–$5,000</span> · 90%</dd></div>
+              <div><dt>State</dt><dd><span class="status status--info">Verification</span></dd></div>
+            </dl>
+          </aside>
+          <p class="sr-only" aria-live="polite" id="offer-live"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ VALUE BY USER -->
+  <section class="section section--tight b-value" aria-labelledby="value-title">
+    <div class="container container--wide">
+      <h2 class="t-label b-value__title" id="value-title" data-reveal>Who Instant Buybacks is for</h2>
+      <ul class="b-value__list">
+        <li data-reveal><span class="b-value__who">For Breakers</span><p class="b-value__line">Increase buyer satisfaction <span class="t-dim">on every hit.</span></p></li>
+        <li data-reveal style="--d:80ms"><span class="b-value__who">For Buyers</span><p class="b-value__line">Faster access to liquidity, <span class="t-dim">without listings.</span></p></li>
+        <li data-reveal style="--d:160ms"><span class="b-value__who">For Businesses</span><p class="b-value__line">More volume <span class="t-dim">with less manual work.</span></p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================ OBJECTIONS -->
+  <section class="section section--tight b-faq" aria-labelledby="faq-title">
+    <div class="container container--narrow">
+      <h2 class="t-h2 b-faq__title" id="faq-title" data-reveal>Common questions.</h2>
+      <div class="faq" data-reveal>
+        <details open>
+          <summary>Do we have to buy back every hit?</summary>
+          <div class="faq__a">No. You set eligibility at the business level: <strong>graders (PSA, BGS, SGC), value range, and the buyback rate</strong>. CardsIQ carries those rules into every eligible offer, then handles verification and settlement.</div>
+        </details>
+        <details>
+          <summary>Where does market value come from?</summary>
+          <div class="faq__a">Market context from <strong>ALT and Card Ladder</strong> is attached to each card. The instant offer is the rate you set, applied to that ALT + Card Ladder market value.</div>
+        </details>
+        <details>
+          <summary>What is checked before payout?</summary>
+          <div class="faq__a"><strong>Identity, card, account, and duplicate checks</strong> run against the same transaction record. Settlement completes only after verification passes, and the record closes with the full history attached.</div>
+        </details>
+        <details>
+          <summary>What happens after the stream ends?</summary>
+          <div class="faq__a">Nothing needs to be rebuilt. The buyer, card, break context, offer, verification, and settlement stay on one record, so break activity connects to pricing and payouts <strong>without rebuilding the transaction after the stream</strong>.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FINAL CTA: the ticket, settled -->
+  <section class="cta-final b-cta" aria-labelledby="cta-title">
+    <div class="ambient ambient--blue" style="width:720px;height:520px;right:-80px;top:10%;opacity:.4"></div>
+    <div class="ambient ambient--violet" style="width:620px;height:460px;left:-140px;bottom:-160px;opacity:.32"></div>
+    <div class="container container--wide b-cta__grid">
+      <div class="b-cta__copy" data-reveal>
+        <p class="eyebrow">Instant Buybacks</p>
+        <h2 class="cta-final__title u-mt" id="cta-title">Put liquidity behind <span class="grad-text">every eligible hit.</span></h2>
+        <p class="cta-final__sub">Connect break activity to pricing, verification, buybacks, and settlement without rebuilding the transaction after the stream.</p>
+        <div class="cta-final__actions btn-row">
+          <a class="btn btn--primary btn--lg" data-cta="partner" data-interest="instant-buybacks" href="become-a-partner.html">Become a buyback partner <span data-ico="arrow"></span></a>
+        </div>
+        <p class="cta-note b-cta__note">Collecting? <a data-cta="create-account" href="#create-account">Create account</a></p>
+      </div>
+
+      <figure class="b-paid" data-reveal style="--d:120ms" aria-label="The same offer, settled: $927 paid to @northstarcards for the Burrow PSA 9">
+        <div class="b-paid__slab" aria-hidden="true">
+          <img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638" loading="lazy">
+        </div>
+        <div class="ui ui--glow b-paid__ticket">
+          <div class="b-paid__head">
+            <p class="ui__title">Instant offer</p>
+            <span class="status status--ok">Settled</span>
+          </div>
+          <p class="b-paid__amt"><span class="b-paid__v">$927</span><span class="b-paid__k">paid</span></p>
+          <dl class="b-paid__rows">
+            <div><dt>Buyer</dt><dd><span class="handle"><span class="avatar" aria-hidden="true">N</span>@northstarcards</span></dd></div>
+            <div><dt>Card</dt><dd>Burrow Downtown! · PSA 9</dd></div>
+            <div><dt>Settled</dt><dd class="t-mono">08:54:12 PM</dd></div>
+            <div><dt>Record</dt><dd>Transaction record closed</dd></div>
+          </dl>
+          <ol class="b-states b-states--done" aria-hidden="true">
+            <li class="is-done"><span class="b-states__n">Offer</span></li>
+            <li class="is-done"><span class="b-states__n">Accepted</span></li>
+            <li class="is-done"><span class="b-states__n">Verified</span></li>
+            <li class="is-done"><span class="b-states__n">Settled</span></li>
+          </ol>
+        </div>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/ciq.js" defer></script>
+<script src="assets/js/page-buybacks.js" defer></script>
+
+<nav id="ciq-ver" aria-label="Design prototype version"><span>Design prototype</span><a href="../v1/instant-buybacks.html" title="First CRO demo" aria-label="v1: First CRO demo" aria-current="page">v1</a><a href="../v2/instant-buybacks.html" title="Combined demo, Oct 6" aria-label="v2: Combined demo, Oct 6">v2</a><a href="../v2.1/instant-buybacks.html" title="Acquisitions + StreamIQ, current" aria-label="v2.1: Acquisitions + StreamIQ, current">v2.1</a></nav>
+<style>
+#ciq-ver{position:fixed;right:16px;bottom:16px;z-index:80;display:flex;align-items:center;gap:4px;padding:4px 4px 4px 14px;border-radius:999px;background:rgba(8,12,28,.92);box-shadow:0 0 0 1px rgba(148,163,200,.28),0 18px 40px -12px rgba(0,0,0,.8);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 13px/1 Outfit,system-ui,-apple-system,"Segoe UI",sans-serif}
+#ciq-ver span{margin-right:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8d97b5;white-space:nowrap}
+#ciq-ver a{display:inline-grid;place-items:center;min-width:44px;height:34px;padding:0 12px;border-radius:999px;color:#c9d1ea;text-decoration:none}
+#ciq-ver a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#ciq-ver a:focus-visible{outline:2px solid #2fd3e6;outline-offset:2px}
+#ciq-ver a[aria-current]{color:#fff;background:linear-gradient(135deg,#2f7bff,#7b5cff)}
+@media (max-width:420px){#ciq-ver span{display:none}#ciq-ver{padding-left:4px}}
+@media print{#ciq-ver{display:none}}
+</style>
+<script>(function(){var q=location.search+location.hash;if(!q)return;document.querySelectorAll('#ciq-ver a').forEach(function(a){a.setAttribute('href',a.getAttribute('href')+q)})})();</script>
+</body>
+</html>

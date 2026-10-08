@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventory Management | CardsIQ</title>
+  <meta name="description" content="Scan the cards you hold or sync marketplace orders before they arrive. Manage every card from acquisition to outcome in one CardsIQ record.">
+  <link rel="icon" href="assets/img/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..800&family=Geist+Mono:wght@400..600&display=swap">
+  <link rel="stylesheet" href="assets/css/ciq.css">
+  <link rel="stylesheet" href="assets/css/live-ui.css">
+  <link rel="stylesheet" href="assets/css/page-inventory.css">
+</head>
+<body data-page="inventory" data-primary-cta="partner" data-interest="inventory-management">
+<script src="assets/js/shell.js"></script>
+<main id="main" class="page">
+
+  <!-- ============================================================ HERO -->
+  <section class="i-hero" data-hero aria-labelledby="hero-title">
+    <div class="ambient ambient--blue i-hero__amb" aria-hidden="true"></div>
+    <div class="container container--wide i-hero__grid">
+      <div class="i-hero__copy">
+        <p class="eyebrow eyebrow--pill">Inventory Management</p>
+        <h1 class="t-hero" id="hero-title"><span class="line">Manage every card</span> <span class="line grad-text">from acquisition</span> <span class="line grad-text">to outcome.</span></h1>
+        <p class="t-lead">Scan the cards you already hold, or sync marketplace orders before the cards arrive. Either way, each card becomes one CardsIQ record through products, live commerce, fulfillment, and buybacks.</p>
+        <div class="btn-row i-hero__cta" data-hero-cta>
+          <a class="btn btn--primary btn--lg" data-cta="partner" data-interest="inventory-management" href="become-a-partner.html">Become a partner <span data-ico="arrow"></span></a>
+          <a class="btn btn--secondary btn--lg" href="#paths">See both ways in</a>
+        </div>
+        <ul class="i-hero__facts">
+          <li><span data-ico="scanbar"></span>Scan PSA, BGS, and SGC certs</li>
+          <li><span data-ico="inbox"></span>Order sync starting with eBay, Fanatics Collect, Goldin, and ALT</li>
+          <li><span data-ico="link"></span>Raw cards from Heystack or CSV</li>
+          <li><span data-ico="value"></span>ALT + Card Ladder on every card</li>
+        </ul>
+      </div>
+
+      <figure class="i-hero__visual" aria-labelledby="hero-vis-cap">
+        <figcaption class="sr-only" id="hero-vis-cap">Three graded cards as CardsIQ records: a Drake Maye Signature Class card incoming from an eBay order and in transit, a Patrick Mahomes card available in inventory, and the Joe Burrow Downtown card assigned to a product.</figcaption>
+        <div class="i-hero__slabs" data-tilt="3" aria-hidden="true">
+          <span class="slab i-hero__slab i-hero__slab--3"><img src="assets/img/slabs/maye-2024-signature-class-gold-auto-psa8.webp" alt="" width="541" height="900"></span>
+          <span class="slab i-hero__slab i-hero__slab--2"><img src="assets/img/slabs/mahomes-2017-optic-holo-psa10.webp" alt="" width="900" height="1494"></span>
+          <span class="slab i-hero__slab i-hero__slab--1"><span class="slab__glow"></span><img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638"></span>
+        </div>
+        <div class="lv-panel i-hero__panel">
+          <div class="lv-panel__head i-hero__head">
+            <div><p class="lv-eyebrow">All inventory</p><p class="lv-title">Card Lifecycle</p></div>
+          </div>
+          <ul class="i-hero__rows">
+            <li class="i-row i-row--incoming" data-reveal>
+              <img class="lv-thumb" src="assets/img/slabs/maye-2024-signature-class-gold-auto-psa8.webp" alt="" width="541" height="900">
+              <div class="i-row__main"><p class="lv-name">2024 Signature Class Drake Maye Rookie Class Chrome Auto Gold Refractor #RCVDM</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 8.0</span><span class="lv-pill lv-pill--cert">Cert #142107918</span><span class="lv-pill lv-pill--team lv-team--patriots">Patriots</span></div></div>
+              <div class="i-row__vals"><span class="i-src">eBay</span><span class="lv-status lv-status--sent lv-status--sm"><span data-ico="truck"></span>In transit</span></div>
+              <div class="i-row__end"><span class="i-row__k">Cost</span><span class="lv-pill lv-pill--cost">$766.61</span><span class="lv-status lv-status--teal lv-status--caps lv-status--sm"><span data-ico="inbox"></span>Incoming</span></div>
+            </li>
+            <li class="i-row" data-reveal style="--d: 120ms">
+              <img class="lv-thumb" src="assets/img/slabs/mahomes-2017-optic-holo-psa10.webp" alt="" width="900" height="1494">
+              <div class="i-row__main"><p class="lv-name">2017 Panini Donruss Optic Patrick Mahomes II Holo #177</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 10.0</span><span class="lv-pill lv-pill--cert">Cert #156971694</span><span class="lv-pill lv-pill--team lv-team--chiefs">Chiefs</span></div></div>
+              <div class="i-row__vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$1,880.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,845.00</span></span></div>
+              <div class="i-row__end"><span class="i-row__k">Cost</span><span class="lv-pill lv-pill--cost">$1,520.00</span><span class="lv-status lv-status--ok lv-status--caps lv-status--sm"><span data-ico="checkc"></span>Available</span></div>
+            </li>
+            <li class="i-row i-row--assigned" data-reveal style="--d: 240ms">
+              <img class="lv-thumb" src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638">
+              <div class="i-row__main"><p class="lv-name">2023 Donruss Optic Joe Burrow Downtown! #D4</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #103207853</span><span class="lv-pill lv-pill--team lv-team--bengals">Bengals</span></div></div>
+              <div class="i-row__vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$1,040.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,020.00</span></span></div>
+              <div class="i-row__end"><span class="i-row__k">Cost</span><span class="lv-pill lv-pill--cost">$540.00</span><span class="lv-status lv-status--violet lv-status--caps lv-status--sm"><span data-ico="link"></span>Assigned</span></div>
+            </li>
+          </ul>
+          <p class="lv-foot"><span>1 incoming · 2 in inventory</span><span class="demo-tag">Illustrative product view · incoming row is a concept in development</span></p>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================================================ TWO WAYS IN -->
+  <section class="section section--tight i-paths" id="paths" aria-labelledby="paths-title">
+    <div class="container container--wide">
+      <div class="i-paths__head" data-reveal>
+        <div>
+          <p class="eyebrow">Every card enters with an identity</p>
+          <h2 class="t-h2" id="paths-title">Two ways in. <span class="grad-text">One record.</span></h2>
+        </div>
+        <p class="t-lead">CardsIQ treats inventory as an operating record, not a static spreadsheet row. Scan a card you hold or sync one you bought, and each movement updates the same card history.</p>
+      </div>
+
+      <div class="i-ways" data-reveal>
+        <div class="i-ways__lanes">
+          <div class="i-lane">
+            <p class="i-lane__k"><b>Path 1</b>Physical intake <span>cards you already hold</span></p>
+            <ol class="i-lsteps">
+              <li><span class="i-lnode"><span data-ico="cards"></span></span><b>Physical card</b><small>Graded or raw</small></li>
+              <li><span class="i-lnode"><span data-ico="scanbar"></span></span><b>Scan</b><small>Cert or Heystack batch</small></li>
+              <li><span class="i-lnode"><span data-ico="verify"></span></span><b>Match identity</b><small>Card, grade, team</small></li>
+              <li><span class="i-lnode"><span data-ico="sku"></span></span><b>Create record</b><small>SKU and warehouse</small></li>
+              <li><span class="i-lnode"><span data-ico="dollar"></span></span><b>Add cost / value</b><small>Paid + ALT / CL</small></li>
+            </ol>
+          </div>
+          <div class="i-lane i-lane--sync">
+            <p class="i-lane__k"><b>Path 2</b>Synchronized acquisition <span>cards you bought</span></p>
+            <ol class="i-lsteps">
+              <li><span class="i-lnode"><span data-ico="cart"></span></span><b>Marketplace purchase</b><small>Marketplace or auction</small></li>
+              <li><span class="i-lnode"><span data-ico="receipt"></span></span><b>Order imported</b><small>Cost, seller, order ID</small></li>
+              <li><span class="i-lnode"><span data-ico="inbox"></span></span><b>Incoming record</b><span class="lv-status lv-status--teal lv-status--caps lv-status--sm">Incoming</span></li>
+              <li><span class="i-lnode"><span data-ico="truck"></span></span><b>Shipping tracked</b><span class="lv-status lv-status--sent lv-status--sm">In transit</span></li>
+              <li><span class="i-lnode"><span data-ico="box"></span></span><b>Package arrives</b><span class="lv-status lv-status--teal lv-status--sm">Delivered</span></li>
+              <li><span class="i-lnode"><span data-ico="scanbar"></span></span><b>Verify / receive</b><span class="lv-status lv-status--ok lv-status--caps lv-status--sm">Received</span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="i-ways__merge" aria-hidden="true"></div>
+        <div class="i-ways__out">
+          <div class="lv-panel i-record">
+            <div class="i-record__top"><span class="lv-k">One CardsIQ record</span><span class="lv-status lv-status--ok lv-status--caps lv-status--sm"><span data-ico="checkc"></span>Available</span></div>
+            <div class="lv-desc-cell">
+              <img class="lv-thumb" src="assets/img/slabs/maye-2024-prizm-red-sparkle-psa10.webp" alt="" width="535" height="900" loading="lazy">
+              <div><p class="lv-name">2024 Panini Prizm Drake Maye Red Sparkle #329</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 10.0</span><span class="lv-pill lv-pill--cert">Cert #139782623</span><span class="lv-pill lv-pill--team lv-team--patriots">Patriots</span></div></div>
+            </div>
+            <div class="i-record__vals">
+              <span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$640.00</span></span>
+              <span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$615.00</span></span>
+              <span class="i-record__cost"><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$410.00</span></span>
+            </div>
+            <dl class="lv-dl i-record__dl">
+              <div><dt>Origin</dt><dd>eBay · Order 14-12688-10937</dd></div>
+              <div><dt>Warehouse</dt><dd>Main Vault</dd></div>
+            </dl>
+          </div>
+          <p class="i-record__cap">A scanned card lands in the same record. Only its origin reads Manual intake.</p>
+          <p class="i-record__tag"><span class="demo-tag">Illustrative record · order sync is a concept in development</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ ACQUISITION -->
+  <section class="section i-acq" id="acquisition" aria-labelledby="acq-title">
+    <div class="container container--wide">
+      <div class="i-acq__head">
+        <div data-reveal>
+          <p class="eyebrow">Acquisitions</p>
+          <h2 class="t-h2" id="acq-title">Know what's coming <span class="grad-text">before it arrives.</span></h2>
+          <p class="t-lead">Your inventory starts in CardsIQ before it reaches your door.</p>
+        </div>
+        <ul class="i-legend i-legend--ico i-acq__legend" data-reveal>
+          <li><span class="i-legend__ico"><span data-ico="inbox"></span></span><span><b>Less manual entry.</b> Synced orders arrive with the card, seller, and order number filled in.</span></li>
+          <li><span class="i-legend__ico"><span data-ico="dollar"></span></span><span><b>Cost basis captured at purchase.</b> What you paid, shipping included, is on the card before it lands.</span></li>
+          <li><span class="i-legend__ico"><span data-ico="truck"></span></span><span><b>Tracking and order history on the card.</b> Carrier, tracking, and every status change stay with the record.</span></li>
+          <li><span class="i-legend__ico"><span data-ico="checkc"></span></span><span><b>Faster receiving, cleaner reconciliation.</b> Scan the cert and CardsIQ matches it to the order.</span></li>
+        </ul>
+      </div>
+
+      <div class="i-wide">
+      <div class="lv-panel lv-panel--flat i-srcs" data-reveal>
+        <div class="i-srcs__head"><p class="lv-eyebrow" id="srcs-title">Acquisition sources</p><p class="lv-sub">Synced orders land in Incoming Inventory. More sources connect over time.</p><span class="demo-tag">Concept in development · built from CardsIQ components · illustrative orders</span></div>
+        <ul class="i-srcs__list" aria-labelledby="srcs-title">
+          <li class="i-srct"><span class="i-src">eBay</span><span class="i-srct__type">Marketplace</span><span class="i-conn">Connected</span><span class="i-srct__line">Orders synced 8:58 PM</span><span class="i-srct__n"><b>5</b> incoming</span></li>
+          <li class="i-srct"><span class="i-src">Fanatics Collect</span><span class="i-srct__type">Marketplace</span><span class="i-conn">Connected</span><span class="i-srct__line">Orders synced 8:58 PM</span><span class="i-srct__n"><b>2</b> incoming</span></li>
+          <li class="i-srct"><span class="i-src">Goldin</span><span class="i-srct__type">Auction</span><span class="i-conn">Connected</span><span class="i-srct__line">Orders synced 8:57 PM</span><span class="i-srct__n"><b>2</b> incoming</span></li>
+          <li class="i-srct"><span class="i-src">ALT</span><span class="i-srct__type">Marketplace</span><span class="i-conn">Connected</span><span class="i-srct__line">Orders synced 8:58 PM</span><span class="i-srct__n"><b>2</b> incoming</span></li>
+          <li class="i-srct"><span class="i-src">Buybacks</span><span class="i-srct__type">CardsIQ</span><span class="i-conn i-conn--built">Built in</span><span class="i-srct__n"><b>1</b> received today</span></li>
+          <li class="i-srct i-srct--more"><span class="i-srct__plus"><span data-ico="plus"></span></span><span class="i-srct__more">More sources</span><span class="i-srct__line">Request a source</span></li>
+        </ul>
+      </div>
+
+      <div class="lv-kpis i-acq__kpis" data-reveal>
+        <div class="lv-kpi lv-kpi--cyan lv-kpi--tinted"><p class="lv-kpi__label">Incoming cards</p><p class="lv-kpi__value">11</p><p class="lv-kpi__desc">Purchased cards on the way to your inventory.</p><span class="lv-kpi__ico"><span data-ico="inbox"></span></span></div>
+        <div class="lv-kpi lv-kpi--blue"><p class="lv-kpi__label">In transit</p><p class="lv-kpi__value">6</p><p class="lv-kpi__desc">Shipments with seller tracking.</p><span class="lv-kpi__ico"><span data-ico="truck"></span></span></div>
+        <div class="lv-kpi lv-kpi--green lv-kpi--tinted"><p class="lv-kpi__label">Ready for intake</p><p class="lv-kpi__value">2</p><p class="lv-kpi__desc">Delivered and waiting to be scanned in.</p><span class="lv-kpi__ico"><span data-ico="scanbar"></span></span></div>
+        <div class="lv-kpi lv-kpi--violet"><p class="lv-kpi__label">Incoming cost</p><p class="lv-kpi__value">$7,940.00</p><p class="lv-kpi__desc">Cost basis captured from synced orders.</p><span class="lv-kpi__ico"><span data-ico="dollar"></span></span></div>
+      </div>
+
+      <div class="lv-panel i-inc" data-reveal>
+        <div class="lv-panel__head">
+          <div><p class="lv-eyebrow">All inventory</p><p class="lv-title">Incoming Inventory</p><p class="lv-desc">Track purchased cards from order to arrival. Synced orders carry cost, seller, and tracking into intake.</p></div>
+          <div class="lv-actions" aria-hidden="true"><span class="lv-btn"><span data-ico="refresh"></span>Sync Orders</span><span class="lv-btn lv-btn--teal"><span data-ico="boxplus"></span>Add Cards</span></div>
+        </div>
+        <div class="i-inc__bar">
+          <div class="lv-tabs i-inc__tabs" role="group" aria-label="Filter incoming inventory by status">
+            <button type="button" class="lv-tab is-on" data-filter="all" aria-pressed="true">All Incoming <span class="lv-count">12</span></button>
+            <button type="button" class="lv-tab" data-filter="awaiting" aria-pressed="false">Awaiting Shipment <span class="lv-count">3</span></button>
+            <button type="button" class="lv-tab" data-filter="transit" aria-pressed="false">In Transit <span class="lv-count">6</span></button>
+            <button type="button" class="lv-tab" data-filter="delivered" aria-pressed="false">Delivered <span class="lv-count">2</span></button>
+            <button type="button" class="lv-tab" data-filter="review" aria-pressed="false">Needs Review <span class="lv-count">1</span></button>
+            <button type="button" class="lv-tab" data-filter="received" aria-pressed="false">Received <span class="lv-count">1</span></button>
+          </div>
+          <div class="i-inc__tools">
+            <label class="lv-search i-inc__search"><span data-ico="search"></span><span class="sr-only">Search incoming inventory</span><input type="search" class="i-inc__q" placeholder="Search card, order #, seller, or tracking" autocomplete="off"></label>
+            <label class="lv-select i-inc__src"><span data-ico="globe"></span><span class="sr-only">Filter by source</span><select class="i-inc__sel">
+              <option value="all">All Sources</option>
+              <option value="ebay">eBay</option>
+              <option value="fanatics">Fanatics Collect</option>
+              <option value="goldin">Goldin</option>
+              <option value="alt">ALT</option>
+              <option value="buyback">Buybacks</option>
+            </select><span data-ico="down"></span></label>
+            <span class="lv-select" aria-hidden="true"><span data-ico="download"></span>Export</span>
+          </div>
+        </div>
+        <p class="i-hint i-hint--panel"><span data-ico="info"></span>Select an order to open its record.</p>
+        <div class="i-inc__wrap">
+          <table class="lv-table i-inc__table">
+            <caption class="sr-only">Incoming Inventory, illustrative: card, source, order, cost, shipping, and status for synced purchases and buybacks</caption>
+            <thead>
+              <tr>
+                <th scope="col">Card / item</th>
+                <th scope="col">Source</th>
+                <th scope="col">Order</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Shipping</th>
+                <th scope="col">Status</th>
+                <th scope="col"><span class="sr-only">Open</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="lv-row--edge" style="--edge:#2fd3e6" data-type="transit" data-src="ebay" data-search="9405503699300184226417" data-drawer-row>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/maye-2024-signature-class-gold-auto-psa8.webp" alt="" width="541" height="900" loading="lazy"><div><p class="lv-name">2024 Signature Class Drake Maye Rookie Class Chrome Auto Gold Refractor #RCVDM</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 8.0</span><span class="lv-pill lv-pill--cert">Cert #142107918</span><span class="lv-pill lv-pill--team lv-team--patriots">Patriots</span></div></div></div></td>
+                <td><span class="lv-k">Source</span><span class="i-src">eBay</span><span class="i-cell__sub">from gridironvault</span></td>
+                <td><span class="lv-k">Order</span><span class="i-mono">14-12873-40562</span><span class="i-cell__sub">Sep 29, 2026<small>9:16 PM</small></span></td>
+                <td><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$766.61</span></td>
+                <td><span class="lv-k">Shipping</span><span class="lv-status lv-status--sent lv-status--sm"><span data-ico="truck"></span>In transit</span><span class="i-cell__sub">USPS · Est. Oct 3</span></td>
+                <td><span class="lv-k">Status</span><span class="lv-status lv-status--teal lv-status--caps lv-status--sm"><span data-ico="inbox"></span>Incoming</span></td>
+                <td class="i-inc__go"><button type="button" class="lv-iconbtn" data-drawer="order" data-drawer-id="ebay-40562" data-card="mayeSC" aria-label="Open eBay order 14-12873-40562 (Drake Maye)"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" style="--edge:#2fd3e6" data-type="transit" data-src="ebay" data-search="9405503699300184226417" data-drawer-row>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/edwards-2020-prizm-blue-ice-psa10.webp" alt="" width="465" height="781" loading="lazy"><div><p class="lv-name">2020 Panini Prizm Anthony Edwards Blue Ice #258</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 10.0</span><span class="lv-pill lv-pill--cert">Cert #62098915</span><span class="lv-pill lv-pill--team lv-team--wolves">Timberwolves</span></div></div></div></td>
+                <td><span class="lv-k">Source</span><span class="i-src">eBay</span><span class="i-cell__sub">from gridironvault</span></td>
+                <td><span class="lv-k">Order</span><span class="i-mono">14-12873-40562</span><span class="i-cell__sub">Sep 29, 2026<small>9:16 PM</small></span></td>
+                <td><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$625.39</span></td>
+                <td><span class="lv-k">Shipping</span><span class="lv-status lv-status--sent lv-status--sm"><span data-ico="truck"></span>In transit</span><span class="i-cell__sub">USPS · Est. Oct 3</span></td>
+                <td><span class="lv-k">Status</span><span class="lv-status lv-status--teal lv-status--caps lv-status--sm"><span data-ico="inbox"></span>Incoming</span></td>
+                <td class="i-inc__go"><button type="button" class="lv-iconbtn" data-drawer="order" data-drawer-id="ebay-40562" data-card="edwards" aria-label="Open eBay order 14-12873-40562 (Anthony Edwards)"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" style="--edge:#2fd3e6" data-type="transit" data-src="goldin" data-drawer-row>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/curry-2022-select-signature-psa9.webp" alt="" width="449" height="784" loading="lazy"><div><p class="lv-name">2022 Select Stephen Curry Signature #SSCY</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #83289827</span><span class="lv-pill lv-pill--team i-team--warriors">Warriors</span></div></div></div></td>
+                <td><span class="lv-k">Source</span><span class="i-src">Goldin</span><span class="i-cell__sub">Auction</span></td>
+                <td><span class="lv-k">Order</span><span class="i-oid">Invoice <span class="i-mono">41873</span></span><span class="i-cell__sub">Sep 27, 2026</span></td>
+                <td><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$1,140.00</span></td>
+                <td><span class="lv-k">Shipping</span><span class="lv-status lv-status--sent lv-status--sm"><span data-ico="truck"></span>In transit</span><span class="i-cell__sub">FedEx · Est. Oct 5</span></td>
+                <td><span class="lv-k">Status</span><span class="lv-status lv-status--teal lv-status--caps lv-status--sm"><span data-ico="inbox"></span>Incoming</span></td>
+                <td class="i-inc__go"><button type="button" class="lv-iconbtn" data-drawer="order" data-drawer-id="goldin-41873" data-card="curry" aria-label="Open Goldin invoice 41873 (Stephen Curry)"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" style="--edge:#2fd3e6" data-type="awaiting" data-src="fanatics" data-search="Order 3318402" data-drawer-row>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/mahomes-2017-optic-lime-psa9.webp" alt="" width="900" height="1499" loading="lazy"><div><p class="lv-name">2017 Panini Donruss Optic Patrick Mahomes II Lime #177</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #159117071</span><span class="lv-pill lv-pill--team lv-team--chiefs">Chiefs</span></div></div></div></td>
+                <td><span class="lv-k">Source</span><span class="i-src">Fanatics Collect</span></td>
+                <td><span class="lv-k">Order</span><span class="i-mono">3318402</span><span class="i-cell__sub">Oct 1, 2026</span></td>
+                <td><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$720.00</span></td>
+                <td><span class="lv-k">Shipping</span><span class="lv-status lv-status--muted lv-status--sm"><span data-ico="clock"></span>Awaiting shipment</span><span class="i-cell__sub">Tracking pending</span></td>
+                <td><span class="lv-k">Status</span><span class="lv-status lv-status--teal lv-status--caps lv-status--sm"><span data-ico="inbox"></span>Incoming</span></td>
+                <td class="i-inc__go"><button type="button" class="lv-iconbtn" data-drawer="order" data-drawer-id="fanatics-3318402" data-card="mahomesLime" aria-label="Open Fanatics Collect order 3318402 (Patrick Mahomes)"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" style="--edge:#f5b13d" data-type="awaiting review" data-src="ebay" data-drawer-row>
+                <td><div class="lv-desc-cell"><span class="lv-thumb i-rawthumb" aria-hidden="true"></span><div><p class="lv-name">“2024 Prizm MHJ Silver RC Cardinals raw NM-MT”</p><div class="lv-chips"><span class="lv-pill lv-pill--raw">RAW</span><span class="lv-pill i-needs"><span data-ico="info"></span>Needs match</span></div></div></div></td>
+                <td><span class="lv-k">Source</span><span class="i-src">eBay</span><span class="i-cell__sub">from desertdugout</span></td>
+                <td><span class="lv-k">Order</span><span class="i-mono">14-13002-77815</span><span class="i-cell__sub">Oct 1, 2026</span></td>
+                <td><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$68.50</span></td>
+                <td><span class="lv-k">Shipping</span><span class="lv-status lv-status--muted lv-status--sm"><span data-ico="clock"></span>Awaiting shipment</span><span class="i-cell__sub">Tracking pending</span></td>
+                <td><span class="lv-k">Status</span><span class="lv-status lv-status--amber lv-status--caps lv-status--sm"><span data-ico="clock"></span>Needs review</span></td>
+                <td class="i-inc__go"><button type="button" class="lv-iconbtn" data-drawer="order" data-drawer-id="ebay-77815" data-card="mhj" aria-label="Open eBay order 14-13002-77815 (needs review)"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" style="--edge:#60a5fa" data-type="delivered" data-src="alt" data-search="Order 8F21C9" data-drawer-row>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/burrow-2020-prizm-blue-ice-psa9.webp" alt="" width="538" height="900" loading="lazy"><div><p class="lv-name">2020 Panini Prizm Joe Burrow Blue Ice #307</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #83079660</span><span class="lv-pill lv-pill--team lv-team--bengals">Bengals</span></div></div></div></td>
+                <td><span class="lv-k">Source</span><span class="i-src">ALT</span></td>
+                <td><span class="lv-k">Order</span><span class="i-mono">8F21C9</span><span class="i-cell__sub">Sep 30, 2026</span></td>
+                <td><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$385.00</span></td>
+                <td><span class="lv-k">Shipping</span><span class="lv-status lv-status--teal lv-status--sm"><span data-ico="box"></span>Delivered</span><span class="i-cell__sub">UPS · Oct 2, 1:47 PM</span></td>
+                <td><span class="lv-k">Status</span><span class="lv-status lv-status--sent lv-status--caps lv-status--sm"><span data-ico="scanbar"></span>Ready for intake</span></td>
+                <td class="i-inc__go"><button type="button" class="lv-iconbtn" data-drawer="order" data-drawer-id="alt-8f21c9" data-card="burrowIce" aria-label="Open ALT order 8F21C9 (Joe Burrow Blue Ice)"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" data-type="received" data-src="buyback" data-search="Acquisition #7C41B2E9" data-drawer-row>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638" loading="lazy"><div><p class="lv-name">2023 Donruss Optic Joe Burrow Downtown! #D4</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #103207853</span><span class="lv-pill lv-pill--team lv-team--bengals">Bengals</span></div></div></div></td>
+                <td><span class="lv-k">Source</span><span class="i-src">Buyback</span><span class="i-cell__sub i-cell__sub--chip"><span class="lv-handle">northstarcards</span></span></td>
+                <td><span class="lv-k">Order</span><span class="i-mono">#7C41B2E9</span><span class="i-cell__sub">Acquisition<small>Oct 2, 2026</small><small>8:54 PM</small></span></td>
+                <td><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$927.00</span></td>
+                <td><span class="lv-k">Shipping</span><span class="lv-status lv-status--muted lv-status--sm"><span data-ico="pin"></span>On hand</span><span class="i-cell__sub">Bought back on stream</span></td>
+                <td><span class="lv-k">Status</span><span class="lv-status lv-status--ok lv-status--caps lv-status--sm"><span data-ico="checkc"></span>Received</span></td>
+                <td class="i-inc__go"><button type="button" class="lv-iconbtn" data-drawer="order" data-drawer-id="buyback-7c41b2e9" data-card="burrow" aria-label="Open buyback acquisition #7C41B2E9 (Joe Burrow Downtown)"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="i-inc__none" hidden><td colspan="7">No incoming cards match this view.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="lv-foot"><span class="i-inc__count" aria-live="polite">Showing 7 of 12 incoming cards</span></p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ RECEIVING / INTAKE -->
+  <section class="section i-intake" id="intake" data-mode="scan" aria-labelledby="intake-title">
+    <div class="container container--wide">
+      <div class="i-intake__grid">
+        <div class="i-intake__copy">
+          <p class="eyebrow">Receiving and intake</p>
+          <h2 class="t-h2" id="intake-title">From scan <span class="grad-text">to available.</span></h2>
+          <p class="t-lead">Turn physical card intake into a structured, searchable record before inventory begins moving. Delivered orders go through the same Add Cards window.</p>
+          <div class="lv-seg i-mode" role="group" aria-label="Intake path">
+            <button type="button" class="is-on" data-mode="scan" aria-pressed="true">Scan a card</button>
+            <button type="button" data-mode="order" aria-pressed="false">Receive an order</button>
+          </div>
+          <ol class="i-steps" id="intake-steps" data-sequence data-interval="1900" aria-labelledby="intake-title">
+            <li class="i-step" data-step><span class="i-step__n">1</span><span class="i-step__m i-step__m--scan"><b>Scan card</b><span>Capture graded cert data or a raw intake record.</span></span><span class="i-step__m i-step__m--order"><b>Scan the delivered card</b><span>Cert 83079660, from ALT order 8F21C9.</span></span></li>
+            <li class="i-step" data-step><span class="i-step__n">2</span><span class="i-step__m i-step__m--scan"><b>Match + identify</b><span>Attach card identity, attributes, and source.</span></span><span class="i-step__m i-step__m--order"><b>Match the order</b><span>CardsIQ finds the incoming record.</span></span></li>
+            <li class="i-step" data-step><span class="i-step__n">3</span><span class="i-step__m i-step__m--scan"><b>Create SKU</b><span>Generate the internal inventory identifier.</span></span><span class="i-step__m i-step__m--order"><b>Cost and team filled</b><span>$385.00 and Bengals come from the order.</span></span></li>
+            <li class="i-step" data-step><span class="i-step__n">4</span><span class="i-step__m i-step__m--scan"><b>Value + cost</b><span>Attach pricing context and cost basis.</span></span><span class="i-step__m i-step__m--order"><b>Verify / receive</b><span>The cert matches the order; Add Cards receives it.</span></span></li>
+            <li class="i-step" data-step><span class="i-step__n">5</span><span class="i-step__m i-step__m--scan"><b>Available</b><span>Release the card into operational inventory.</span></span><span class="i-step__m i-step__m--order"><b>Available</b><span>Its incoming row becomes Received.</span></span></li>
+          </ol>
+          <button type="button" class="seq-ctl i-intake__ctl" data-seq-control="#intake-steps"><span class="seq-ctl__ico" aria-hidden="true"></span><span class="seq-ctl__label">Pause</span></button>
+        </div>
+
+        <!-- The live Add Cards modal (Screenshots 181739 / 181749 / 181753) -->
+        <div class="lv-panel i-add" data-state="5" data-mode="scan" role="group" aria-label="CardsIQ Add Cards window">
+          <div class="i-add__head">
+            <div><p class="lv-title i-add__title">Add Cards</p><p class="lv-desc">Add graded or raw cards to your product inventory. Enter the amount paid for each card, and a market value for raw cards.</p></div>
+            <span class="lv-iconbtn lv-iconbtn--muted" aria-hidden="true"><span data-ico="close"></span></span>
+          </div>
+          <div class="i-add__wh">
+            <p class="lv-label">Warehouse location <span class="lv-required">Required</span></p>
+            <div class="lv-input"><span data-ico="pin"></span>Main Vault<span class="i-add__clr" data-ico="close"></span><span class="i-add__chev" data-ico="down"></span></div>
+          </div>
+          <div class="i-add__body">
+            <div class="i-add__rail">
+              <p class="lv-label">Intake method</p>
+              <ul class="i-add__methods">
+                <li class="is-on"><span data-ico="scanbar"></span><span><b>Scan Barcodes</b><small>Graded slabs or raw cards</small></span></li>
+                <li><span data-ico="link"></span><span><b>Heystack</b><small>Raw card intake</small></span></li>
+                <li><span data-ico="edit"></span><span><b>Manual Entry</b><small>Add cards individually</small></span></li>
+              </ul>
+              <p class="lv-label i-add__bulk">Bulk tools</p>
+              <ul class="i-add__methods i-add__methods--bulk">
+                <li><span data-ico="upload"></span><span><b>Import CSV</b></span></li>
+                <li><span data-ico="download"></span><span><b>Download Template</b></span></li>
+              </ul>
+            </div>
+            <div class="i-add__main">
+              <div class="i-add__type"><p class="lv-label">Card type</p><span class="lv-seg"><span class="is-on">Graded</span><span>Raw</span></span><p class="i-add__cap">Scan a cert barcode</p></div>
+              <div class="i-add__row2">
+                <div><p class="lv-label">Grader</p><div class="lv-input i-add__grader">PSA<span class="i-add__chev" data-ico="down"></span></div></div>
+                <div><p class="lv-label">Scan barcode</p><div class="lv-input i-add__scan"><span data-ico="scanbar"></span><span class="i-add__typed" data-typed-scan="103207853" data-typed-order="83079660" data-placeholder="Scan a barcode or enter a cert number">103207853</span><span class="lv-btn lv-btn--teal lv-btn--sm i-add__addbtn">Add</span></div></div>
+              </div>
+              <p class="i-add__help">Scan continuously from anywhere in this modal. Cards appear in the list right away while details load in the background. Set team and amount paid on each card below. <span class="i-add__done"><span data-ico="check"></span>Filled from the order</span></p>
+              <div class="i-add__list">
+                <p class="i-add__listhead"><b>Scanned Cards</b><span class="lv-count i-add__count">1</span></p>
+                <p class="i-add__empty">No cards scanned yet.</p>
+                <div class="i-add__card i-add__card--scan">
+                  <img class="lv-thumb" src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638">
+                  <div>
+                    <p class="lv-name">2023 Donruss Optic Joe Burrow Downtown! #D4</p>
+                    <div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #103207853</span><span class="lv-pill lv-pill--team lv-team--bengals i-add__team">Bengals</span><span class="lv-pill lv-pill--cert i-add__sku">SKU #CIQ-P123891</span></div>
+                    <div class="i-add__money">
+                      <span class="lv-val i-add__fmv"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$1,040.00</span></span>
+                      <span class="lv-val i-add__fmv"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,020.00</span></span>
+                      <span class="i-add__paid">Amount paid <span class="lv-pill lv-pill--cost">$540.00</span></span>
+                    </div>
+                    <span class="lv-status lv-status--ok lv-status--caps lv-status--sm i-add__avail"><span data-ico="checkc"></span>Available</span>
+                  </div>
+                </div>
+                <div class="i-add__card i-add__card--order">
+                  <img class="lv-thumb" src="assets/img/slabs/burrow-2020-prizm-blue-ice-psa9.webp" alt="" width="538" height="900" loading="lazy">
+                  <div>
+                    <p class="lv-name">2020 Panini Prizm Joe Burrow Blue Ice #307</p>
+                    <div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #83079660</span><span class="lv-pill lv-pill--team lv-team--bengals i-add__team">Bengals</span></div>
+                    <p class="i-add__match"><span class="lv-status lv-status--ok lv-status--sm"><span data-ico="dcheck"></span>Matched · ALT order 8F21C9</span></p>
+                    <div class="i-add__money">
+                      <span class="i-add__paid">Amount paid <span class="lv-pill lv-pill--cost">$385.00</span><span class="i-add__from"><span data-ico="lock"></span>From order</span></span>
+                    </div>
+                    <span class="lv-status lv-status--ok lv-status--caps lv-status--sm i-add__avail"><span data-ico="checkc"></span>Available</span>
+                  </div>
+                </div>
+              </div>
+              <div class="i-add__acts"><span class="lv-btn i-add__clear">Clear All</span><span class="lv-btn lv-btn--teal i-add__go">Add Cards</span></div>
+            </div>
+          </div>
+          <div class="i-add__foot"><span class="demo-tag i-add__tag--scan">Illustrative product view</span><span class="demo-tag i-add__tag--order">Concept in development · built from CardsIQ components · illustrative orders</span></div>
+        </div>
+      </div>
+      <p class="i-intake__note" data-reveal><span data-ico="link"></span><span class="i-note--scan"><b>Raw cards, too.</b> Import a completed Heystack batch with card title, front and back images, SKU, catalog match, and team, or bring a CSV. Same directory, same record.</span><span class="i-note--order"><b>Received, not re-keyed.</b> Add Cards sets the card to AVAILABLE, and its row in Incoming Inventory becomes Received.</span></p>
+    </div>
+  </section>
+
+  <!-- ============================================================ DIRECTORY (+ insights) -->
+  <section class="section i-dir" id="directory" aria-labelledby="dir-title">
+    <div class="container container--wide">
+      <div class="i-dir__head" data-reveal>
+        <div>
+          <p class="eyebrow">All inventory</p>
+          <h2 class="t-h2" id="dir-title">Graded and raw. <span class="t-dim">One directory.</span></h2>
+        </div>
+        <p class="t-lead">Graded slabs sit beside raw-card SKUs, each with ALT + Card Ladder market data, cost basis, and operational status. Every card keeps where it came from.</p>
+      </div>
+
+      <div class="i-wide">
+      <div class="lv-kpis i-kpis" data-reveal>
+        <div class="lv-kpi lv-kpi--blue"><p class="lv-kpi__label">All inventory</p><p class="lv-kpi__value">184</p><p class="lv-kpi__desc">Cards currently loaded into partner inventory.</p><span class="lv-kpi__ico"><span data-ico="wallet"></span></span></div>
+        <div class="lv-kpi lv-kpi--green lv-kpi--tinted"><p class="lv-kpi__label">Estimated market value</p><p class="lv-kpi__value">$84,420.00</p><p class="lv-kpi__desc">Current estimated value of available inventory.</p><span class="lv-kpi__ico"><span data-ico="dollar"></span></span></div>
+        <div class="lv-kpi lv-kpi--violet"><p class="lv-kpi__label">Inventory cost</p><p class="lv-kpi__value">$61,240.00</p><p class="lv-kpi__desc">Partner cost basis across available inventory.</p><span class="lv-kpi__ico"><span data-ico="clock"></span></span></div>
+        <div class="lv-kpi lv-kpi--amber"><p class="lv-kpi__label">Pricing review</p><p class="lv-kpi__value i-kpis__amber">6</p><p class="lv-kpi__desc">Cards requiring valuation or inventory review.</p><span class="lv-kpi__ico"><span data-ico="checkc"></span></span></div>
+      </div>
+
+      <div class="lv-panel i-dir__panel" data-reveal>
+        <div class="lv-panel__head">
+          <div><p class="lv-eyebrow">Inventory catalog</p><p class="lv-title">Inventory Directory</p><p class="lv-desc">Manage available cards, pricing, status, and inventory details across your catalog.</p></div>
+          <div class="lv-actions" aria-hidden="true"><span class="lv-btn lv-btn--teal"><span data-ico="boxplus"></span>Add Cards</span><span class="lv-btn"><span data-ico="printer"></span>Print Inventory Labels</span></div>
+        </div>
+        <div class="i-dir__bar">
+          <div class="lv-tabs i-dir__tabs" role="group" aria-label="Filter the directory">
+            <button type="button" class="lv-tab is-on" data-filter="all" aria-pressed="true">All Inventory <span class="lv-count">184</span></button>
+            <button type="button" class="lv-tab" data-filter="slab" aria-pressed="false">Slabs <span class="lv-count">152</span></button>
+            <button type="button" class="lv-tab" data-filter="raw" aria-pressed="false">Raw / Sealed <span class="lv-count">32</span></button>
+            <button type="button" class="lv-tab" data-filter="review" aria-pressed="false">Needs Review <span class="lv-count">6</span></button>
+            <button type="button" class="lv-tab" data-filter="noteam" aria-pressed="false">Missing Team <span class="lv-count">2</span></button>
+          </div>
+          <div class="i-dir__tools" aria-hidden="true">
+            <span class="lv-search"><span data-ico="scanbar"></span><span class="i-dir__ph">Scan cert # or SKU, or search by card details</span></span>
+            <span class="lv-select"><span data-ico="filter"></span>Filters</span>
+            <span class="lv-select"><span data-ico="download"></span>Export</span>
+          </div>
+        </div>
+        <p class="i-hint i-hint--panel"><span data-ico="info"></span>Select a card to see where it came from, what you paid, and what happened next.</p>
+        <div class="i-dir__scroll">
+          <table class="lv-table lv-table--stack i-table">
+            <caption class="sr-only">Inventory Directory, illustrative: description, fair market value from ALT and Card Ladder, last sale price, cost, status, and date added</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="i-table__chk"><span class="i-chk" aria-hidden="true"></span><span class="sr-only">Select</span></th>
+                <th scope="col">Description <span class="i-mark" aria-hidden="true">1</span></th>
+                <th scope="col">Fair market value<span data-ico="sort"></span> <span class="i-mark" aria-hidden="true">2</span></th>
+                <th scope="col">Last sale price<span data-ico="sort"></span></th>
+                <th scope="col">Cost<span data-ico="sort"></span> <span class="i-mark" aria-hidden="true">3</span></th>
+                <th scope="col">Status <span class="i-mark" aria-hidden="true">4</span></th>
+                <th scope="col" class="is-sorted">Date added<span data-ico="sort"></span></th>
+                <th scope="col"><span class="sr-only">Open</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="lv-row--edge" style="--edge:#a78bfa" data-type="slab" data-drawer-row>
+                <td class="i-table__chk"><span class="i-chk" aria-hidden="true"></span></td>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638" loading="lazy"><div><p class="lv-name">2023 Donruss Optic Joe Burrow Downtown! #D4</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #103207853</span><span class="lv-pill lv-pill--team lv-team--bengals">Bengals</span></div><div class="i-wh"><span class="lv-pill lv-pill--wh"><span data-ico="pin"></span>Main Vault<span data-ico="down"></span></span></div></div></div></td>
+                <td><span class="lv-k">Fair market value</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$1,040.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,020.00</span></span></span></td>
+                <td><span class="lv-k">Last sale price</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--sale">$1,065.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--sale">$995.00</span></span></span></td>
+                <td class="lv-num"><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$540.00</span></td>
+                <td class="lv-num"><span class="lv-k">Status</span><span class="lv-status lv-status--violet lv-status--caps"><span data-ico="link"></span>Assigned</span></td>
+                <td><span class="lv-k">Date added</span><span class="lv-date">Oct 2, 2026<small>8:42 AM</small></span></td>
+                <td class="i-table__go"><button type="button" class="lv-iconbtn" data-drawer="card" data-drawer-id="burrow" aria-label="Open 2023 Donruss Optic Joe Burrow Downtown! #D4"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" data-type="slab" data-drawer-row>
+                <td class="i-table__chk"><span class="i-chk" aria-hidden="true"></span></td>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/mahomes-2017-optic-holo-psa10.webp" alt="" width="900" height="1494" loading="lazy"><div><p class="lv-name">2017 Panini Donruss Optic Patrick Mahomes II Holo #177</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 10.0</span><span class="lv-pill lv-pill--cert">Cert #156971694</span><span class="lv-pill lv-pill--team lv-team--chiefs">Chiefs</span></div><div class="i-wh"><span class="lv-pill lv-pill--wh"><span data-ico="pin"></span>Main Vault<span data-ico="down"></span></span></div></div></div></td>
+                <td><span class="lv-k">Fair market value</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$1,880.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,845.00</span></span></span></td>
+                <td><span class="lv-k">Last sale price</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--sale">$1,910.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--sale">$1,825.00</span></span></span></td>
+                <td class="lv-num"><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$1,520.00</span></td>
+                <td class="lv-num"><span class="lv-k">Status</span><span class="lv-status lv-status--ok lv-status--caps"><span data-ico="checkc"></span>Available</span></td>
+                <td><span class="lv-k">Date added</span><span class="lv-date">Oct 2, 2026<small>8:39 AM</small></span></td>
+                <td class="i-table__go"><button type="button" class="lv-iconbtn" data-drawer="card" data-drawer-id="mahomes" aria-label="Open 2017 Panini Donruss Optic Patrick Mahomes II Holo #177"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" style="--edge:#a78bfa" data-type="slab" data-drawer-row>
+                <td class="i-table__chk"><span class="i-chk" aria-hidden="true"></span></td>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/brady-2000-bowman-psa8.webp" alt="" width="900" height="1495" loading="lazy"><div><p class="lv-name">2000 Bowman Tom Brady #236</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 8.0</span><span class="lv-pill lv-pill--cert">Cert #82389068</span><span class="lv-pill lv-pill--team lv-team--patriots">Patriots</span></div><div class="i-wh"><span class="lv-pill lv-pill--wh"><span data-ico="pin"></span>Main Vault<span data-ico="down"></span></span></div></div></div></td>
+                <td><span class="lv-k">Fair market value</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$1,195.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,165.00</span></span></span></td>
+                <td><span class="lv-k">Last sale price</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--sale">$1,210.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--sale">$1,140.00</span></span></span></td>
+                <td class="lv-num"><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$1,040.00</span></td>
+                <td class="lv-num"><span class="lv-k">Status</span><span class="lv-status lv-status--violet lv-status--caps"><span data-ico="link"></span>Assigned</span></td>
+                <td><span class="lv-k">Date added</span><span class="lv-date">Oct 1, 2026<small>4:12 PM</small></span></td>
+                <td class="i-table__go"><button type="button" class="lv-iconbtn" data-drawer="card" data-drawer-id="brady" aria-label="Open 2000 Bowman Tom Brady #236"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" data-type="slab" data-drawer-row>
+                <td class="i-table__chk"><span class="i-chk" aria-hidden="true"></span></td>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/kobe-1998-stadium-club-chrome-refractor-psa10.webp" alt="" width="536" height="900" loading="lazy"><div><p class="lv-name">1998 Stadium Club Chrome Kobe Bryant Refractor #6</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 10.0</span><span class="lv-pill lv-pill--cert">Cert #99344756</span><span class="lv-pill lv-pill--team lv-team--lakers">Lakers</span></div><div class="i-wh"><span class="lv-pill lv-pill--wh"><span data-ico="pin"></span>Main Vault<span data-ico="down"></span></span></div></div></div></td>
+                <td><span class="lv-k">Fair market value</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$3,420.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$3,380.00</span></span></span></td>
+                <td><span class="lv-k">Last sale price</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--sale">$3,500.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--sale">$3,350.00</span></span></span></td>
+                <td class="lv-num"><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$2,760.00</span></td>
+                <td class="lv-num"><span class="lv-k">Status</span><span class="lv-status lv-status--ok lv-status--caps"><span data-ico="checkc"></span>Available</span></td>
+                <td><span class="lv-k">Date added</span><span class="lv-date">Oct 1, 2026<small>2:05 PM</small></span></td>
+                <td class="i-table__go"><button type="button" class="lv-iconbtn" data-drawer="card" data-drawer-id="kobe" aria-label="Open 1998 Stadium Club Chrome Kobe Bryant Refractor #6"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" data-type="slab" data-drawer-row>
+                <td class="i-table__chk"><span class="i-chk" aria-hidden="true"></span></td>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/maye-2024-prizm-red-sparkle-psa10.webp" alt="" width="535" height="900" loading="lazy"><div><p class="lv-name">2024 Panini Prizm Drake Maye Red Sparkle #329</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 10.0</span><span class="lv-pill lv-pill--cert">Cert #139782623</span><span class="lv-pill lv-pill--team lv-team--patriots">Patriots</span></div><div class="i-wh"><span class="lv-pill lv-pill--wh"><span data-ico="pin"></span>Main Vault<span data-ico="down"></span></span></div></div></div></td>
+                <td><span class="lv-k">Fair market value</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$640.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$615.00</span></span></span></td>
+                <td><span class="lv-k">Last sale price</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--sale">$655.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--sale">$600.00</span></span></span></td>
+                <td class="lv-num"><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$410.00</span></td>
+                <td class="lv-num"><span class="lv-k">Status</span><span class="lv-status lv-status--ok lv-status--caps"><span data-ico="checkc"></span>Available</span></td>
+                <td><span class="lv-k">Date added</span><span class="lv-date">Sep 30, 2026<small>11:48 AM</small></span></td>
+                <td class="i-table__go"><button type="button" class="lv-iconbtn" data-drawer="card" data-drawer-id="maye" aria-label="Open 2024 Panini Prizm Drake Maye Red Sparkle #329"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" style="--edge:#f5b13d" data-type="slab review noteam" data-drawer-row>
+                <td class="i-table__chk"><span class="i-chk" aria-hidden="true"></span></td>
+                <td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/wembanyama-2022-bowman-u-best-auto-psa10.webp" alt="" width="469" height="799" loading="lazy"><div><p class="lv-name">2022 Bowman University Best Victor Wembanyama Auto-Refractor #BOAVW</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 10.0</span><span class="lv-pill lv-pill--cert">Cert #78900062</span><span class="lv-pill i-noteam">Missing team</span></div><div class="i-wh"><span class="lv-pill lv-pill--wh"><span data-ico="pin"></span>Main Vault<span data-ico="down"></span></span></div></div></div></td>
+                <td><span class="lv-k">Fair market value</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$1,650.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,600.00</span></span></span></td>
+                <td><span class="lv-k">Last sale price</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--sale">$1,700.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--sale">$1,580.00</span></span></span></td>
+                <td class="lv-num"><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$1,280.00</span></td>
+                <td class="lv-num"><span class="lv-k">Status</span><span class="lv-status lv-status--amber lv-status--caps"><span data-ico="clock"></span>Needs review</span></td>
+                <td><span class="lv-k">Date added</span><span class="lv-date i-date--amber">Sep 29, 2026<small>3:20 PM</small></span></td>
+                <td class="i-table__go"><button type="button" class="lv-iconbtn" data-drawer="card" data-drawer-id="wemby" aria-label="Open 2022 Bowman University Best Victor Wembanyama Auto-Refractor #BOAVW"><span data-ico="arrow"></span></button></td>
+              </tr>
+              <tr class="lv-row--edge" data-type="raw" data-drawer-row>
+                <td class="i-table__chk"><span class="i-chk" aria-hidden="true"></span></td>
+                <td><div class="lv-desc-cell"><span class="lv-thumb i-rawthumb" aria-hidden="true"></span><div><p class="lv-name">2024 Panini Prizm Bo Nix Silver Prizm Rookie Broncos</p><div class="lv-chips"><span class="lv-pill lv-pill--raw">RAW</span><span class="lv-pill lv-pill--cert">SKU #CIQ-412</span><span class="lv-pill lv-pill--team lv-team--broncos">Broncos</span></div><div class="i-wh"><span class="lv-pill lv-pill--wh"><span data-ico="pin"></span>Main Vault<span data-ico="down"></span></span></div></div></div></td>
+                <td><span class="lv-k">Fair market value</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--empty">—</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--empty">—</span></span></span></td>
+                <td><span class="lv-k">Last sale price</span><span class="lv-vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--sale">$170.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--sale">$165.00</span></span></span></td>
+                <td class="lv-num"><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$95.00</span></td>
+                <td class="lv-num"><span class="lv-k">Status</span><span class="lv-status lv-status--ok lv-status--caps"><span data-ico="checkc"></span>Available</span></td>
+                <td><span class="lv-k">Date added</span><span class="lv-date">Sep 29, 2026<small>10:02 AM</small></span></td>
+                <td class="i-table__go"><button type="button" class="lv-iconbtn" data-drawer="card" data-drawer-id="bonix" aria-label="Open 2024 Panini Prizm Bo Nix Silver Prizm Rookie Broncos"><span data-ico="arrow"></span></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="lv-foot"><span class="i-dir__count" aria-live="polite">Showing 7 of 184 cards</span><span class="demo-tag">Illustrative product view · real CardsIQ layout</span></p>
+      </div>
+
+      <ol class="i-legend" data-reveal>
+        <li><span class="i-mark">1</span><span><b>Identity on every row.</b> Grade, cert or SKU, team, and warehouse location travel with the card.</span></li>
+        <li><span class="i-mark">2</span><span><b>Two market sources.</b> ALT and Card Ladder fair market value and last sale, side by side.</span></li>
+        <li><span class="i-mark">3</span><span><b>Cost basis on the card.</b> What you paid sits next to what it's worth.</span></li>
+        <li><span class="i-mark">4</span><span><b>Gaps get caught.</b> Needs Review and Missing Team surface cards that aren't ready to move.</span></li>
+      </ol>
+      </div>
+
+      <div class="i-ins__grid" aria-labelledby="ins-title" role="group">
+        <div class="i-ins__copy" data-reveal>
+          <p class="eyebrow">Inventory intelligence</p>
+          <h3 class="t-h3" id="ins-title">Know what you hold, <span class="t-dim">and how long you've held it.</span></h3>
+          <p class="t-body">See how available inventory is distributed by value and how long it has been sitting in stock, so pricing and product decisions start from the record.</p>
+        </div>
+        <div class="lv-panel i-ins__panel" data-reveal>
+          <div class="lv-panel__head">
+            <div><p class="lv-eyebrow">Inventory intelligence</p><p class="lv-title">Inventory Insights</p></div>
+            <span class="lv-btn lv-btn--teal lv-btn--sm" aria-hidden="true"><span data-ico="chart"></span>View Reports</span>
+          </div>
+          <div class="i-ins__body">
+            <div class="i-ins__card">
+              <div class="i-ins__top"><div><p class="lv-tile__k">Value distribution</p><p class="i-ins__big">$458.80</p><p class="lv-sub">Average inventory value</p></div><span class="lv-tile lv-tile--teal i-ins__loaded"><span class="lv-tile__k">Loaded</span><span class="lv-tile__v">184 cards</span></span></div>
+              <ul class="i-bars">
+                <li><span>Under $100</span><span>38 cards · 20.7%</span><span class="lv-bar"><i style="--w: 20.7%"></i></span></li>
+                <li><span>$100 – $249</span><span>52 cards · 28.3%</span><span class="lv-bar"><i style="--w: 28.3%"></i></span></li>
+                <li><span>$250 – $499</span><span>41 cards · 22.3%</span><span class="lv-bar"><i style="--w: 22.3%"></i></span></li>
+                <li><span>$500 – $999</span><span>30 cards · 16.3%</span><span class="lv-bar"><i style="--w: 16.3%"></i></span></li>
+                <li><span>$1,000 – $2,499</span><span>17 cards · 9.2%</span><span class="lv-bar"><i style="--w: 9.2%"></i></span></li>
+                <li><span>$2,500+</span><span>6 cards · 3.3%</span><span class="lv-bar"><i style="--w: 3.3%"></i></span></li>
+              </ul>
+            </div>
+            <div class="i-ins__card">
+              <div class="i-ins__top"><div><p class="lv-tile__k">Inventory aging</p><p class="i-ins__big">60 Days</p><p class="lv-sub">Current stale inventory threshold</p></div><span class="lv-tile lv-tile--teal i-ins__loaded"><span class="lv-tile__k">Aging starts</span><span class="lv-tile__v">Day 30</span></span></div>
+              <div class="i-age" aria-hidden="true"><i style="--w: 82%"></i><i style="--w: 15%"></i><i style="--w: 3%"></i></div>
+              <div class="lv-tiles i-age__tiles">
+                <div class="lv-tile"><p class="i-age__k"><span class="lv-dot lv-dot--green"></span>Fresh</p><p class="lv-tile__v">151</p><p class="lv-sub">0–29 days</p></div>
+                <div class="lv-tile"><p class="i-age__k"><span class="lv-dot lv-dot--amber"></span>Aging</p><p class="lv-tile__v">27</p><p class="lv-sub">30–59 days</p></div>
+                <div class="lv-tile"><p class="i-age__k"><span class="lv-dot lv-dot--red"></span>Stale</p><p class="lv-tile__v">6</p><p class="lv-sub">60+ days</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ PRODUCT -->
+  <section class="section i-prod" aria-labelledby="prod-title">
+    <div class="container container--wide">
+      <div class="i-prod__grid">
+        <div class="i-prod__copy" data-reveal>
+          <p class="eyebrow">Products</p>
+          <h2 class="t-h2" id="prod-title">Inventory becomes product <span class="grad-text">without losing its history.</span></h2>
+          <p class="t-lead">Build cases and break products from live inventory while keeping card-level economics and status connected.</p>
+          <ul class="i-keeps">
+            <li><span data-ico="checkc"></span>Every card keeps its cert, cost basis, and market value</li>
+            <li><span data-ico="checkc"></span>Floor and ceiling tiers set the product's range</li>
+            <li><span data-ico="checkc"></span>Totals are the sum of the cards inside</li>
+          </ul>
+          <a class="link-arrow" href="streamiq.html">Follow the product into StreamIQ <span data-ico="arrow"></span></a>
+        </div>
+
+        <div class="i-prod__ui" data-reveal>
+          <!-- Case detail (Screenshot 181419) -->
+          <div class="lv-panel i-case i-case--first">
+            <div class="i-case__head">
+              <div><p class="lv-name lv-name--caps i-case__title">Football Premium 02 <span class="lv-status lv-status--amber lv-status--sm"><span data-ico="box"></span>Filling</span></p><p class="lv-sub">Updated Oct 2, 2026 · 8:31 PM</p></div>
+              <div class="lv-chips i-case__tiers"><span class="lv-tier lv-tier--floor"><b>Floor</b> $150.00–$400.00</span><span class="lv-tier lv-tier--ceiling"><b>Ceiling</b> $1,000.00–$1,500.00</span></div>
+            </div>
+            <div class="i-case__banner"><span data-ico="info"></span><span><b>Team assignments are in progress</b><span>This case is in a break that is still collecting team spots.</span></span><span class="i-case__inv"><span class="lv-k">Case inventory</span><b>10/10 cards</b><span class="lv-bar lv-bar--green"><i style="--w: 100%"></i></span></span></div>
+            <div class="i-case__sec"><p class="lv-title i-case__h">Ceiling Cards</p><p class="lv-sub">3 cards in the ceiling range</p><span class="lv-tier lv-tier--ceiling i-case__tag"><b>Ceiling</b></span></div>
+            <table class="lv-table i-case__table">
+              <caption class="sr-only">Ceiling cards in Football Premium 02 with eligibility, fair market value, and cost</caption>
+              <thead><tr><th scope="col">Eligibility</th><th scope="col">Description</th><th scope="col">Fair market value</th><th scope="col">Cost</th></tr></thead>
+              <tbody>
+                <tr><td class="lv-num"><span class="i-elig" role="img" aria-label="Eligible"><span data-ico="checkc"></span></span></td><td><div class="lv-desc-cell"><span class="lv-thumb i-goldthumb" aria-hidden="true"></span><div><p class="lv-name">2024 Panini Prizm Malik Nabers Gold /10</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 10.0</span><span class="lv-pill lv-pill--team lv-team--giants">Giants</span></div></div></div></td><td><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,420.00</span></span></td><td><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$1,260.00</span></td></tr>
+                <tr><td class="lv-num"><span class="i-elig" role="img" aria-label="Eligible"><span data-ico="checkc"></span></span></td><td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/brady-2000-bowman-psa8.webp" alt="" width="900" height="1495" loading="lazy"><div><p class="lv-name">2000 Bowman Tom Brady #236</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 8.0</span><span class="lv-pill lv-pill--cert">Cert #82389068</span><span class="lv-pill lv-pill--team lv-team--patriots">Patriots</span></div></div></div></td><td><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,165.00</span></span></td><td><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$1,040.00</span></td></tr>
+                <tr class="lv-row--hi"><td class="lv-num"><span class="i-elig" role="img" aria-label="Eligible"><span data-ico="checkc"></span></span></td><td><div class="lv-desc-cell"><img class="lv-thumb" src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638" loading="lazy"><div><p class="lv-name">2023 Donruss Optic Joe Burrow Downtown! #D4</p><div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #103207853</span><span class="lv-pill lv-pill--team lv-team--bengals">Bengals</span></div></div></div></td><td><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,020.00</span></span></td><td><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$540.00</span></td></tr>
+              </tbody>
+            </table>
+            <div class="i-case__sec i-case__sec--floor"><p class="lv-title i-case__h">Floor Cards</p><p class="lv-sub">7 cards in the floor range · Chase, Williams, Daniels, Stroud, Wilson, Robinson, Bowers</p><span class="lv-tier lv-tier--floor i-case__tag"><b>Floor</b></span></div>
+            <div class="i-case__totals"><span><span class="lv-k">Cards</span><b>10</b></span><span><span class="lv-k">Market value</span><span class="lv-pill lv-pill--fmv">$5,430.00</span></span><span><span class="lv-k">Build cost</span><span class="lv-pill lv-pill--cost">$4,820.00</span></span><span><span class="lv-k">Spread</span><b class="i-case__spread">+$610.00</b></span></div>
+            <p class="lv-foot"><span>Spread = market value − cost, summed card by card.</span><span class="demo-tag">Illustrative product view</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ LEDGER -->
+  <section class="section i-ledger" id="ledger" aria-labelledby="ledger-title">
+    <div class="container container--wide">
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow">Inventory ledger</p>
+        <h2 class="t-h2" id="ledger-title" tabindex="-1">One card. One record. <span class="grad-text">Every movement.</span></h2>
+        <p class="t-lead">Intake, valuation, product assignment, break activity, fulfillment, and buybacks remain visible as one operational history.</p>
+      </div>
+
+      <div class="i-ledger__grid">
+        <aside class="i-ledger__card" aria-label="The card this ledger follows">
+          <div class="i-ledger__sticky">
+            <span class="slab i-ledger__slab"><img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="2023 Donruss Optic Joe Burrow Downtown! #D4, PSA 9 MINT, cert 103207853" width="380" height="638" loading="lazy"><span class="slab__floor"></span></span>
+            <div class="i-ledger__state">
+              <p class="lv-k">Record · <span>SKU #CIQ-P123891</span></p>
+              <p class="i-ledger__now" aria-live="off"><span class="lv-status lv-status--ok lv-status--caps" data-state-pill><span data-ico="checkc"></span><span data-state-text>Available</span></span></p>
+              <p class="lv-sub" data-state-where>Main Vault · cost $927.00</p>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lv-panel i-ledger__panel">
+          <div class="lv-panel__head">
+            <div><p class="lv-eyebrow">Inventory ledger</p><p class="lv-title">Ledger Activity</p><p class="lv-desc">Track inventory movement, cost changes, and how each activity affects your inventory balance.</p></div>
+          </div>
+          <ol class="i-entries">
+            <li class="i-entry" data-state="Available|ok|Main Vault · cost $540.00">
+              <span class="i-entry__node"><span data-ico="boxplus"></span></span>
+              <div class="i-entry__card">
+                <div class="i-entry__top"><p class="i-entry__t">Inventory Added</p><span class="lv-pill lv-pill--lg i-entry__amt i-entry__amt--up"><span data-ico="up"></span>+$540.00</span></div>
+                <div class="lv-chips"><span class="i-tag i-tag--green">Scan</span><span class="i-tag">1 card</span><span class="i-tag">Oct 2, 2026 · 8:42 AM</span></div>
+                <p class="i-entry__d">Card was added to available inventory and the inventory balance was updated.</p>
+                <div class="i-entry__bal"><span><span class="lv-k">Previous balance</span><b>$60,700.00</b></span><span class="i-entry__arrow" aria-hidden="true"><span data-ico="arrow"></span></span><span><span class="lv-k">Updated balance</span><b>$61,240.00</b></span></div>
+              </div>
+            </li>
+            <li class="i-entry" data-state="Available|ok|Priced · $1,030.00 reference">
+              <span class="i-entry__node"><span data-ico="value"></span></span>
+              <div class="i-entry__card">
+                <div class="i-entry__top"><p class="i-entry__t">Priced</p><span class="lv-pill lv-pill--fmv lv-pill--lg">$1,030.00</span></div>
+                <div class="lv-chips"><span class="i-tag i-tag--cyan">ALT + CL</span><span class="i-tag">9:14 AM</span></div>
+                <p class="i-entry__d">Market value attached from ALT ($1,040.00) and Card Ladder ($1,020.00), beside a $540.00 cost basis.</p>
+              </div>
+            </li>
+            <li class="i-entry" data-state="Assigned|violet|Football Premium 02">
+              <span class="i-entry__node"><span data-ico="layers"></span></span>
+              <div class="i-entry__card">
+                <div class="i-entry__top"><p class="i-entry__t">Assigned to product</p><span class="lv-status lv-status--violet lv-status--caps"><span data-ico="link"></span>Assigned</span></div>
+                <div class="lv-chips"><span class="i-tag i-tag--violet">Football Premium 02</span><span class="i-tag">11:37 AM</span></div>
+                <p class="i-entry__d">Moved into a closed-break product with its cert, cost, and market value attached.</p>
+              </div>
+            </li>
+            <li class="i-entry" data-state="Live break|teal|2026 NFL Mixer · Break 04">
+              <span class="i-entry__node"><span data-ico="radio"></span></span>
+              <div class="i-entry__card">
+                <div class="i-entry__top"><p class="i-entry__t">Break started · buyer assigned</p><span class="lv-handle">northstarcards</span></div>
+                <div class="lv-chips"><span class="i-tag i-tag--teal">StreamIQ</span><span class="i-tag">BRK-1842-04</span><span class="i-tag">8:31 PM</span></div>
+                <p class="i-entry__d">2026 NFL Mixer, Break 04. The Bengals spot belongs to a verified buyer before the card is hit.</p>
+              </div>
+            </li>
+            <li class="i-entry" data-state="Completed|ok|Bought back · $927.00">
+              <span class="i-entry__node"><span data-ico="dollar"></span></span>
+              <div class="i-entry__card">
+                <div class="i-entry__top"><p class="i-entry__t">Bought back</p><span class="lv-pill lv-pill--offer lv-pill--lg">$927.00</span></div>
+                <div class="lv-chips"><span class="i-tag i-tag--blue">Buyback</span><span class="i-tag">Live break</span><span class="i-tag">#7C41B2E9</span><span class="i-tag">8:54 PM</span></div>
+                <p class="i-entry__d">Hit at 8:52 PM. The instant offer at 90.0% was accepted, verified, and completed. <a class="lv-link" href="instant-buybacks.html">See it in Instant Buybacks <span data-ico="external"></span></a></p>
+              </div>
+            </li>
+            <li class="i-entry" data-state="Available|ok|Main Vault · cost $927.00">
+              <span class="i-entry__node i-entry__node--done"><span data-ico="checkc"></span></span>
+              <div class="i-entry__card">
+                <div class="i-entry__top"><p class="i-entry__t">Inventory Added</p><span class="lv-pill lv-pill--lg i-entry__amt i-entry__amt--up"><span data-ico="up"></span>+$927.00</span></div>
+                <div class="lv-chips"><span class="i-tag i-tag--green">Buyback intake</span><span class="i-tag">Destination: Inventory</span></div>
+                <p class="i-entry__d">The bought-back card returns to inventory with its whole history attached and a new cost basis.</p>
+              </div>
+            </li>
+          </ol>
+          <p class="lv-foot"><span>6 entries · 10 events on this record</span><span class="demo-tag">Illustrative ledger</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FAQ -->
+  <section class="section i-faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="split-head">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Questions</p>
+          <h2 class="t-h2" id="faq-title">Inventory questions.</h2>
+          <p class="t-body">Start with the cards you already hold, then sync the ones you buy.</p>
+        </div>
+        <div class="faq" data-reveal>
+          <details open>
+            <summary>Can we bring in the inventory we already have?</summary>
+            <div class="faq__a">Yes. Scan graded certs, import a completed <strong>Heystack</strong> batch for raw cards, add cards manually, or import a CSV from the template. Each card gets an identity, an internal SKU, and a warehouse location before it moves.</div>
+          </details>
+          <details>
+            <summary>Which marketplaces sync orders?</summary>
+            <div class="faq__a">Order sync starts with eBay, Fanatics Collect, Goldin, and ALT, with more sources to follow. Synced orders arrive as incoming inventory with cost, seller, and tracking attached.</div>
+          </details>
+          <details>
+            <summary>What happens when the package arrives?</summary>
+            <div class="faq__a">Scan the cert like any other intake. CardsIQ matches it to the incoming record, so cost and order details are already on the card.</div>
+          </details>
+          <details>
+            <summary>Does it handle raw cards as well as graded slabs?</summary>
+            <div class="faq__a">Yes. Graded cards are matched from PSA, BGS, and SGC cert data. Raw cards enter with their own SKU and source attached, then sit in the same directory as your slabs.</div>
+          </details>
+          <details>
+            <summary>What happens to card-level economics inside a product?</summary>
+            <div class="faq__a">They stay attached. When you build a case or break product from live inventory, every card keeps its cert, cost basis, market value, and status, so the product's totals are the sum of the cards inside it.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FINAL CTA -->
+  <section class="cta-final i-final" aria-labelledby="final-title">
+    <div class="ambient ambient--violet i-final__amb" aria-hidden="true"></div>
+    <div class="container container--wide">
+      <div class="i-final__copy">
+        <p class="eyebrow">Built on CardsIQ</p>
+        <h2 class="cta-final__title" id="final-title">Operate inventory <span class="grad-text">from acquisition to outcome.</span></h2>
+        <p class="cta-final__sub">Give every card a structured identity, cost history, operational state, and transaction trail that survives every workflow.</p>
+        <div class="cta-final__actions btn-row i-final__actions">
+          <a class="btn btn--primary btn--lg" data-cta="partner" data-interest="inventory-management" href="become-a-partner.html">Become a partner <span data-ico="arrow"></span></a>
+          <span class="cta-note">Collecting? <a data-cta="create-account" href="#create-account">Create account</a></span>
+        </div>
+      </div>
+      <p class="sr-only" id="shelf-label">Graded cards on the shelf, each with its CardsIQ identity</p>
+      <ul class="i-shelf" aria-labelledby="shelf-label">
+        <li><span class="slab"><img src="assets/img/slabs/mantle-1958-topps-psa4.webp" alt="1958 Topps Mickey Mantle #150, PSA 4 VG-EX" width="900" height="1501" loading="lazy"></span><span class="lv-pill lv-pill--cert">Cert #69974937</span></li>
+        <li><span class="slab"><img src="assets/img/slabs/brady-2000-bowman-psa8.webp" alt="2000 Bowman Tom Brady #236, PSA 8 NM-MT" width="900" height="1495" loading="lazy"></span><span class="lv-pill lv-pill--cert">Cert #82389068</span></li>
+        <li><span class="slab"><img src="assets/img/slabs/mahomes-2017-optic-holo-psa10.webp" alt="2017 Panini Donruss Optic Patrick Mahomes II Holo #177, PSA 10 GEM MT" width="900" height="1494" loading="lazy"></span><span class="lv-pill lv-pill--cert">Cert #156971694</span></li>
+        <li class="i-shelf__hero"><span class="slab"><img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="2023 Donruss Optic Joe Burrow Downtown! #D4, PSA 9 MINT" width="380" height="638" loading="lazy"></span><span class="lv-pill lv-pill--cert">SKU #CIQ-P123891</span></li>
+        <li><span class="slab"><img src="assets/img/slabs/kobe-1998-stadium-club-chrome-refractor-psa10.webp" alt="1998 Stadium Club Chrome Kobe Bryant Refractor #6, PSA 10 GEM MT" width="536" height="900" loading="lazy"></span><span class="lv-pill lv-pill--cert">Cert #99344756</span></li>
+        <li><span class="slab"><img src="assets/img/slabs/maye-2024-prizm-red-sparkle-psa10.webp" alt="2024 Prizm Drake Maye Red Sparkle #329, PSA 10 GEM MT" width="535" height="900" loading="lazy"></span><span class="lv-pill lv-pill--cert">Cert #139782623</span></li>
+        <li><span class="slab"><img src="assets/img/slabs/wembanyama-2022-bowman-u-best-auto-psa10.webp" alt="2022 Bowman University Best Victor Wembanyama Auto-Refractor #BOAVW, PSA 10 GEM MT" width="469" height="799" loading="lazy"></span><span class="lv-pill lv-pill--cert">Cert #78900062</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+<script src="assets/js/ciq.js" defer></script>
+<script src="assets/js/page-inventory.js" defer></script>
+
+<nav id="ciq-ver" aria-label="Design prototype version"><span>Design prototype</span><a href="../v1/inventory-management.html" title="First CRO demo" aria-label="v1: First CRO demo">v1</a><a href="../v2/inventory-management.html" title="Combined demo, Oct 6" aria-label="v2: Combined demo, Oct 6">v2</a><a href="../v2.1/inventory-management.html" title="Acquisitions + StreamIQ, current" aria-label="v2.1: Acquisitions + StreamIQ, current" aria-current="page">v2.1</a></nav>
+<style>
+#ciq-ver{position:fixed;right:16px;bottom:16px;z-index:80;display:flex;align-items:center;gap:4px;padding:4px 4px 4px 14px;border-radius:999px;background:rgba(8,12,28,.92);box-shadow:0 0 0 1px rgba(148,163,200,.28),0 18px 40px -12px rgba(0,0,0,.8);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 13px/1 Outfit,system-ui,-apple-system,"Segoe UI",sans-serif}
+#ciq-ver span{margin-right:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8d97b5;white-space:nowrap}
+#ciq-ver a{display:inline-grid;place-items:center;min-width:44px;height:34px;padding:0 12px;border-radius:999px;color:#c9d1ea;text-decoration:none}
+#ciq-ver a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#ciq-ver a:focus-visible{outline:2px solid #2fd3e6;outline-offset:2px}
+#ciq-ver a[aria-current]{color:#fff;background:linear-gradient(135deg,#2f7bff,#7b5cff)}
+@media (max-width:420px){#ciq-ver span{display:none}#ciq-ver{padding-left:4px}}
+@media print{#ciq-ver{display:none}}
+</style>
+<script>(function(){var q=location.search+location.hash;if(!q)return;document.querySelectorAll('#ciq-ver a').forEach(function(a){a.setAttribute('href',a.getAttribute('href')+q)})})();</script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+/* About (trust page) — v2 composition.
+   Structure from v1 about.html (approved): thesis → why CardsIQ exists → principles → manifesto → who → two sides → close.
+   v2: hero pill eyebrow + hi-res Mantle with label-only caption; the v1 weave simplified to a CSS-only
+   "Today → Built on CardsIQ" map (labels from the One operating system PDF); one photographic moment;
+   one live status-pill line in the manifesto. No product dashboards. No JS beyond ciq.js.
+   Layout breakpoints respond to the content column (@container main), not the viewport. */
+
+:root {
+  --ab-ink-cyan: #7fdcf0;     /* label-scan readout */
+  --ab-ink-blue: #8fb8ff;     /* outline numerals, hairlines */
+  --ab-thread: linear-gradient(90deg, #22a8ff, #4f7cff 55%, #a258f7);
+}
+.ab-nowrap { white-space: nowrap; }
+
+/* ------------------------------------------------------------ hero */
+.ab-hero { position: relative; padding: clamp(36px, 4.4vw, 72px) 0 clamp(64px, 6.4vw, 104px); overflow: hidden; }
+.ab-hero__amb1 { width: 760px; height: 640px; right: -200px; top: -60px; opacity: 0.4; }
+.ab-hero__amb2 { width: 460px; height: 380px; right: 160px; top: 300px; opacity: 0.24; }
+.ab-hero__grid { display: grid; grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr); gap: clamp(36px, 4.4vw, 72px); align-items: center; }
+/* Title size follows the copy column so "infrastructure." always holds on one line. */
+.ab-hero__title { margin-top: 28px; font-size: min(var(--fs-hero), calc((min(100cqi - 2 * var(--gutter), 1320px) - clamp(36px, 4.4vw, 72px)) * 0.47 / 7.4)); }
+.ab-hero__lead { margin-top: 28px; max-width: 30em; }
+.ab-hero__claim { position: relative; margin-top: 24px; padding-left: 20px; max-width: 28em; font-size: clamp(1.1875rem, 1.05rem + 0.45vw, 1.4375rem); line-height: 1.4; font-weight: 500; letter-spacing: -0.015em; color: var(--text); }
+.ab-hero__claim::before { content: ""; position: absolute; left: 0; top: 0.2em; bottom: 0.2em; width: 2px; border-radius: 2px; background: var(--grad-v); box-shadow: 0 0 14px rgba(79, 124, 255, 0.6); }
+.ab-hero__cta { margin-top: 40px; }
+
+/* The artifact: one slab; its label read as data, beside it. Sizes come from the figure's own width (cqi). */
+.ab-art { position: relative; margin: 0; container: art / inline-size; display: grid; grid-template-columns: 58% minmax(0, 1fr); column-gap: 30px; align-items: start; padding-bottom: 48px; }
+.ab-art__card { position: relative; z-index: 1; }
+.ab-art__card .slab { width: 100%; }
+.ab-art__card .slab img { border-radius: 3.4% / 2.1%; }
+.ab-art__card .slab__glow { inset: 6% -24% 0; background: radial-gradient(closest-side, rgba(47, 139, 255, 0.4), transparent 72%); }
+/* label scan, inside .slab so it tilts with the card: brackets stay (the label is data now), the beam passes once */
+.ab-art__scan { position: absolute; left: 7.2%; right: 7.2%; top: 3.6%; height: 15.8%; border-radius: 4px; pointer-events: none; overflow: hidden;
+  --c: var(--cyan);
+  background:
+    linear-gradient(var(--c), var(--c)) left top / 14px 1.5px no-repeat,
+    linear-gradient(var(--c), var(--c)) left top / 1.5px 14px no-repeat,
+    linear-gradient(var(--c), var(--c)) right top / 14px 1.5px no-repeat,
+    linear-gradient(var(--c), var(--c)) right top / 1.5px 14px no-repeat,
+    linear-gradient(var(--c), var(--c)) left bottom / 14px 1.5px no-repeat,
+    linear-gradient(var(--c), var(--c)) left bottom / 1.5px 14px no-repeat,
+    linear-gradient(var(--c), var(--c)) right bottom / 14px 1.5px no-repeat,
+    linear-gradient(var(--c), var(--c)) right bottom / 1.5px 14px no-repeat;
+  box-shadow: 0 0 0 1px rgba(53, 208, 238, 0.14), 0 0 30px rgba(53, 208, 238, 0.12); }
+.ab-art__scan::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 34%; background: linear-gradient(90deg, transparent, rgba(53, 208, 238, 0.3) 70%, rgba(170, 240, 255, 0.7) 96%, transparent); transform: translateX(-110%); animation: ab-scan 1.5s var(--ease) 0.4s 1 both; }
+@keyframes ab-scan { 0% { transform: translateX(-110%); opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(310%); opacity: 0; } }
+
+/* The caption lines up with the slab label: label centre = 58cqi × 1.668 × 0.1146 ≈ 11.1cqi from the top. */
+.ab-art__label { position: relative; padding-top: calc(11.1cqi - 0.6rem); }
+.ab-art__label::before { content: ""; position: absolute; right: calc(100% + 8px); width: 18px; top: 11.1cqi; height: 1.5px; background: linear-gradient(90deg, rgba(53, 208, 238, 0.2), var(--cyan)); }
+.ab-art__k { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; line-height: 1.2rem; color: var(--ab-ink-cyan); }
+.ab-art__fields { margin-top: 16px; border-top: 1px solid var(--line); }
+.ab-art__fields > div { padding: 13px 0 14px; border-bottom: 1px solid var(--line); animation: ab-read .6s var(--ease-out) both; }
+.ab-art__fields > div:nth-child(1) { animation-delay: 1.1s; }
+.ab-art__fields > div:nth-child(2) { animation-delay: 1.3s; }
+.ab-art__fields > div:nth-child(3) { animation-delay: 1.5s; }
+@keyframes ab-read { from { opacity: 0.25; } to { opacity: 1; } }
+.ab-art__fields dt { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); font-weight: 600; }
+.ab-art__fields dd { margin-top: 5px; font-size: 1.0625rem; line-height: 1.35; font-weight: 500; letter-spacing: -0.01em; color: var(--text); }
+.ab-art__fields dd.t-mono { font-size: 1rem; }
+.ab-art__year { position: absolute; right: -6%; bottom: -0.08em; z-index: -1; font-size: clamp(6rem, 30cqi, 12.5rem); font-weight: 600; line-height: 0.8; letter-spacing: -0.06em; color: transparent; -webkit-text-stroke: 1px rgba(143, 184, 255, 0.16); user-select: none; pointer-events: none; }
+
+/* 1280vw: keep both hero buttons on one row in the narrower copy column */
+@container main (max-width: 1099px) {
+  .ab-hero__cta { gap: 12px; }
+  .ab-hero__cta .btn { padding-inline: 22px; }
+}
+/* tablet: the slab stays beside the copy (above the fold); its caption moves under it */
+@container main (max-width: 899px) {
+  .ab-hero { padding-bottom: clamp(56px, 7vw, 80px); }
+  .ab-hero__grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr); gap: 36px; align-items: start; }
+  .ab-hero__title { font-size: min(var(--fs-hero), calc((100cqi - 2 * var(--gutter) - 36px) * 0.7 / 7.4)); }
+  .ab-hero__cta { margin-top: 32px; }
+  .ab-art { margin-top: 62px; grid-template-columns: minmax(0, 1fr); row-gap: 24px; padding-bottom: 0; }
+  .ab-art__label { padding-top: 0; }
+  .ab-art__label::before { display: none; }
+  .ab-art__year { display: none; }
+}
+/* phone: stacked; slab and caption side by side again */
+@container main (max-width: 639px) {
+  .ab-hero__grid { grid-template-columns: minmax(0, 1fr); gap: 44px; }
+  .ab-hero__title { font-size: var(--fs-hero); }
+  .ab-hero__title .line { display: inline; }
+  .ab-hero__lead { margin-top: 22px; }
+  .ab-hero__claim { margin-top: 20px; }
+  .ab-hero__cta .btn { flex: 1 1 100%; }
+  .ab-art { margin-top: 0; grid-template-columns: 46% minmax(0, 1fr); column-gap: 22px; padding-bottom: 8px; }
+  .ab-art__label { padding-top: calc(8.8cqi - 0.6rem); }
+  .ab-art__label::before { display: block; top: 8.8cqi; width: 12px; right: calc(100% + 6px); }
+  .ab-art__fields { margin-top: 10px; }
+  .ab-art__fields > div { padding: 9px 0 10px; }
+  .ab-art__fields dd { font-size: 0.9375rem; }
+  .ab-art__fields dd.t-mono { font-size: 0.875rem; }
+}
+
+/* ------------------------------------------------------------ why CardsIQ exists */
+.ab-frag { padding-block: calc(var(--section) * 0.6) calc(var(--section) * 0.7); }
+.ab-frag__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr); gap: clamp(32px, 5vw, 80px); align-items: end; }
+.ab-frag__head .eyebrow + .t-h2 { margin-top: 22px; }
+.ab-frag__head .t-lead { max-width: 30em; }
+@container main (max-width: 899px) {
+  .ab-frag__head { grid-template-columns: 1fr; gap: 22px; }
+}
+
+/* The map (simplified v1 weave). Left of the threshold each tool keeps a dashed stub that stops short;
+   right of it one solid thread per tool runs into a single bus, and the bus into one operational record.
+   Pure CSS: before and after are both visible at rest; only the threads draw in. */
+.ab-flow { --lw: 10.5em; --row: 50px; --gap: 16px; --gate: calc(var(--lw) + (100% - var(--lw)) / 2); margin: clamp(56px, 6vw, 88px) 0 0; }
+.ab-flow__map { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 0.7fr); grid-template-areas: "heads ." "rows record"; }
+
+.ab-flow__heads { grid-area: heads; display: grid; grid-template-columns: var(--gate) minmax(0, 1fr); padding-bottom: 26px; }
+.ab-flow__head { display: grid; gap: 6px; align-content: start; padding-right: 20px; }
+.ab-flow__head--on { padding: 0 0 0 calc(var(--gap) + 8px); }
+.ab-flow__k { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--text-3); }
+.ab-flow__head--on .ab-flow__k { color: var(--label-blue); }
+.ab-flow__s { font-size: 1rem; line-height: 1.4; color: var(--text-3); }
+.ab-flow__head--on .ab-flow__s { color: var(--text); }
+
+.ab-flow__rows { grid-area: rows; position: relative; }
+.ab-flow__rows li { position: relative; display: grid; grid-template-columns: var(--lw) minmax(0, 1fr) minmax(0, 1fr); align-items: center; height: var(--row); }
+.ab-flow__name { grid-column: 1; grid-row: 1; font-size: clamp(1.0625rem, 0.95rem + 0.35vw, 1.3125rem); font-weight: 500; letter-spacing: -0.015em; color: var(--text-2); white-space: nowrap; }
+/* stub: dashed, dim, and it never reaches the threshold */
+.ab-flow__rows li::before { content: ""; grid-column: 2; grid-row: 1; height: 1.5px; margin: 0 var(--gap) 0 0; background: repeating-linear-gradient(90deg, rgba(140, 156, 214, 0.42) 0 3px, transparent 3px 9px); }
+/* thread: solid, from just past the threshold into the bus */
+.ab-flow__rows li::after { content: ""; grid-column: 3; grid-row: 1; height: 2px; margin-left: var(--gap); background: var(--ab-thread); background-size: 100% 100%; transform-origin: left center; }
+.ab-flow__rows i { grid-column: 3; grid-row: 1; justify-self: start; margin-left: calc(var(--gap) - 4px); width: 9px; height: 9px; border-radius: 50%; background: var(--bg); box-shadow: inset 0 0 0 1.5px #7db4ff, 0 0 10px rgba(79, 124, 255, 0.6); z-index: 1; }
+/* the threshold */
+.ab-flow__rows::before { content: ""; position: absolute; top: -10px; bottom: -10px; left: var(--gate); width: 1px; background: linear-gradient(180deg, transparent, var(--line-3) 14%, var(--line-3) 86%, transparent); }
+/* the bus */
+.ab-flow__rows::after { content: ""; position: absolute; right: 0; top: calc(var(--row) / 2); bottom: calc(var(--row) / 2); width: 2px; border-radius: 2px; background: linear-gradient(180deg, #4f7cff, #a258f7); box-shadow: 0 0 14px rgba(79, 124, 255, 0.55); transform-origin: center; }
+
+.ab-flow__record { grid-area: record; position: relative; align-self: center; display: flex; align-items: center; gap: 22px; padding-left: 56px; }
+.ab-flow__record::before { content: ""; position: absolute; left: 0; top: 50%; width: 56px; height: 2px; margin-top: -1px; background: #a258f7; box-shadow: 0 0 12px rgba(162, 88, 247, 0.6); transform-origin: left center; }
+.ab-flow__mark { flex: none; width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 50% 35%, #111a4a, #070b26 70%); box-shadow: inset 0 0 0 1px rgba(124, 140, 255, 0.7), 0 0 0 10px rgba(79, 124, 255, 0.07), 0 0 70px rgba(79, 124, 255, 0.5); }
+.ab-flow__mark img { width: 44px; height: auto; }
+.ab-flow__rec { font-size: clamp(1.5rem, 1rem + 1.2vw, 2.25rem); line-height: 1.05; font-weight: 600; letter-spacing: -0.03em; color: var(--text); text-wrap: balance; }
+
+/* draw-in, once, when the figure reveals */
+html.js .ab-flow__rows li::after { transform: scaleX(0); transition: transform .9s var(--ease-out); }
+html.js .ab-flow__rows li:nth-child(2)::after { transition-delay: 80ms; }
+html.js .ab-flow__rows li:nth-child(3)::after { transition-delay: 160ms; }
+html.js .ab-flow__rows li:nth-child(4)::after { transition-delay: 240ms; }
+html.js .ab-flow__rows li:nth-child(5)::after { transition-delay: 320ms; }
+html.js .ab-flow__rows li:nth-child(6)::after { transition-delay: 400ms; }
+html.js .ab-flow__rows::after { transform: scaleY(0); transition: transform .7s var(--ease-out) .8s; }
+html.js .ab-flow__record::before { transform: scaleX(0); transition: transform .5s var(--ease-out) 1.3s; }
+html.js .ab-flow__mark, html.js .ab-flow__rec { opacity: 0.3; transition: opacity .8s var(--ease) 1.5s; }
+.ab-flow.is-in .ab-flow__rows li::after, .ab-flow.is-in .ab-flow__record::before { transform: none; }
+.ab-flow.is-in .ab-flow__rows::after { transform: none; }
+.ab-flow.is-in .ab-flow__mark, .ab-flow.is-in .ab-flow__rec { opacity: 1; }
+
+/* tablet + phone: the record drops below, hanging from the bus */
+@container main (max-width: 899px) {
+  .ab-flow { --lw: 8.6em; --row: 50px; --bus: 32px; }
+  .ab-flow__map { grid-template-columns: minmax(0, 1fr); grid-template-areas: "heads" "rows" "record"; }
+  .ab-flow__rows { margin-right: var(--bus); }
+  .ab-flow__heads { margin-right: var(--bus); }
+  .ab-flow__rows::after { bottom: 0; border-radius: 2px 2px 0 0; transform-origin: top center; }
+  .ab-flow__record { justify-self: end; flex-direction: row-reverse; align-items: center; gap: 16px; padding: 30px 0 0; text-align: right; }
+  .ab-flow__record::before { left: auto; right: calc(var(--bus) - 1px); top: 0; width: 2px; height: 30px; margin: 0; background: linear-gradient(180deg, #a258f7, #8a6bff); transform-origin: top center; }
+  html.js .ab-flow__record::before { transform: scaleY(0); }
+  .ab-flow.is-in .ab-flow__record::before { transform: none; }
+  .ab-flow__mark { width: 64px; height: 64px; }
+  .ab-flow__mark img { width: 34px; }
+  .ab-flow__rec { max-width: 9em; }
+}
+@container main (max-width: 639px) {
+  /* the "today" stubs get the narrower share so the CardsIQ heading has room */
+  .ab-flow { --lw: 5.7em; --row: 46px; --gap: 10px; --bus: 32px; --gate: calc(var(--lw) + (100% - var(--lw)) * 0.3); margin-top: 44px; }
+  .ab-flow__rows li { grid-template-columns: var(--lw) minmax(0, 0.3fr) minmax(0, 0.7fr); }
+  .ab-flow__k { letter-spacing: 0.12em; }
+  .ab-flow__name { font-size: 1rem; }
+  .ab-flow__head { padding-right: 10px; }
+  .ab-flow__head--on { padding-left: calc(var(--gap) + 4px); }
+  .ab-flow__s { font-size: 0.875rem; }
+  .ab-flow__rec { font-size: 1.5rem; }
+}
+
+/* ------------------------------------------------------------ principles: a descending staircase, the evidence under 04 */
+.ab-prin { padding-block: calc(var(--section) * 0.65) calc(var(--section) * 0.55); }
+.ab-prin__head .eyebrow + .t-h2 { margin-top: 22px; }
+.prin { --w: 58%; margin-top: clamp(40px, 4vw, 56px); display: grid; gap: clamp(20px, 2.2vw, 30px); }
+.prin__item { width: var(--w); margin-left: calc((100% - var(--w)) / 3 * var(--i, 0)); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(20px, 2.4vw, 36px); align-items: start; padding-top: 24px; border-top: 1px solid var(--line); }
+.prin__item:nth-child(2) { --i: 1; } .prin__item:nth-child(3) { --i: 2; } .prin__item:nth-child(4) { --i: 3; }
+.prin__num { min-width: 1.15em; font-size: clamp(3.25rem, 2rem + 3.4vw, 5.5rem); line-height: 0.78; font-weight: 300; letter-spacing: -0.05em; color: transparent; -webkit-text-stroke: 1.2px rgba(143, 184, 255, 0.6); font-variant-numeric: tabular-nums; }
+.prin__name { font-size: clamp(1.5rem, 1.15rem + 1vw, 2.125rem); line-height: 1.1; font-weight: 600; letter-spacing: -0.028em; }
+.prin__text { margin-top: 10px; font-size: var(--fs-lead); line-height: 1.5; color: var(--text-2); max-width: 26em; text-wrap: pretty; }
+.prin__proof { margin-top: 24px; padding-top: 18px; display: grid; grid-template-columns: repeat(2, minmax(0, max-content)); gap: 16px clamp(28px, 3.4vw, 56px); background: linear-gradient(90deg, var(--blue), rgba(124, 92, 255, 0.5) 40%, transparent) left top / 100% 1px no-repeat; }
+.prin__proof dt { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); font-weight: 600; }
+.prin__proof dd { margin-top: 5px; font-size: 1rem; font-weight: 500; line-height: 1.4; color: var(--text); white-space: nowrap; }
+@container main (max-width: 899px) { .prin { --w: 80%; } }
+@container main (max-width: 639px) {
+  .prin { --w: 100%; gap: 22px; }
+  .prin__item { margin-left: 0; gap: 16px; padding-top: 20px; }
+  .prin__num { font-size: 2.75rem; }
+  .prin__proof { gap: 14px 20px; }
+  .prin__proof dd { font-size: 0.9375rem; white-space: normal; }
+}
+
+/* ------------------------------------------------------------ photo moment: one band, edge to edge of the content column.
+   The photograph bleeds in from the right and fades into the page; the caption sits on plain ground at the left. */
+.ab-photo { position: relative; display: grid; padding-block: calc(var(--section) * 0.2) calc(var(--section) * 0.5); }
+.ab-photo > * { grid-area: 1 / 1; }
+.ab-photo__band { position: relative; margin: 0; height: clamp(300px, 32cqi, 440px); overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 84%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 84%, transparent 100%); }
+.ab-photo__band img { position: absolute; top: 0; right: 0; width: 64%; height: 100%; object-fit: cover; object-position: 50% 55%; filter: saturate(0.86) brightness(0.9);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, 0.55) 18%, #000 40%);
+  mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, 0.55) 18%, #000 40%); }
+.ab-photo__cap { position: relative; z-index: 1; align-self: center; }
+.ab-photo__copy { max-width: min(26em, 38%); }
+.ab-photo__title { font-size: clamp(1.75rem, 1.2rem + 1.5vw, 2.75rem); line-height: 1.06; font-weight: 600; letter-spacing: -0.03em; text-wrap: balance; }
+.ab-photo__sub { margin-top: 16px; font-size: var(--fs-lead); line-height: 1.5; color: var(--text-2); text-wrap: pretty; }
+@container main (max-width: 899px) {
+  .ab-photo__band img { width: 60%; }
+  .ab-photo__copy { max-width: 42%; }
+}
+/* phone: the band full width, the caption beneath it */
+@container main (max-width: 639px) {
+  .ab-photo { padding-bottom: calc(var(--section) * 0.55); }
+  .ab-photo > * { grid-area: auto; }
+  .ab-photo__band { height: 230px; }
+  .ab-photo__band img { position: static; width: 100%; object-position: 50% 34%; -webkit-mask-image: none; mask-image: none; }
+  .ab-photo__cap { margin-top: 18px; }
+  .ab-photo__copy { max-width: none; }
+  .ab-photo__sub { margin-top: 12px; }
+}
+
+/* ------------------------------------------------------------ manifesto: one card, one record, every movement */
+.ab-mani { position: relative; padding-block: calc(var(--section) * 0.55) calc(var(--section) * 0.65); overflow: hidden; background: linear-gradient(180deg, transparent, rgba(9, 14, 43, 0.72) 20%, rgba(9, 14, 43, 0.72) 80%, transparent); }
+.mani { position: relative; margin-top: 28px; padding-left: clamp(24px, 3vw, 44px); }
+.mani__rail { position: absolute; left: 0; top: 0.4em; bottom: 0; width: 2px; border-radius: 2px; background: rgba(140, 156, 214, 0.14); }
+.mani__rail::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 0; border-radius: inherit; background: var(--grad-v); box-shadow: 0 0 14px rgba(79, 124, 255, 0.7); transition: height 1s var(--ease-out); }
+html:not(.js) .mani__rail::after, .mani[data-index="2"] .mani__rail::after { height: 100%; }
+.mani[data-index="0"] .mani__rail::after { height: 26%; }
+.mani[data-index="1"] .mani__rail::after { height: 50%; }
+.mani__title { font-size: clamp(2.75rem, calc((100cqi - 2 * var(--gutter) - 52px) / 10), 7rem); line-height: 1.02; letter-spacing: -0.048em; font-weight: 600; }
+/* dimmed only once JS can light them; without JS the H2 stays at full contrast */
+.mani__line { display: block; width: fit-content; color: var(--text); transition: opacity 1s var(--ease); }
+html.js .mani__line { opacity: 0.16; }
+html.js .mani__line.is-active, html.js .mani__line.is-done { opacity: 1; }
+.mani__line--last { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: 0.06em; }
+
+/* the one live line: this card, its cert, the statuses its record moved through */
+.mani__proof { margin-top: clamp(36px, 4vw, 52px); padding-top: 24px; border-top: 1px solid var(--line); display: grid; gap: 14px; transition: opacity .8s var(--ease); }
+html.js .mani:not([data-index="2"]) .mani__proof { opacity: 0.35; }
+.mani__trail { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+.mani__card { display: inline-flex; align-items: center; gap: 12px; }
+.mani__card .lv-thumb { width: 30px; }
+.mani__steps { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px 8px; }
+/* each arrow travels with the status it leads to, so a wrapped line starts with an arrow instead of ending on one */
+.mani__step { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.mani__arr { width: 22px; height: 1.5px; background: linear-gradient(90deg, rgba(140, 156, 214, 0.25), rgba(140, 156, 214, 0.7)); position: relative; }
+.mani__arr::after { content: ""; position: absolute; right: -1px; top: -3px; width: 7px; height: 7px; border-top: 1.5px solid rgba(140, 156, 214, 0.7); border-right: 1.5px solid rgba(140, 156, 214, 0.7); transform: rotate(45deg); }
+@container main (max-width: 639px) {
+  .mani__title { font-size: clamp(2.25rem, 10.6cqi, 3.5rem); }
+  .mani__trail { gap: 14px; }
+  .mani__arr { width: 14px; }
+}
+
+/* ------------------------------------------------------------ built across the hobby + the two sides of one card */
+.ab-who { overflow: hidden; padding-block: calc(var(--section) * 0.65); }
+.ab-who__amb { width: 620px; height: 520px; left: 50%; top: 56%; margin-left: -310px; opacity: 0.24; }
+.roles-type { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.08em 0; font-size: clamp(2rem, 1rem + 2.5vw, 3.375rem); line-height: 1.16; font-weight: 500; letter-spacing: -0.035em; color: var(--text); }
+.roles-type li { white-space: nowrap; }
+.roles-type li:not(:last-child)::after { content: "/"; margin: 0 0.32em 0 0.3em; font-weight: 300; color: rgba(125, 150, 230, 0.5); }
+.ab-who__sub { margin-top: clamp(24px, 2.6vw, 32px); max-width: 36em; }
+
+/* two sides, one hinge: a blue-to-violet rule between the business side and the collector side */
+.sides { position: relative; margin-top: clamp(52px, 5.4vw, 80px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: clamp(56px, 7vw, 112px); }
+/* subgrid rows keep both lists on the same line whatever the subtitle length */
+.side { display: grid; grid-row: span 5; grid-template-rows: subgrid; align-content: start; }
+.sides { grid-template-rows: repeat(5, auto); }
+.side__cta { justify-self: start; }
+.sides::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: linear-gradient(180deg, rgba(47, 139, 255, 0.7), rgba(162, 88, 247, 0.7) 70%, transparent); }
+.side__k { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--text-3); }
+.side__title { margin-top: 14px; font-size: clamp(1.75rem, 1.25rem + 1.3vw, 2.5rem); line-height: 1.05; letter-spacing: -0.032em; font-weight: 600; text-wrap: balance; }
+.side__sub { margin-top: 12px; max-width: 26em; font-size: var(--fs-body); line-height: 1.55; color: var(--text-2); }
+.side__list { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; border-top: 1px solid var(--line); }
+.side__list li { position: relative; display: flex; align-items: center; gap: 12px; min-height: 48px; border-bottom: 1px solid var(--line); font-size: 1.0625rem; font-weight: 500; letter-spacing: -0.01em; color: var(--text); }
+.side__list li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; flex: none; background: var(--blue); box-shadow: 0 0 10px rgba(47, 139, 255, 0.7); }
+/* module names that have their own page are plain links */
+.side__list a { flex: 1; align-self: stretch; display: flex; align-items: center; color: inherit; text-decoration: underline; text-decoration-color: rgba(143, 184, 255, 0.35); text-decoration-thickness: 1px; text-underline-offset: 6px; transition: text-decoration-color .25s, color .25s; }
+.side__list a:hover { color: #fff; text-decoration-color: var(--ab-ink-blue); }
+.side__cta { margin-top: 20px; min-height: 44px; }
+.side--col .side__list li::before { background: var(--violet-s); box-shadow: 0 0 10px rgba(162, 88, 247, 0.6); }
+.side--col .side__cta .ico { color: var(--violet-s); }
+
+@container main (max-width: 899px) {
+  .sides { column-gap: 48px; }
+  .side__list { grid-template-columns: 1fr; }
+  .side__list li { min-height: 46px; }
+}
+/* phone: business, then collector; the hinge turns horizontal */
+@container main (max-width: 639px) {
+  .roles-type { font-size: clamp(1.75rem, 8.4cqi, 2.25rem); }
+  .sides { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 60px; margin-top: 48px; }
+  .side { display: block; grid-row: auto; }
+  .sides::before { top: 50%; bottom: auto; left: 0; right: 0; width: auto; height: 1px; background: linear-gradient(90deg, rgba(47, 139, 255, 0.7), rgba(162, 88, 247, 0.7) 70%, transparent); }
+  .side__list { grid-template-columns: 1fr 1fr; column-gap: 20px; }
+  .side__list li { min-height: 48px; font-size: 1rem; gap: 10px; }
+}
+
+/* ------------------------------------------------------------ final CTA: centered, the hobby's cards rising beneath */
+.ab-cta { padding-top: calc(var(--section) * 0.75); padding-bottom: 0; border-top: 1px solid rgba(140, 156, 214, 0.08); text-align: center; }
+.ab-cta__amb { width: 760px; height: 560px; left: 50%; bottom: -160px; margin-left: -380px; opacity: 0.5; }
+.ab-cta__inner { display: flex; flex-direction: column; align-items: center; }
+.ab-cta .cta-final__sub { margin-inline: auto; }
+.ab-cta .cta-final__actions { justify-content: center; }
+.ab-cta__art { position: relative; width: min(100%, 560px); height: clamp(170px, 19cqi, 240px); margin: clamp(40px, 4vw, 56px) auto 0; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 45%, transparent); mask-image: linear-gradient(180deg, #000 45%, transparent); }
+.ab-cta__art img { width: 100%; height: auto; filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.6)) saturate(0.95); }
+@container main (max-width: 639px) {
+  .ab-cta .cta-final__title .line { display: inline; }
+  .ab-cta .cta-final__actions .btn { flex: 1 1 100%; }
+  .ab-cta__art { height: 130px; margin-top: 36px; }
+}
+
+/* ------------------------------------------------------------ phone rhythm */
+@container main (max-width: 639px) {
+  .ab-frag { padding-block: calc(var(--section) * 0.5) calc(var(--section) * 0.6); }
+  .ab-prin { padding-block: calc(var(--section) * 0.55) calc(var(--section) * 0.5); }
+  .ab-mani { padding-block: calc(var(--section) * 0.55) calc(var(--section) * 0.6); }
+  .ab-who { padding-block: calc(var(--section) * 0.55); }
+}

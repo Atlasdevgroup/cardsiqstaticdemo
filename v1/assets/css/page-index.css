@@ -1,0 +1,32 @@
+/* Demo hub — reviewer entry point */
+.hub-hero { position: relative; padding: clamp(48px, 6vw, 96px) 0 clamp(24px, 3vw, 40px); overflow: hidden; }
+.hub-hero__title { margin-top: 22px; max-width: 18ch; }
+.hub-hero__lead { margin-top: 22px; max-width: 640px; }
+
+.hub-list { margin-top: 20px; border-top: 1px solid var(--line); counter-reset: hub; }
+.hub-row { display: grid; grid-template-columns: 48px minmax(0, 1fr) 200px 240px; gap: 24px; align-items: center; padding: 26px 8px 26px 0; border-bottom: 1px solid var(--line); transition: background .25s, padding .3s var(--ease); }
+.hub-row:hover { background: rgba(255, 255, 255, 0.02); padding-left: 10px; }
+.hub-row__n { color: var(--text-3); font-size: 0.875rem; }
+.hub-row__main { display: grid; gap: 6px; }
+.hub-row__name { font-size: clamp(1.25rem, 1.05rem + 0.6vw, 1.625rem); font-weight: 600; letter-spacing: -0.02em; }
+.hub-row__idea { color: var(--text-2); font-size: 0.9375rem; }
+.hub-row__route { color: #8fc0ff; font-size: 0.875rem; }
+.hub-row__cta { color: var(--text-3); font-size: 0.875rem; text-align: right; }
+
+.hub-notes { border-top: 1px solid rgba(140, 156, 214, 0.08); }
+.hub-notes__grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr); gap: clamp(32px, 5vw, 80px); }
+.hub-dl > div { display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.hub-dl dt { color: var(--text-3); font-size: 0.875rem; }
+.hub-dl dd { color: var(--text-2); font-size: 0.9375rem; }
+.hub-dl a { color: var(--text); text-decoration: underline; text-decoration-color: var(--line-3); text-underline-offset: 3px; }
+
+@container main (max-width: 899px) {
+  .hub-row { grid-template-columns: 36px minmax(0, 1fr); }
+  .hub-row__route, .hub-row__cta { grid-column: 2; text-align: left; }
+  .hub-notes__grid { grid-template-columns: 1fr; }
+}
+@container main (max-width: 479px) { .hub-dl > div { grid-template-columns: 1fr; gap: 4px; } }
+
+.hub-hero__wrap { position: relative; }
+.hub-hero__art { position: absolute; right: 0; top: 50%; width: min(40%, 480px); height: auto; transform: translateY(-46%) rotate(4deg); filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.65)); pointer-events: none; }
+@container main (max-width: 899px) { .hub-hero__art { display: none; } }

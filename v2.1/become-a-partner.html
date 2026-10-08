@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Become a Partner | CardsIQ</title>
+  <meta name="description" content="Bring CardsIQ infrastructure into your collectibles business with the platform modules that fit your operation.">
+  <link rel="icon" href="assets/img/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..800&family=Geist+Mono:wght@400..600&display=swap">
+  <link rel="stylesheet" href="assets/css/ciq.css">
+  <link rel="stylesheet" href="assets/css/live-ui.css">
+  <link rel="stylesheet" href="assets/css/page-partner.css">
+</head>
+<body data-page="partner" data-primary-cta="none">
+<script src="assets/js/shell.js"></script>
+<main id="main" class="page">
+
+  <!-- ============================================================ HERO: the pitch on the left, the inquiry on the right -->
+  <section class="bp-hero" data-hero aria-labelledby="hero-title">
+    <div class="ambient ambient--blue bp-hero__amb1" aria-hidden="true"></div>
+    <div class="ambient ambient--violet bp-hero__amb2" aria-hidden="true"></div>
+    <div class="container container--wide bp-hero__grid">
+
+      <div class="bp-head">
+        <p class="eyebrow eyebrow--pill">Partner with CardsIQ</p>
+        <h1 class="t-hero bp-head__title" id="hero-title">Bring your hobby operation <span class="grad-text">onto one connected platform.</span></h1>
+        <p class="t-lead bp-head__lead">Whether you run breaks, manage inventory, operate a card shop, build repacks, or acquire cards, CardsIQ connects the workflows behind your business.</p>
+      </div>
+
+      <!-- ============================================================ INQUIRY (two steps; without JS both steps show and the form posts) -->
+      <div class="bp-side" data-hero-cta>
+        <div class="bp-form" id="inquiry" tabindex="-1">
+          <form id="inquiry-form" class="bp-form__form" method="post" action="#inquiry-form" novalidate aria-label="Partner inquiry">
+            <div class="bp-form__top">
+              <p class="lv-eyebrow">Partner inquiry</p>
+              <ol class="bp-steps" aria-label="Inquiry steps" hidden>
+                <li aria-current="step">Step 01</li>
+                <li>Step 02</li>
+              </ol>
+            </div>
+
+            <!-- Step 1: how you operate (production fields interest / volume / workflow as radio chips) -->
+            <div class="bp-pane" data-pane="1" role="group" aria-labelledby="pane1-title">
+              <h2 class="bp-pane__title" id="pane1-title" tabindex="-1">Tell us how you operate.</h2>
+              <p class="bp-pane__sub">Tell us how your business operates today and which parts of CardsIQ you want to explore.</p>
+
+              <fieldset class="bp-group" data-group="interest">
+                <legend class="lv-label">Primary Interest <span class="lv-required" aria-hidden="true">Required</span></legend>
+                <div class="lv-seg bp-seg">
+                  <label class="bp-chip"><input type="radio" name="interest" value="Inventory Management" required><span>Inventory Management</span></label>
+                  <label class="bp-chip"><input type="radio" name="interest" value="Instant Buybacks" required><span>Instant Buybacks</span></label>
+                  <label class="bp-chip"><input type="radio" name="interest" value="StreamIQ" required><span>StreamIQ</span></label>
+                  <label class="bp-chip"><input type="radio" name="interest" value="Licensed Repacks" required><span>Licensed Repacks</span></label>
+                  <label class="bp-chip"><input type="radio" name="interest" value="Multiple Products" required><span>Multiple Products</span></label>
+                </div>
+                <p class="bp-err" id="err-interest" hidden></p>
+              </fieldset>
+
+              <fieldset class="bp-group" data-group="volume">
+                <legend class="lv-label">Monthly Card Volume <span class="lv-required" aria-hidden="true">Required</span></legend>
+                <div class="lv-seg bp-seg">
+                  <label class="bp-chip"><input type="radio" name="volume" value="Under 500 cards" required><span>Under 500 cards</span></label>
+                  <label class="bp-chip"><input type="radio" name="volume" value="500 - 2,500 cards" required><span>500 - 2,500 cards</span></label>
+                  <label class="bp-chip"><input type="radio" name="volume" value="2,500 - 10,000 cards" required><span>2,500 - 10,000 cards</span></label>
+                  <label class="bp-chip"><input type="radio" name="volume" value="10,000+ cards" required><span>10,000+ cards</span></label>
+                </div>
+                <p class="bp-err" id="err-volume" hidden></p>
+              </fieldset>
+
+              <fieldset class="bp-group" data-group="workflow">
+                <legend class="lv-label">Current Workflow <span class="lv-required" aria-hidden="true">Required</span></legend>
+                <div class="lv-seg bp-seg">
+                  <label class="bp-chip"><input type="radio" name="workflow" value="Spreadsheets / manual intake" required><span>Spreadsheets / manual intake</span></label>
+                  <label class="bp-chip"><input type="radio" name="workflow" value="Existing inventory platform" required><span>Existing inventory platform</span></label>
+                  <label class="bp-chip"><input type="radio" name="workflow" value="Live-break tools" required><span>Live-break tools</span></label>
+                  <label class="bp-chip"><input type="radio" name="workflow" value="Custom internal software" required><span>Custom internal software</span></label>
+                </div>
+                <p class="bp-err" id="err-workflow" hidden></p>
+              </fieldset>
+
+              <div class="bp-actions bp-actions--next" hidden>
+                <button class="btn btn--primary btn--block bp-continue" type="button">Continue <span data-ico="arrow"></span></button>
+              </div>
+            </div>
+
+            <!-- Step 2: who you are and what you're trying to solve -->
+            <div class="bp-pane" data-pane="2" role="group" aria-labelledby="pane2-title">
+              <h2 class="bp-pane__title" id="pane2-title" tabindex="-1">Tell us about your hobby business.</h2>
+              <p class="bp-pane__sub">Where the friction is, and how to reach you. We'll route the inquiry to the right team.</p>
+              <div class="bp-picked" hidden>
+                <p class="bp-picked__k" id="picked-k">Your operation</p>
+                <ul class="bp-picked__list" aria-labelledby="picked-k"></ul>
+              </div>
+
+              <div class="bp-fields">
+                <div class="bp-field">
+                  <label class="lv-label" for="f-name">Full Name <span class="lv-required" aria-hidden="true">Required</span></label>
+                  <input class="lv-input" id="f-name" name="fullName" type="text" autocomplete="name" placeholder="Jane Smith" required>
+                  <p class="bp-err" id="err-fullName" hidden></p>
+                </div>
+                <div class="bp-field">
+                  <label class="lv-label" for="f-company">Company / Shop <span class="lv-required" aria-hidden="true">Required</span></label>
+                  <input class="lv-input" id="f-company" name="company" type="text" autocomplete="organization" placeholder="Acme Breaks LLC" required>
+                  <p class="bp-err" id="err-company" hidden></p>
+                </div>
+                <div class="bp-field bp-field--full">
+                  <label class="lv-label" for="f-email">Work Email <span class="lv-required" aria-hidden="true">Required</span></label>
+                  <input class="lv-input" id="f-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@yourshop.com" required>
+                  <p class="bp-err" id="err-email" hidden></p>
+                </div>
+                <div class="bp-field bp-field--full">
+                  <label class="lv-label" for="f-message">What are you trying to solve? <span class="lv-optional">Optional</span></label>
+                  <textarea class="lv-input" id="f-message" name="message" rows="3" placeholder="Inventory intake, raw-card workflow, buybacks, live production, operational pain points..."></textarea>
+                </div>
+              </div>
+
+              <!-- Visible summary (not live: it follows edits). Outcomes are announced in #bp-live. -->
+              <p class="bp-status" id="bp-status"></p>
+              <div class="bp-actions">
+                <button class="btn btn--secondary bp-back" type="button" hidden><span data-ico="arrow"></span>Back</button>
+                <button class="btn btn--primary bp-submit" type="submit"><span class="bp-submit__label">Submit inquiry</span><span data-ico="send"></span></button>
+              </div>
+              <p class="bp-trust"><span data-ico="lock"></span>Your information is secure and will only be used by the CardsIQ team.</p>
+            </div>
+          </form>
+
+          <!-- Success: replaces the form after a successful submission -->
+          <div class="bp-done" hidden>
+            <span class="bp-done__mark" aria-hidden="true"><span data-ico="check"></span></span>
+            <h2 class="bp-done__title" tabindex="-1">Inquiry received.</h2>
+            <p class="bp-done__sub">We'll route it to the right CardsIQ team.</p>
+            <dl class="bp-done__record">
+              <div><dt>Company / Shop</dt><dd data-out="company"></dd></div>
+              <div><dt>Primary Interest</dt><dd data-out="interest"></dd></div>
+              <div><dt>Monthly Card Volume</dt><dd data-out="volume"></dd></div>
+              <div><dt>Current Workflow</dt><dd data-out="workflow"></dd></div>
+            </dl>
+            <p class="bp-done__k">While you wait</p>
+            <div class="bp-done__links">
+              <a class="link-arrow bp-done__module" href="how-it-works.html" hidden><span class="bp-done__module-label"></span> <span data-ico="arrow"></span></a>
+              <a class="link-arrow" href="how-it-works.html" data-route="platform">See how CardsIQ works <span data-ico="arrow"></span></a>
+            </div>
+          </div>
+
+          <p class="sr-only" id="bp-live" aria-live="polite"></p>
+        </div>
+        <p class="cta-note bp-side__note">Collecting, not running a business? <a data-cta="create-account" href="#create-account">Create account</a></p>
+      </div>
+
+      <div class="bp-who">
+        <p class="bp-k">Who we work with</p>
+        <ul class="bp-who__list">
+          <li>Breakers</li>
+          <li>Card shops</li>
+          <li>Show vendors</li>
+          <li>Repack businesses</li>
+          <li>Marketplaces</li>
+          <li>Buyers</li>
+        </ul>
+      </div>
+
+      <div class="bp-next">
+        <h2 class="bp-k" id="next-title">What happens next</h2>
+        <ol class="bp-next__list" aria-labelledby="next-title">
+          <li class="bp-next__step is-current"><span class="bp-next__n" aria-hidden="true"><span class="bp-next__num">01</span><span data-ico="check"></span></span><span class="bp-next__t">Tell us how your operation runs today.</span></li>
+          <li class="bp-next__step"><span class="bp-next__n" aria-hidden="true"><span class="bp-next__num">02</span><span data-ico="check"></span></span><span class="bp-next__t">We route it to the right CardsIQ team.</span></li>
+          <li class="bp-next__step"><span class="bp-next__n" aria-hidden="true"><span class="bp-next__num">03</span><span data-ico="check"></span></span><span class="bp-next__t">We scope the CardsIQ modules that fit your operation.</span></li>
+        </ol>
+        <p class="bp-next__note"><b>No generic package.</b> We start with how your business actually works.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ PRODUCT FIT -->
+  <section class="section bp-fit" aria-labelledby="fit-title">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow">Product fit</p>
+        <h2 class="t-h2" id="fit-title">Start where you need <span class="grad-text">CardsIQ most.</span></h2>
+        <p class="t-lead">Start with one module. Card identity, inventory, products, live commerce, buybacks, and settlement stay connected, so each workflow carries context into the next.</p>
+      </div>
+
+      <ol class="bp-fit__list">
+        <li class="bp-fit__row" data-reveal>
+          <div class="bp-fit__copy">
+            <p class="bp-fit__n">01</p>
+            <h3 class="t-h3">Inventory</h3>
+            <p class="t-body">Graded card ingestion, raw-card intake, ALT + Card Ladder market data, warehouses, and product workflows.</p>
+            <a class="link-arrow bp-up" href="#inquiry" data-pick="Inventory Management">Start with Inventory Management <span data-ico="arrow"></span></a>
+          </div>
+          <figure class="lv-panel lv-panel--flat bp-proof">
+            <figcaption class="bp-proof__bar"><span class="lv-eyebrow">Inventory Directory</span><span class="lv-sub">SKU #CIQ-P123891</span></figcaption>
+            <div class="bp-proof__body bp-proof__card">
+              <img class="lv-thumb" src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="" width="380" height="638" loading="lazy">
+              <div>
+                <p class="lv-name">2023 Donruss Optic Joe Burrow Downtown! #D4</p>
+                <div class="lv-chips"><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #103207853</span><span class="lv-pill lv-pill--team lv-team--bengals">Bengals</span><span class="lv-pill lv-pill--wh"><span data-ico="pin"></span>Main Vault</span></div>
+              </div>
+            </div>
+            <div class="bp-proof__cells">
+              <div><span class="lv-k">Fair market value</span><span class="bp-proof__vals"><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$1,040.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,020.00</span></span></span></div>
+              <div><span class="lv-k">Cost</span><span class="lv-pill lv-pill--cost">$540.00</span></div>
+              <div><span class="lv-k">Status</span><span class="lv-status lv-status--ok lv-status--caps"><span data-ico="checkc"></span>Available</span></div>
+            </div>
+          </figure>
+        </li>
+
+        <li class="bp-fit__row" data-reveal>
+          <div class="bp-fit__copy">
+            <p class="bp-fit__n">02</p>
+            <h3 class="t-h3">Instant Buybacks</h3>
+            <p class="t-body">Offer logic, approvals, verification, and settlement infrastructure for acquisitions.</p>
+            <a class="link-arrow bp-up" href="#inquiry" data-pick="Instant Buybacks">Start with Instant Buybacks <span data-ico="arrow"></span></a>
+          </div>
+          <figure class="lv-panel lv-panel--flat bp-proof">
+            <figcaption class="bp-proof__bar"><span class="lv-eyebrow">Break 04 · Buyback offers</span><span class="lv-sub">Card hit 8:52:03 PM</span></figcaption>
+            <div class="bp-proof__cells bp-proof__cells--offer">
+              <div><span class="lv-k">User</span><span class="lv-handle">northstarcards</span></div>
+              <div><span class="lv-k">Reference price</span><span class="lv-pill lv-pill--fmv">$1,030.00</span></div>
+              <div><span class="lv-k">Buyback %</span><span class="lv-pill lv-pill--rate">90.0%</span></div>
+              <div><span class="lv-k">Offer</span><span class="lv-pill lv-pill--offer lv-pill--lg">$927.00</span></div>
+              <div><span class="lv-k">Status</span><span class="bp-proof__status"><span class="lv-status lv-status--ok"><span data-ico="dcheck"></span>Completed</span><span class="lv-link">View Transaction <span data-ico="external"></span></span></span></div>
+            </div>
+          </figure>
+        </li>
+
+        <li class="bp-fit__row" data-reveal>
+          <div class="bp-fit__copy">
+            <p class="bp-fit__n">03</p>
+            <h3 class="t-h3">Live Commerce <span class="bp-fit__aka">StreamIQ</span></h3>
+            <p class="t-body">Shows, products, break fills, assignments, scenes, and post-break offer delivery.</p>
+            <a class="link-arrow bp-up" href="#inquiry" data-pick="StreamIQ">Start with StreamIQ <span data-ico="arrow"></span></a>
+          </div>
+          <figure class="lv-panel lv-panel--flat bp-proof">
+            <figcaption class="bp-proof__bar"><span class="lv-eyebrow">StreamIQ</span><span class="lv-sub">STR-1842</span></figcaption>
+            <div class="bp-proof__body bp-proof__stream">
+              <span class="lv-status lv-status--live lv-status--caps">Live</span>
+              <div><p class="lv-name lv-name--caps">2026 NFL Mixer</p><p class="lv-sub">Live stream in progress · Break 04 · Football Premium 02</p></div>
+              <span class="lv-platform">Whatnot</span>
+            </div>
+            <div class="bp-proof__cells">
+              <div><span class="lv-k">Breaks</span><span class="bp-proof__big">4</span></div>
+              <div><span class="lv-k">Break 04</span><span class="lv-status lv-status--teal lv-status--sm">33/33 assigned</span></div>
+              <div><span class="lv-k">Break type</span><span class="lv-tier lv-tier--closed">Closed Break</span></div>
+            </div>
+          </figure>
+        </li>
+
+        <li class="bp-fit__row" data-reveal>
+          <div class="bp-fit__copy">
+            <p class="bp-fit__n">04</p>
+            <h3 class="t-h3">Operations + Integrations</h3>
+            <p class="t-body">Product structures, inventory controls, and workflows for licensed repack programs, plus the market data and cert sources you already use.</p>
+            <a class="link-arrow bp-up" href="#inquiry" data-pick="Licensed Repacks">Start with Licensed Repacks <span data-ico="arrow"></span></a>
+          </div>
+          <figure class="lv-panel lv-panel--flat bp-proof">
+            <figcaption class="bp-proof__bar"><span class="lv-eyebrow">Product Directory</span><span class="lv-sub">10 cards</span></figcaption>
+            <div class="bp-proof__body bp-proof__card">
+              <span class="bp-proof__tile" aria-hidden="true"><span data-ico="layers"></span></span>
+              <div>
+                <p class="lv-name lv-name--caps">Football Premium 02</p>
+                <div class="lv-chips"><span class="lv-tier lv-tier--closed">Closed Break</span><span class="lv-tier lv-tier--floor"><b>Floor</b> $150.00–$400.00</span><span class="lv-tier lv-tier--ceiling"><b>Ceiling</b> $1,000.00–$1,500.00</span></div>
+              </div>
+            </div>
+            <div class="bp-proof__cells">
+              <div><span class="lv-k">Market value</span><span class="lv-pill lv-pill--fmv">$5,430.00</span></div>
+              <div><span class="lv-k">Build cost</span><span class="lv-pill lv-pill--cost">$4,820.00</span></div>
+              <div><span class="lv-k">Status</span><span class="lv-status lv-status--live">Live</span></div>
+            </div>
+          </figure>
+        </li>
+      </ol>
+      <p class="demo-tag bp-fit__tag">Illustrative data · real CardsIQ components</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ WHO IT'S FOR -->
+  <section class="section bp-roles" aria-labelledby="roles-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Who it's for</p>
+        <h2 class="t-h2" id="roles-title">Built for the businesses <span class="grad-text">moving the hobby.</span></h2>
+        <p class="t-lead">Different operations. One shared need: keep every card and every workflow connected.</p>
+      </div>
+      <ul class="bp-quad">
+        <li class="bp-role" data-reveal>
+          <h3 class="bp-role__k">Breakers</h3>
+          <p class="bp-role__line">Run connected breaks.</p>
+          <p class="bp-role__desc">Track products, spots, buyers, hits, and what happens after the stream.</p>
+        </li>
+        <li class="bp-role" data-reveal style="--d: 60ms">
+          <h3 class="bp-role__k">Card shops</h3>
+          <p class="bp-role__line">Connect the counter to the card.</p>
+          <p class="bp-role__desc">Bring inventory, offers, sales, buybacks, and customer activity into one system.</p>
+        </li>
+        <li class="bp-role" data-reveal style="--d: 120ms">
+          <h3 class="bp-role__k">Repack companies</h3>
+          <p class="bp-role__line">Build products with card-level context.</p>
+          <p class="bp-role__desc">Keep identity, cost basis, inventory, and product history connected.</p>
+        </li>
+        <li class="bp-role" data-reveal style="--d: 180ms">
+          <h3 class="bp-role__k">Platforms &amp; marketplaces</h3>
+          <p class="bp-role__line">Build on connected hobby infrastructure.</p>
+          <p class="bp-role__desc">Connect card identity, operations, transactions, and liquidity.</p>
+        </li>
+      </ul>
+      <p class="bp-roles__more" data-reveal>Show vendor or another hobby business? <a class="link-arrow bp-up" href="#inquiry">Talk to CardsIQ <span data-ico="arrow"></span></a></p>
+    </div>
+  </section>
+
+  <!-- ============================================================ TRUST: what CardsIQ connects to -->
+  <section class="section bp-eco" aria-labelledby="eco-title">
+    <div class="ambient ambient--blue bp-eco__amb" aria-hidden="true"></div>
+    <div class="container container--wide">
+      <div class="bp-eco__grid">
+        <figure class="bp-eco__card" data-tilt="3">
+          <span class="slab bp-eco__slab"><span class="slab__glow"></span><img src="assets/img/slabs/burrow-2023-optic-downtown-psa9.webp" alt="2023 Donruss Optic Joe Burrow Downtown! #D4, graded PSA 9 MINT, cert 103207853" width="380" height="638" loading="lazy"><span class="slab__floor"></span></span>
+          <figcaption class="bp-eco__cap">One card. One record. Every movement.</figcaption>
+        </figure>
+
+        <div class="bp-eco__body">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">What CardsIQ connects to</p>
+            <h2 class="t-h2" id="eco-title">Built to work across <span class="t-dim">the hobby ecosystem.</span></h2>
+            <p class="t-lead">Infrastructure, not another destination. CardsIQ connects the operations between the platforms you already use.</p>
+          </div>
+
+          <dl class="bp-src" data-reveal>
+            <div class="bp-src__row">
+              <dt><span class="bp-src__k">Card identity</span><span class="bp-src__v">PSA · BGS · SGC cert data</span></dt>
+              <dd><span class="lv-pill lv-pill--grade">PSA 9.0</span><span class="lv-pill lv-pill--cert">Cert #103207853</span></dd>
+            </div>
+            <div class="bp-src__row">
+              <dt><span class="bp-src__k">Market data</span><span class="bp-src__v">ALT + Card Ladder</span></dt>
+              <dd><span class="lv-val"><span class="lv-src lv-src--alt">ALT</span><span class="lv-pill lv-pill--fmv">$1,040.00</span></span><span class="lv-val"><span class="lv-src lv-src--cl">CL</span><span class="lv-pill lv-pill--fmv">$1,020.00</span></span></dd>
+            </div>
+            <div class="bp-src__row">
+              <dt><span class="bp-src__k">Live commerce</span><span class="bp-src__v">Whatnot · TikTok LIVE</span></dt>
+              <dd><span class="lv-handle">northstarcards</span><span class="lv-pill lv-pill--team lv-team--bengals">Bengals</span></dd>
+            </div>
+            <div class="bp-src__row">
+              <dt><span class="bp-src__k">Raw-card intake</span><span class="bp-src__v">Heystack · CSV import</span></dt>
+              <dd><span class="lv-pill lv-pill--raw">RAW</span><span class="lv-pill lv-pill--cert">SKU #CIQ-412</span></dd>
+            </div>
+          </dl>
+
+          <div class="bp-programs" data-reveal>
+            <p class="bp-k">Licensed repack programs on CardsIQ</p>
+            <ul class="bp-programs__list">
+              <li><img src="assets/img/brand/hg-breaks.png" alt="" width="619" height="337" loading="lazy">HG Breaks</li>
+              <li><span class="bp-programs__rr" aria-hidden="true">RR</span>Rogue Rips</li>
+            </ul>
+          </div>
+          <p class="demo-tag bp-eco__tag">Illustrative record · real CardsIQ components</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FAQ -->
+  <section class="section bp-faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="split-head">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Questions, answered</p>
+          <h2 class="t-h2" id="faq-title">Looking for something else?</h2>
+          <p class="t-body">Let's get your question to the right place.</p>
+          <a class="link-arrow bp-up bp-faq__talk" href="#inquiry">Talk to CardsIQ <span data-ico="arrow"></span></a>
+        </div>
+        <div class="faq" data-reveal>
+          <details open>
+            <summary>Who is CardsIQ for?</summary>
+            <div class="faq__a">CardsIQ is built for breakers, card shops, repack companies, marketplaces, and show vendors who want to connect inventory, live commerce, offers, and card history in one system.</div>
+          </details>
+          <details>
+            <summary>Do I need to use every CardsIQ product?</summary>
+            <div class="faq__a">No. There's <strong>no generic package</strong>. Start where you need CardsIQ most, whether that's inventory, instant buybacks, live commerce, or licensed repacks, and we scope the modules that fit your operation.</div>
+          </details>
+          <details>
+            <summary>Can CardsIQ work with my existing workflow?</summary>
+            <div class="faq__a">Yes. CardsIQ is <strong>infrastructure, not another destination</strong>. It connects the operations between the platforms you already use: PSA, BGS, and SGC cert data, ALT and Card Ladder market data, Whatnot and TikTok LIVE, and raw-card intake from Heystack or a CSV import.</div>
+          </details>
+          <details>
+            <summary>What happens after I submit an inquiry?</summary>
+            <div class="faq__a">We route it to the right CardsIQ team, then scope the CardsIQ modules that fit your operation. We start with how your business actually works.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ COLLECTOR OFF-RAMP -->
+  <section class="cta-final bp-close" aria-labelledby="close-title">
+    <div class="container">
+      <div class="bp-close__inner" data-reveal>
+        <img class="bp-close__fan" src="assets/img/slabs/stack-contenders-fan.webp" alt="" width="1310" height="1144" loading="lazy">
+        <div class="bp-close__copy">
+          <h2 class="bp-close__title" id="close-title">Collecting, not running a business?</h2>
+          <p class="bp-close__sub">Know what you own. Your cards, offers, and break history stay connected to the card itself.</p>
+          <p class="cta-note bp-close__note">Running a hobby business? <a href="#inquiry">Talk to CardsIQ</a></p>
+        </div>
+        <a class="btn btn--secondary btn--lg bp-close__btn" data-cta="create-account" href="#create-account">Create account</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="assets/js/ciq.js" defer></script>
+<script src="assets/js/page-partner.js" defer></script>
+
+<nav id="ciq-ver" aria-label="Design prototype version"><span>Design prototype</span><a href="../v1/become-a-partner.html" title="First CRO demo" aria-label="v1: First CRO demo">v1</a><a href="../v2/become-a-partner.html" title="Combined demo, Oct 6" aria-label="v2: Combined demo, Oct 6">v2</a><a href="../v2.1/become-a-partner.html" title="Acquisitions + StreamIQ, current" aria-label="v2.1: Acquisitions + StreamIQ, current" aria-current="page">v2.1</a></nav>
+<style>
+#ciq-ver{position:fixed;right:16px;bottom:16px;z-index:80;display:flex;align-items:center;gap:4px;padding:4px 4px 4px 14px;border-radius:999px;background:rgba(8,12,28,.92);box-shadow:0 0 0 1px rgba(148,163,200,.28),0 18px 40px -12px rgba(0,0,0,.8);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 13px/1 Outfit,system-ui,-apple-system,"Segoe UI",sans-serif}
+#ciq-ver span{margin-right:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8d97b5;white-space:nowrap}
+#ciq-ver a{display:inline-grid;place-items:center;min-width:44px;height:34px;padding:0 12px;border-radius:999px;color:#c9d1ea;text-decoration:none}
+#ciq-ver a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#ciq-ver a:focus-visible{outline:2px solid #2fd3e6;outline-offset:2px}
+#ciq-ver a[aria-current]{color:#fff;background:linear-gradient(135deg,#2f7bff,#7b5cff)}
+@media (max-width:420px){#ciq-ver span{display:none}#ciq-ver{padding-left:4px}}
+@media print{#ciq-ver{display:none}}
+</style>
+<script>(function(){var q=location.search+location.hash;if(!q)return;document.querySelectorAll('#ciq-ver a').forEach(function(a){a.setAttribute('href',a.getAttribute('href')+q)})})();</script>
+</body>
+</html>

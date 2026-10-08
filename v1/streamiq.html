@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreamIQ | CardsIQ</title>
+  <meta name="description" content="Live-break production infrastructure for team assignments, scenes, overlays, offers, and stream operations.">
+  <link rel="icon" href="assets/img/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
+  <link rel="stylesheet" href="assets/css/ciq.css">
+  <link rel="stylesheet" href="assets/css/page-streamiq.css">
+</head>
+<body data-page="streamiq" data-primary-cta="partner" data-interest="streamiq">
+<script src="assets/js/shell.js"></script>
+
+<main id="main" class="page">
+
+  <!-- ============================================================ HERO: the live session, on air -->
+  <section class="s-hero" data-hero aria-labelledby="hero-title">
+    <div class="ambient ambient--blue" style="width:820px;height:560px;left:18%;top:260px;opacity:.42"></div>
+    <div class="ambient ambient--violet" style="width:560px;height:480px;right:-160px;top:-40px;opacity:.32"></div>
+    <div class="container container--wide">
+      <div class="s-hero__head">
+        <p class="eyebrow eyebrow--live">StreamIQ</p>
+        <h1 class="t-hero s-hero__title" id="hero-title"><span class="line">Run the stream</span> <span class="line grad-text">and the operation together.</span></h1>
+        <div class="s-hero__row">
+          <p class="t-lead s-hero__lead">Connect shows, products, fills, buyer assignments, production, card hits, buybacks, and fulfillment inside one live operating workspace.</p>
+          <div class="btn-row s-hero__cta" data-hero-cta>
+            <a class="btn btn--primary" data-cta="partner" data-interest="streamiq" href="become-a-partner.html">Become a partner <span data-ico="arrow"></span></a>
+            <a class="btn btn--secondary s-watch" href="#break-run"><span data-ico="play"></span>Watch a break run</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live command view: what is on stream and what CardsIQ knows, side by side -->
+      <figure class="s-console" aria-labelledby="console-cap">
+        <figcaption id="console-cap" class="sr-only">StreamIQ live session view. Stream #1842, 2026 NFL Mixer, is live. Break 04 of Football Premium 02 has 28 of 32 team spots filled. Malik Nabers, 2024 Panini Prizm Gold /10, PSA 10, was hit for @nycards in the Giants spot: market value $1,420, instant offer $1,278 at 90% of market, buyback eligible. OBS bridge connected, 12 offers ready.</figcaption>
+
+        <div class="ui ui--glow s-con" data-state="offer">
+          <div class="s-con__bar">
+            <span class="status status--live">Live</span>
+            <div class="s-con__id">
+              <p class="s-con__name">2026 NFL Mixer</p>
+              <p class="s-con__meta"><span class="t-mono">Stream #1842</span> · Break 04 · Football Premium 02</p>
+            </div>
+            <dl class="s-con__stats">
+              <div class="s-con__clock"><dt>Show clock</dt><dd class="t-mono"><span role="timer" data-clock>08:41:20 PM</span></dd></div>
+              <div><dt>OBS bridge</dt><dd><span class="dot dot--ok"></span>Connected</dd></div>
+              <div><dt>Offers ready</dt><dd class="t-mono">12</dd></div>
+            </dl>
+          </div>
+
+          <div class="s-con__body">
+            <!-- On stream: program output -->
+            <div class="s-program">
+              <span class="s-program__safe" aria-hidden="true"></span>
+              <div class="s-program__top">
+                <span class="s-program__tag"><span class="dot dot--live"></span>On stream</span>
+                <span class="s-program__tc" aria-hidden="true"><b>PGM</b><span data-clock-burn>08:41:20</span></span>
+              </div>
+              <div class="s-program__stage">
+                <div class="s-program__slab">
+                  <div class="css-slab" aria-hidden="true">
+                    <div class="css-slab__label"><span>2024 Prizm</span><b>10</b><span>Nabers</span><span>Gold /10</span></div>
+                    <div class="css-slab__card"><div class="css-slab__art" data-initials="MN"></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-lower s-lower--pre">
+                <span class="s-lower__tag">Break 04</span>
+                <span class="s-lower__text"><span class="s-lower__main">Football Premium 02</span><span class="s-lower__sub">32-spot team break · <span class="tnum">28 / 32</span> filled</span></span>
+              </div>
+              <div class="s-lower s-lower--hit">
+                <span class="s-lower__tag">Card hit</span>
+                <span class="s-lower__text"><span class="s-lower__main">Malik Nabers · Prizm Gold /10</span><span class="s-lower__sub">PSA 10 · @nycards · Giants spot</span></span>
+              </div>
+            </div>
+
+            <!-- In CardsIQ: the current card and the offer it created -->
+            <div class="s-current">
+              <p class="s-side"><img src="assets/img/brand/cardsiq-mark.png" alt="" width="14" height="14">In CardsIQ</p>
+              <div class="s-current__head">
+                <p class="ui__kicker">Current card</p>
+                <span class="status status--ok s-current__status">Buyback eligible</span>
+              </div>
+              <p class="s-current__name">2024 Panini Prizm Malik Nabers Gold /10 <span class="chip chip--grade">PSA 10</span></p>
+              <p class="s-current__meta t-mono">Hit 08:41:14 · NYG spot · Break 04</p>
+              <dl class="s-current__fields">
+                <div><dt>Buyer</dt><dd><span class="handle"><span class="avatar" aria-hidden="true">N</span>@nycards</span></dd></div>
+                <div><dt>Market</dt><dd class="t-mono">$1,420</dd></div>
+                <div class="s-current__offer"><dt>Offer · 90%</dt><dd class="t-mono">$1,278</dd></div>
+              </dl>
+              <div class="s-current__ratio" aria-hidden="true"><i></i><span class="t-mono">90% of market</span></div>
+            </div>
+
+            <!-- In CardsIQ: the break's spot board -->
+            <div class="s-board">
+              <div class="s-board__head">
+                <p class="ui__kicker">Spot board <span class="s-board__sub">Break 04 · 32-spot team break</span></p>
+                <p class="s-board__fill"><span class="tnum">28 / 32</span> filled</p>
+              </div>
+              <div class="s-board__bar" aria-hidden="true"><i></i></div>
+              <ul class="s-spots" aria-label="Break 04 team spots, 28 of 32 filled">
+                <li>ARI</li><li>ATL</li><li>BAL</li><li>BUF<span class="sr-only"> @buffalocards</span></li><li class="is-open">CAR<span class="sr-only"> open</span></li><li>CHI</li><li>CIN<span class="sr-only"> @northstarcards</span></li><li>CLE</li>
+                <li>DAL<span class="sr-only"> @waxroom</span></li><li>DEN</li><li>DET</li><li>GB</li><li>HOU</li><li>IND</li><li class="is-open">JAX<span class="sr-only"> open</span></li><li>KC<span class="sr-only"> @ripking</span></li>
+                <li>LV</li><li>LAC</li><li>LAR</li><li class="is-open">MIA<span class="sr-only"> open</span></li><li>MIN</li><li>NE</li><li>NO</li><li class="is-hit">NYG<span class="sr-only"> @nycards, card hit</span></li>
+                <li>NYJ</li><li>PHI<span class="sr-only"> @vaultcollects</span></li><li>PIT</li><li>SF<span class="sr-only"> @collector92</span></li><li>SEA</li><li>TB</li><li class="is-open">TEN<span class="sr-only"> open</span></li><li>WAS</li>
+              </ul>
+              <p class="s-board__key" aria-hidden="true"><span><i class="k-fill"></i>Filled</span><span><i class="k-open"></i>Open</span><span class="s-board__hitkey"><i class="k-hit"></i>Hit<b class="t-mono">NYG → @nycards</b></span></p>
+            </div>
+          </div>
+
+          <!-- Live event ticker -->
+          <div class="s-ticker">
+            <p class="s-ticker__label">Events</p>
+            <ol class="s-ticker__list" aria-label="Break 04 events so far">
+              <li style="--o:1"><time class="t-mono">08:31:02</time><span><b>Break created</b> Break 04 · Football Premium 02</span></li>
+              <li style="--o:2"><time class="t-mono">08:32:11</time><span><b>Buyer assigned</b> @nycards · Giants</span></li>
+              <li style="--o:3"><time class="t-mono">08:34:05</time><span><b>Product opened</b> 32-spot team break</span></li>
+              <li style="--o:4" data-ev="hit"><time class="t-mono">08:41:14</time><span><b>Card hit</b> Malik Nabers · Prizm Gold /10</span></li>
+              <li style="--o:5" data-ev="offer"><time class="t-mono">08:41:15</time><span><b>Offer queued</b> Eligible buyback created</span></li>
+            </ol>
+          </div>
+        </div>
+        <p class="s-console__note"><span class="demo-tag">Product view · illustrative data</span></p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================================================ EVENT RAIL: two lanes, one timecode -->
+  <section class="section s-sync" id="break-run" aria-labelledby="sync-title">
+    <div class="container container--wide">
+      <div class="s-sync__head" data-reveal>
+        <p class="s-preface">The livestream is not separate from the business system.</p>
+        <h2 class="t-h2" id="sync-title"><span class="line">Every event in the stream</span> <span class="line grad-text">updates CardsIQ.</span></h2>
+        <p class="t-lead">StreamIQ connects what happens during a live show to what happens operationally after it.</p>
+      </div>
+
+      <div class="s-rail is-complete" data-index="7" data-reveal>
+        <div class="s-rail__title">
+          <p class="s-rail__id"><span>Break 04 · Nabers hit</span><span class="s-rail__prod">Football Premium 02</span><span class="t-mono s-rail__range">08:31:02 – 08:46:31</span></p>
+          <div class="s-rail__ctl" role="group" aria-label="Playback" hidden>
+            <button type="button" class="s-ctl" data-rail="pause" aria-pressed="false"><span class="s-ctl__g s-ctl__g--pause" aria-hidden="true"></span>Pause</button>
+            <button type="button" class="s-ctl" data-rail="replay"><span data-ico="history"></span>Replay</button>
+          </div>
+        </div>
+
+        <div class="s-band s-band--show" data-phase="show" aria-hidden="true"><span>Show</span></div>
+        <div class="s-band s-band--break" data-phase="break" aria-hidden="true"><span>Break</span></div>
+        <div class="s-band s-band--production" data-phase="production" aria-hidden="true"><span>Production</span></div>
+        <div class="s-band s-band--post" data-phase="post" aria-hidden="true"><span>Post-Break</span></div>
+
+        <div class="s-lanebg s-lanebg--stream" aria-hidden="true"><span><i class="dot"></i>On stream</span></div>
+        <div class="s-lanebg s-lanebg--ciq" aria-hidden="true"><span><img src="assets/img/brand/cardsiq-mark.png" alt="" width="14" height="14">In CardsIQ</span></div>
+        <div class="s-rail__cols" aria-hidden="true"><span>Time</span><span>On stream</span><span>In CardsIQ</span></div>
+
+        <ol class="s-events" aria-label="Break 04 events: what happened on stream and the CardsIQ record update it caused">
+          <li class="s-ev is-done" data-phase="show">
+            <p class="s-ev__phase"><b>Show</b> Create the live production session and connect the products, people, and operational context that belong to it.</p>
+            <p class="s-ev__t"><time class="t-mono">08:31:02</time></p>
+            <p class="s-ev__stream"><span class="sr-only">On stream: </span>Break created</p>
+            <span class="s-ev__link" aria-hidden="true"></span>
+            <p class="s-ev__ciq"><span class="sr-only">In CardsIQ: </span><span class="s-ev__k">Break</span><span class="s-ev__v">Break 04</span><span class="s-ev__s">Football Premium 02</span></p>
+          </li>
+          <li class="s-ev is-done" data-phase="break">
+            <p class="s-ev__phase"><b>Break</b> Open a break, assign products, and map every spot to a buyer.</p>
+            <p class="s-ev__t"><time class="t-mono">08:32:11</time><span class="s-ev__d t-mono">+1:09</span></p>
+            <p class="s-ev__stream"><span class="sr-only">On stream: </span>Buyer assigned</p>
+            <span class="s-ev__link" aria-hidden="true"></span>
+            <p class="s-ev__ciq"><span class="sr-only">In CardsIQ: </span><span class="s-ev__k">Buyer</span><span class="s-ev__v">@nycards</span><span class="s-ev__s">Giants spot</span></p>
+          </li>
+          <li class="s-ev is-done" data-phase="break">
+            <p class="s-ev__t"><time class="t-mono">08:34:05</time><span class="s-ev__d t-mono">+1:54</span></p>
+            <p class="s-ev__stream"><span class="sr-only">On stream: </span>Product opened</p>
+            <span class="s-ev__link" aria-hidden="true"></span>
+            <p class="s-ev__ciq"><span class="sr-only">In CardsIQ: </span><span class="s-ev__k">Product</span><span class="s-ev__v">32 spots</span><span class="s-ev__s">Team break</span></p>
+          </li>
+          <li class="s-ev s-ev--hit is-done" data-phase="production">
+            <p class="s-ev__phase"><b>Production</b> Bridge scenes and program output into the live workspace.</p>
+            <p class="s-ev__t"><time class="t-mono">08:41:14</time><span class="s-ev__d t-mono">+7:09</span></p>
+            <p class="s-ev__stream"><span class="sr-only">On stream: </span>Card hit</p>
+            <span class="s-ev__link" aria-hidden="true"></span>
+            <p class="s-ev__ciq"><span class="sr-only">In CardsIQ: </span><span class="s-ev__k">Card</span><span class="s-ev__v">Malik Nabers</span><span class="s-ev__s">Prizm Gold /10 · PSA 10</span></p>
+          </li>
+          <li class="s-ev is-done" data-phase="post">
+            <p class="s-ev__phase"><b>Post-Break</b> Turn hits into offers, fulfillment, and settled history.</p>
+            <p class="s-ev__t"><time class="t-mono">08:41:15</time><span class="s-ev__d t-mono">+0:01</span></p>
+            <p class="s-ev__stream"><span class="sr-only">On stream: </span>Offer queued</p>
+            <span class="s-ev__link" aria-hidden="true"></span>
+            <p class="s-ev__ciq"><span class="sr-only">In CardsIQ: </span><span class="s-ev__k">Offer</span><span class="s-ev__v t-mono">$1,278</span><span class="s-ev__s">Eligible buyback created</span></p>
+          </li>
+          <li class="s-ev is-done" data-phase="post">
+            <p class="s-ev__t"><time class="t-mono">08:43:02</time><span class="s-ev__d t-mono">+1:47</span></p>
+            <p class="s-ev__stream"><span class="sr-only">On stream: </span>Buyback accepted</p>
+            <span class="s-ev__link" aria-hidden="true"></span>
+            <p class="s-ev__ciq"><span class="sr-only">In CardsIQ: </span><span class="s-ev__k">Transaction</span><span class="s-ev__v">Accepted</span><span class="s-ev__s">Buyer confirmed transaction</span></p>
+          </li>
+          <li class="s-ev is-done" data-phase="post">
+            <p class="s-ev__t"><time class="t-mono">08:44:10</time><span class="s-ev__d t-mono">+1:08</span></p>
+            <p class="s-ev__stream"><span class="sr-only">On stream: </span>Verification passed</p>
+            <span class="s-ev__link" aria-hidden="true"></span>
+            <p class="s-ev__ciq"><span class="sr-only">In CardsIQ: </span><span class="s-ev__k">Verification</span><span class="s-ev__v">Passed</span><span class="s-ev__s">Identity / card / account / duplicate checks</span></p>
+          </li>
+          <li class="s-ev s-ev--end is-done" data-phase="post">
+            <p class="s-ev__t"><time class="t-mono">08:46:31</time><span class="s-ev__d t-mono">+2:21</span></p>
+            <p class="s-ev__stream"><span class="sr-only">On stream: </span>Settlement completed</p>
+            <span class="s-ev__link" aria-hidden="true"></span>
+            <p class="s-ev__ciq"><span class="sr-only">In CardsIQ: </span><span class="s-ev__k">Settlement</span><span class="s-ev__v">Settled</span><span class="s-ev__s">Transaction record closed</span></p>
+          </li>
+        </ol>
+
+        <p class="s-rail__note"><span class="demo-tag">Product view · illustrative data</span></p>
+
+        <ol class="s-phases" aria-label="StreamIQ phases">
+          <li data-phase="show"><b>Show</b><span>Create the live production session and connect the products, people, and operational context that belong to it.</span></li>
+          <li data-phase="break"><b>Break</b><span>Open a break, assign products, and map every spot to a buyer.</span></li>
+          <li data-phase="production"><b>Production</b><span>Bridge scenes and program output into the live workspace.</span></li>
+          <li data-phase="post"><b>Post-Break</b><span>Turn hits into offers, fulfillment, and settled history.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ OUTCOMES: the break becomes data -->
+  <section class="section s-data" aria-labelledby="data-title">
+    <div class="ambient ambient--violet" style="width:700px;height:420px;left:-180px;top:20%;opacity:.22"></div>
+    <div class="container container--wide">
+      <div class="s-data__grid">
+        <div class="s-data__head" data-reveal>
+          <h2 class="t-h2" id="data-title">The break <span class="grad-text">becomes data.</span></h2>
+        </div>
+        <p class="s-out__src" data-reveal aria-hidden="true">From the Break 04 record</p>
+        <ul class="s-out">
+          <li data-reveal><span class="s-out__name">Fewer manual handoffs</span><span class="s-out__body"><span class="s-out__line">Fills, assignments, hits, and offers write to CardsIQ as they happen.</span><span class="s-out__ev t-mono">Break 04 · 8 events so far</span></span></li>
+          <li data-reveal style="--d:60ms"><span class="s-out__name">Buyer context preserved</span><span class="s-out__body"><span class="s-out__line">Every spot is mapped to a buyer, so every hit already knows who owns it.</span><span class="s-out__ev t-mono">NYG · @nycards · 08:32:11</span></span></li>
+          <li data-reveal style="--d:120ms"><span class="s-out__name"><a class="s-out__link" href="instant-buybacks.html">Instant buybacks <span data-ico="arrow"></span></a></span><span class="s-out__body"><span class="s-out__line">Eligible hits become buyback offers while the break is still live.</span><span class="s-out__ev t-mono">Offer queued 08:41:15 · $1,278</span></span></li>
+          <li data-reveal style="--d:180ms"><span class="s-out__name">Clean break history</span><span class="s-out__body"><span class="s-out__line">Every break keeps its own ledger, from first spot to settled offer.</span><span class="s-out__ev t-mono">Break 04 ledger · 10 cards</span></span></li>
+          <li data-reveal style="--d:240ms"><span class="s-out__name">Better operational visibility</span><span class="s-out__body"><span class="s-out__line">Shows, products, fills, production, and hits in one live workspace.</span><span class="s-out__ev t-mono">Stream #1842 · 5 breaks</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ RUN OF SHOW: one show, separate ledgers -->
+  <section class="section s-shows" aria-labelledby="shows-title">
+    <div class="container container--wide">
+      <div class="s-shows__head" data-reveal>
+        <h2 class="t-h2" id="shows-title"><span class="line">One show. Multiple breaks.</span> <span class="line t-dim">Separate ledgers.</span></h2>
+        <p class="t-lead">Every break remains independently auditable while still belonging to the larger show and production session.</p>
+      </div>
+
+      <div class="s-ros" data-reveal>
+        <div class="s-ros__show">
+          <div class="s-ros__id">
+            <span class="status status--live">Live</span>
+            <p class="s-ros__name">2026 NFL Mixer</p>
+          </div>
+          <div class="s-ros__span" aria-hidden="true"><span>Show and production session</span></div>
+          <p class="s-ros__meta"><span class="t-mono">Stream #1842</span><span><span class="t-mono">5</span> breaks</span></p>
+        </div>
+
+        <ol class="s-ros__lanes" aria-label="Run of show, Stream #1842">
+          <li class="s-lane is-done" style="--s:0;--e:.165">
+            <div class="s-lane__id"><span class="s-lane__name">Break 01</span><span class="status status--ok">Completed</span></div>
+            <div class="s-lane__track" aria-hidden="true"><span class="s-lane__bar"></span></div>
+            <p class="s-lane__ledger"><span class="t-mono">32</span> buyers / <span class="t-mono">10</span> cards</p>
+          </li>
+          <li class="s-lane is-done" style="--s:.18;--e:.35">
+            <div class="s-lane__id"><span class="s-lane__name">Break 02</span><span class="status status--ok">Completed</span></div>
+            <div class="s-lane__track" aria-hidden="true"><span class="s-lane__bar"></span></div>
+            <p class="s-lane__ledger"><span class="t-mono">29</span> buyers / <span class="t-mono">10</span> cards</p>
+          </li>
+          <li class="s-lane is-done" style="--s:.365;--e:.54">
+            <div class="s-lane__id"><span class="s-lane__name">Break 03</span><span class="status status--ok">Completed</span></div>
+            <div class="s-lane__track" aria-hidden="true"><span class="s-lane__bar"></span></div>
+            <p class="s-lane__ledger"><span class="t-mono">32</span> buyers / <span class="t-mono">10</span> cards</p>
+          </li>
+          <li class="s-lane is-live" style="--s:.555;--e:.73">
+            <div class="s-lane__id"><span class="s-lane__name">Break 04</span><span class="status status--live">Live</span></div>
+            <div class="s-lane__track" aria-hidden="true"><span class="s-lane__bar"><span class="s-lane__start t-mono">08:31 PM</span></span></div>
+            <p class="s-lane__ledger"><span class="tnum s-lane__fill">28 / 32</span> filled</p>
+            <div class="s-ledger">
+              <p class="s-ledger__title">Break 04 ledger</p>
+              <dl class="s-ledger__fields">
+                <div><dt>Product</dt><dd>Football Premium 02</dd></div>
+                <div><dt>Cards</dt><dd class="t-mono">10</dd></div>
+                <div><dt>Cost</dt><dd class="t-mono">$4,820</dd></div>
+                <div><dt>Market</dt><dd class="t-mono">$5,430</dd></div>
+                <div><dt>Chase</dt><dd class="t-mono">$1,420</dd></div>
+                <div class="s-ledger__hit"><dt>Latest hit</dt><dd>Malik Nabers → @nycards <span class="s-ledger__offer"><span class="dot dot--ok"></span>Buyback settled <span class="t-mono">$1,278</span></span></dd></div>
+              </dl>
+            </div>
+          </li>
+          <li class="s-lane is-queued" style="--s:.75;--e:.93">
+            <div class="s-lane__id"><span class="s-lane__name">Break 05</span><span class="status status--muted">Queued</span></div>
+            <div class="s-lane__track" aria-hidden="true"><span class="s-lane__bar"></span></div>
+            <p class="s-lane__ledger">Product reserved</p>
+          </li>
+        </ol>
+        <div class="s-ros__now" aria-hidden="true"><span class="t-mono">Now · 08:47 PM</span></div>
+      </div>
+      <p class="s-ros__note"><span class="demo-tag">Product view · illustrative data</span></p>
+    </div>
+  </section>
+
+  <!-- ============================================================ OBJECTIONS -->
+  <section class="section s-faq" aria-labelledby="faq-title">
+    <div class="container container--wide s-faq__wrap">
+      <h2 class="t-h2" id="faq-title" data-reveal>Common questions.</h2>
+      <p class="s-connects" data-reveal><span class="s-connects__k">Connects to</span><span>OBS program bridge</span><span>ALT + Card Ladder market data</span><span>PSA / BGS / SGC cert data</span></p>
+      <div class="faq" data-reveal>
+        <details open>
+          <summary>How does StreamIQ connect to our production?</summary>
+          <div class="faq__a">Through the <strong>OBS program bridge</strong>. StreamIQ bridges scenes and program output into the live workspace, alongside fills, buyer assignments, and card hits.</div>
+        </details>
+        <details>
+          <summary>Does each break keep its own records?</summary>
+          <div class="faq__a">Yes. One show can run multiple breaks, and <strong>every break keeps its own ledger</strong>. Each one remains independently auditable while still belonging to the larger show and production session.</div>
+        </details>
+        <details>
+          <summary>What happens after a card is hit?</summary>
+          <div class="faq__a">The hit is written to the break with its buyer already attached. StreamIQ turns hits into <strong>offers, fulfillment, and settled history</strong>, so eligible cards can become instant buybacks without rebuilding the transaction after the stream.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FINAL CTA: from show to settlement -->
+  <section class="cta-final s-cta" aria-labelledby="cta-title">
+    <div class="ambient ambient--blue" style="width:900px;height:520px;left:50%;top:10%;margin-left:-450px;opacity:.38"></div>
+    <div class="ambient ambient--violet" style="width:520px;height:420px;right:-120px;bottom:-80px;opacity:.3"></div>
+    <div class="container container--wide">
+      <div class="s-cta__main" data-reveal>
+        <p class="eyebrow">StreamIQ</p>
+        <h2 class="cta-final__title" id="cta-title"><span class="line">Run every break</span> <span class="line grad-text">from show to settlement.</span></h2>
+        <p class="cta-final__sub">Connect products, breaks, buyer assignments, scenes, hits, offers, fulfillment, and history inside one live production system.</p>
+        <div class="cta-final__actions btn-row">
+          <a class="btn btn--primary btn--lg" data-cta="partner" data-interest="streamiq" href="become-a-partner.html">Become a partner <span data-ico="arrow"></span></a>
+        </div>
+        <p class="cta-note s-cta__note">Watching breaks as a collector? <a data-cta="create-account" href="#create-account">Create account</a></p>
+      </div>
+
+      <ol class="s-cta__ruler" aria-hidden="true" data-reveal>
+        <li><i></i><span>Show</span></li>
+        <li><i></i><span>Break</span></li>
+        <li><i></i><span>Production</span></li>
+        <li><i></i><span>Post-Break</span></li>
+        <li class="is-end"><i></i><span>Settled</span></li>
+      </ol>
+
+      <div class="s-cta__strip" data-reveal>
+        <p class="s-cta__label">Buyer assignments across every break</p>
+        <ul class="s-cta__chips" aria-label="Buyer assignments">
+          <li><abbr title="San Francisco 49ers">SF</abbr>@collector92</li>
+          <li><abbr title="Buffalo Bills">BUF</abbr>@buffalocards</li>
+          <li><abbr title="Kansas City Chiefs">KC</abbr>@ripking</li>
+          <li><abbr title="New York Giants">NYG</abbr>@nycards</li>
+          <li><abbr title="Philadelphia Eagles">PHI</abbr>@vaultcollects</li>
+          <li><abbr title="Cincinnati Bengals">CIN</abbr>@northstarcards</li>
+          <li><abbr title="Dallas Cowboys">DAL</abbr>@waxroom</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/ciq.js" defer></script>
+<script src="assets/js/page-streamiq.js" defer></script>
+
+<nav id="ciq-ver" aria-label="Design prototype version"><span>Design prototype</span><a href="../v1/streamiq.html" title="First CRO demo" aria-label="v1: First CRO demo" aria-current="page">v1</a><a href="../v2/streamiq.html" title="Combined demo, Oct 6" aria-label="v2: Combined demo, Oct 6">v2</a><a href="../v2.1/streamiq.html" title="Acquisitions + StreamIQ, current" aria-label="v2.1: Acquisitions + StreamIQ, current">v2.1</a></nav>
+<style>
+#ciq-ver{position:fixed;right:16px;bottom:16px;z-index:80;display:flex;align-items:center;gap:4px;padding:4px 4px 4px 14px;border-radius:999px;background:rgba(8,12,28,.92);box-shadow:0 0 0 1px rgba(148,163,200,.28),0 18px 40px -12px rgba(0,0,0,.8);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:600 13px/1 Outfit,system-ui,-apple-system,"Segoe UI",sans-serif}
+#ciq-ver span{margin-right:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8d97b5;white-space:nowrap}
+#ciq-ver a{display:inline-grid;place-items:center;min-width:44px;height:34px;padding:0 12px;border-radius:999px;color:#c9d1ea;text-decoration:none}
+#ciq-ver a:hover{color:#fff;background:rgba(255,255,255,.06)}
+#ciq-ver a:focus-visible{outline:2px solid #2fd3e6;outline-offset:2px}
+#ciq-ver a[aria-current]{color:#fff;background:linear-gradient(135deg,#2f7bff,#7b5cff)}
+@media (max-width:420px){#ciq-ver span{display:none}#ciq-ver{padding-left:4px}}
+@media print{#ciq-ver{display:none}}
+</style>
+<script>(function(){var q=location.search+location.hash;if(!q)return;document.querySelectorAll('#ciq-ver a').forEach(function(a){a.setAttribute('href',a.getAttribute('href')+q)})})();</script>
+</body>
+</html>
