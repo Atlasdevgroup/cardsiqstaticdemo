@@ -30,25 +30,20 @@
         <p class="t-lead bp-head__lead">Whether you run breaks, manage inventory, operate a card shop, build repacks, or acquire cards, CardsIQ connects the workflows behind your business.</p>
       </div>
 
-      <!-- ============================================================ INQUIRY (two steps; without JS both steps show and the form posts) -->
+      <!-- ============================================================ INQUIRY (one step; without JS the form posts) -->
       <div class="bp-side" data-hero-cta>
         <div class="bp-form" id="inquiry" tabindex="-1">
           <form id="inquiry-form" class="bp-form__form" method="post" action="#inquiry-form" novalidate aria-label="Partner inquiry">
             <div class="bp-form__top">
               <p class="lv-eyebrow">Partner inquiry</p>
-              <ol class="bp-steps" aria-label="Inquiry steps" hidden>
-                <li aria-current="step">Step 01</li>
-                <li>Step 02</li>
-              </ol>
             </div>
 
-            <!-- Step 1: how you operate (production fields interest / volume / workflow as radio chips) -->
-            <div class="bp-pane" data-pane="1" role="group" aria-labelledby="pane1-title">
-              <h2 class="bp-pane__title" id="pane1-title" tabindex="-1">Tell us how you operate.</h2>
-              <p class="bp-pane__sub">Tell us how your business operates today and which parts of CardsIQ you want to explore.</p>
+            <div class="bp-pane" role="group" aria-labelledby="pane-title">
+              <h2 class="bp-pane__title" id="pane-title" tabindex="-1">Tell us how you operate.</h2>
+              <p class="bp-pane__sub">We'll route your inquiry to the right CardsIQ team.</p>
 
               <fieldset class="bp-group" data-group="interest">
-                <legend class="lv-label">Primary Interest <span class="lv-required" aria-hidden="true">Required</span></legend>
+                <legend class="lv-label">Primary Interest</legend>
                 <div class="lv-seg bp-seg">
                   <label class="bp-chip"><input type="radio" name="interest" value="Inventory Management" required><span>Inventory Management</span></label>
                   <label class="bp-chip"><input type="radio" name="interest" value="Instant Buybacks" required><span>Instant Buybacks</span></label>
@@ -59,55 +54,19 @@
                 <p class="bp-err" id="err-interest" hidden></p>
               </fieldset>
 
-              <fieldset class="bp-group" data-group="volume">
-                <legend class="lv-label">Monthly Card Volume <span class="lv-required" aria-hidden="true">Required</span></legend>
-                <div class="lv-seg bp-seg">
-                  <label class="bp-chip"><input type="radio" name="volume" value="Under 500 cards" required><span>Under 500 cards</span></label>
-                  <label class="bp-chip"><input type="radio" name="volume" value="500 - 2,500 cards" required><span>500 - 2,500 cards</span></label>
-                  <label class="bp-chip"><input type="radio" name="volume" value="2,500 - 10,000 cards" required><span>2,500 - 10,000 cards</span></label>
-                  <label class="bp-chip"><input type="radio" name="volume" value="10,000+ cards" required><span>10,000+ cards</span></label>
-                </div>
-                <p class="bp-err" id="err-volume" hidden></p>
-              </fieldset>
-
-              <fieldset class="bp-group" data-group="workflow">
-                <legend class="lv-label">Current Workflow <span class="lv-required" aria-hidden="true">Required</span></legend>
-                <div class="lv-seg bp-seg">
-                  <label class="bp-chip"><input type="radio" name="workflow" value="Spreadsheets / manual intake" required><span>Spreadsheets / manual intake</span></label>
-                  <label class="bp-chip"><input type="radio" name="workflow" value="Existing inventory platform" required><span>Existing inventory platform</span></label>
-                  <label class="bp-chip"><input type="radio" name="workflow" value="Live-break tools" required><span>Live-break tools</span></label>
-                  <label class="bp-chip"><input type="radio" name="workflow" value="Custom internal software" required><span>Custom internal software</span></label>
-                </div>
-                <p class="bp-err" id="err-workflow" hidden></p>
-              </fieldset>
-
-              <div class="bp-actions bp-actions--next" hidden>
-                <button class="btn btn--primary btn--block bp-continue" type="button">Continue <span data-ico="arrow"></span></button>
-              </div>
-            </div>
-
-            <!-- Step 2: who you are and what you're trying to solve -->
-            <div class="bp-pane" data-pane="2" role="group" aria-labelledby="pane2-title">
-              <h2 class="bp-pane__title" id="pane2-title" tabindex="-1">Tell us about your hobby business.</h2>
-              <p class="bp-pane__sub">Where the friction is, and how to reach you. We'll route the inquiry to the right team.</p>
-              <div class="bp-picked" hidden>
-                <p class="bp-picked__k" id="picked-k">Your operation</p>
-                <ul class="bp-picked__list" aria-labelledby="picked-k"></ul>
-              </div>
-
               <div class="bp-fields">
                 <div class="bp-field">
-                  <label class="lv-label" for="f-name">Full Name <span class="lv-required" aria-hidden="true">Required</span></label>
+                  <label class="lv-label" for="f-name">Full Name</label>
                   <input class="lv-input" id="f-name" name="fullName" type="text" autocomplete="name" placeholder="Jane Smith" required>
                   <p class="bp-err" id="err-fullName" hidden></p>
                 </div>
                 <div class="bp-field">
-                  <label class="lv-label" for="f-company">Company / Shop <span class="lv-required" aria-hidden="true">Required</span></label>
+                  <label class="lv-label" for="f-company">Company / Shop</label>
                   <input class="lv-input" id="f-company" name="company" type="text" autocomplete="organization" placeholder="Acme Breaks LLC" required>
                   <p class="bp-err" id="err-company" hidden></p>
                 </div>
                 <div class="bp-field bp-field--full">
-                  <label class="lv-label" for="f-email">Work Email <span class="lv-required" aria-hidden="true">Required</span></label>
+                  <label class="lv-label" for="f-email">Email</label>
                   <input class="lv-input" id="f-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@yourshop.com" required>
                   <p class="bp-err" id="err-email" hidden></p>
                 </div>
@@ -120,7 +79,6 @@
               <!-- Visible summary (not live: it follows edits). Outcomes are announced in #bp-live. -->
               <p class="bp-status" id="bp-status"></p>
               <div class="bp-actions">
-                <button class="btn btn--secondary bp-back" type="button" hidden><span data-ico="arrow"></span>Back</button>
                 <button class="btn btn--primary bp-submit" type="submit"><span class="bp-submit__label">Submit inquiry</span><span data-ico="send"></span></button>
               </div>
               <p class="bp-trust"><span data-ico="lock"></span>Your information is secure and will only be used by the CardsIQ team.</p>
@@ -135,8 +93,6 @@
             <dl class="bp-done__record">
               <div><dt>Company / Shop</dt><dd data-out="company"></dd></div>
               <div><dt>Primary Interest</dt><dd data-out="interest"></dd></div>
-              <div><dt>Monthly Card Volume</dt><dd data-out="volume"></dd></div>
-              <div><dt>Current Workflow</dt><dd data-out="workflow"></dd></div>
             </dl>
             <p class="bp-done__k">While you wait</p>
             <div class="bp-done__links">

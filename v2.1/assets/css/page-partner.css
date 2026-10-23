@@ -7,7 +7,7 @@
    around a physical slab, FAQ, collector off-ramp. */
 
 /* ------------------------------------------------------------ hero */
-.bp-hero { --err: #ff8fa0; position: relative; padding: clamp(28px, 3vw, 44px) 0 clamp(24px, 2.6vw, 40px); overflow: hidden; }
+.bp-hero { --err: #ff8fa0; position: relative; padding: clamp(28px, 3vw, 44px) 0 clamp(24px, 2.6vw, 40px); overflow: clip; }
 .bp-hero__amb1 { width: 820px; height: 640px; right: -260px; top: -120px; opacity: 0.34; }
 .bp-hero__amb2 { width: 620px; height: 520px; left: -240px; bottom: 0; opacity: 0.22; }
 .bp-hero__grid {
@@ -59,18 +59,6 @@
 .bp-form:focus { outline: none; }
 .bp-form__top { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 28px; }
 
-/* Figma step indicator (STEP 01 —— STEP 02), drawn as live pills */
-.bp-steps { display: flex; align-items: center; }
-.bp-steps li { position: relative; display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 999px; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: var(--lv-text-3); box-shadow: inset 0 0 0 1px var(--lv-line-2); white-space: nowrap; }
-.bp-steps li + li { margin-left: 34px; }
-.bp-steps li + li::before { content: ""; position: absolute; right: calc(100% + 6px); top: 50%; width: 22px; height: 1px; background: var(--lv-line-2); }
-.bp-steps li[aria-current="step"] { color: var(--lv-teal); background: rgba(47, 211, 230, 0.08); box-shadow: inset 0 0 0 1px rgba(47, 211, 230, 0.5); }
-.bp-steps li.is-done { color: var(--lv-text-2); }
-
-.bp-pane + .bp-pane { margin-top: 36px; padding-top: 30px; border-top: 1px solid var(--lv-line); }
-.is-stepped .bp-pane + .bp-pane { margin-top: 0; padding-top: 0; border-top: 0; }
-.is-stepped .bp-pane:not([hidden]) { animation: bp-in .45s var(--ease-out); }
-@keyframes bp-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 .bp-pane__title { margin-top: 16px; font-size: clamp(1.5rem, 1.15rem + 0.7cqi, 1.875rem); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; color: var(--lv-text); }
 .bp-pane__title:focus { outline: none; }
 .bp-pane__title:focus-visible { outline: 2px solid #8fc6ff; outline-offset: 4px; }
@@ -102,19 +90,9 @@
 .lv-input[aria-invalid="true"] { box-shadow: inset 0 0 0 1px rgba(255, 122, 142, 0.7); }
 .lv-input[aria-invalid="true"]:focus { box-shadow: inset 0 0 0 1px rgba(255, 122, 142, 0.9), 0 0 0 4px rgba(255, 122, 142, 0.14); }
 
-/* Step 2: what step 1 captured, as live pills */
-.bp-picked { margin-top: 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
-.bp-picked__k { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--lv-text-3); margin-right: 2px; }
-.bp-picked__list { display: contents; }
-.bp-picked__list li { color: var(--lv-text); background: rgba(47, 211, 230, 0.07); box-shadow: inset 0 0 0 1px rgba(47, 211, 230, 0.38); }
-
 .bp-actions { margin-top: 24px; display: flex; gap: 12px; }
-.bp-actions--next { margin-top: 26px; }
-.bp-back .ico { transform: rotate(180deg); }
-.bp-back:hover .ico { transform: rotate(180deg) translateX(3px); }
 .bp-submit { flex: 1 1 auto; }
 .bp-submit[disabled] { cursor: progress; filter: saturate(0.7) brightness(0.9); transform: none; }
-.bp-back[disabled] { opacity: 0.5; cursor: default; }
 .bp-status { margin-top: 18px; font-size: 0.875rem; line-height: 1.45; font-weight: 500; color: var(--err); }
 .bp-status:empty { display: none; }
 .bp-trust { margin-top: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.8125rem; line-height: 1.4; color: var(--lv-text-3); text-align: center; }
@@ -155,12 +133,9 @@
   .bp-side { margin-top: 30px; }
   .bp-form { padding: 22px 18px; border-radius: 20px; }
   .bp-form__top { flex-wrap: wrap; row-gap: 10px; }
-  .bp-steps li + li { margin-left: 26px; }
-  .bp-steps li + li::before { width: 16px; }
   .bp-chip { padding: 0 12px; }
   .bp-fields { grid-template-columns: minmax(0, 1fr); }
   .bp-actions { flex-wrap: wrap; }
-  .bp-back { flex: 0 0 auto; }
   .bp-done__record > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .bp-who__list { font-size: 1rem; }
 }

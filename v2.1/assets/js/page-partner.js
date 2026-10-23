@@ -1,9 +1,7 @@
-/* Become a Partner — two-step partner inquiry.
- * Step 1 (chip-first, Figma): Primary Interest / Monthly Card Volume / Current Workflow as radio chips.
- * Step 2: Full Name / Company / Shop / Work Email / What are you trying to solve?
- * Field names and option values are the production ones, so the payload is unchanged:
- *   fullName, company, email, interest, volume, workflow, message.
- * Progressive enhancement: without JS both steps show, Continue/Back stay hidden and the form posts.
+/* Become a Partner — one-step partner inquiry.
+ * Primary Interest as radio chips, then Full Name / Company / Shop / Email / What are you trying to solve?
+ * Field names and option values are the production ones: fullName, company, email, interest, message.
+ * Progressive enhancement: without JS the form posts.
  * Runs deferred, before ciq.js boots (ciq.js hydrates icons afterwards).
  */
 (function () {
@@ -32,31 +30,19 @@
   var done = panel.querySelector('.bp-done');
   var live = document.getElementById('bp-live');     // polite; written only for submit outcomes
   var status = document.getElementById('bp-status'); // visible summary; follows edits silently
-  var panes = [form.querySelector('[data-pane="1"]'), form.querySelector('[data-pane="2"]')];
-  var stepper = form.querySelector('.bp-steps');
-  var stepItems = stepper ? slice(stepper.children) : [];
-  var nextRow = form.querySelector('.bp-actions--next');
-  var btnNext = form.querySelector('.bp-continue');
-  var btnBack = form.querySelector('.bp-back');
   var submit = form.querySelector('.bp-submit');
   var submitLabel = submit.querySelector('.bp-submit__label');
-  var picked = form.querySelector('.bp-picked');
-  var pickedList = picked && picked.querySelector('.bp-picked__list');
 
-  var FIELDS = ['fullName', 'company', 'email', 'interest', 'volume', 'workflow', 'message'];
-  var CHOICES = ['interest', 'volume', 'workflow'];
+  var FIELDS = ['fullName', 'company', 'email', 'interest', 'message'];
   var RULES = {
-    interest: { step: 1, label: 'Primary Interest', empty: 'Select a primary interest.' },
-    volume: { step: 1, label: 'Monthly Card Volume', empty: 'Select your monthly card volume.' },
-    workflow: { step: 1, label: 'Current Workflow', empty: 'Select your current workflow.' },
-    fullName: { step: 2, label: 'Full Name', empty: 'Enter your full name.' },
-    company: { step: 2, label: 'Company / Shop', empty: 'Enter your company or shop name.' },
-    email: { step: 2, label: 'Work Email', empty: 'Enter your work email.', bad: 'Enter a valid email address, like you@yourshop.com.' }
+    interest: { label: 'Primary Interest', empty: 'Select a primary interest.' },
+    fullName: { label: 'Full Name', empty: 'Enter your full name.' },
+    company: { label: 'Company / Shop', empty: 'Enter your company or shop name.' },
+    email: { label: 'Email', empty: 'Enter your email.', bad: 'Enter a valid email address, like you@yourshop.com.' }
   };
-  var ORDER = ['interest', 'volume', 'workflow', 'fullName', 'company', 'email'];
+  var ORDER = ['interest', 'fullName', 'company', 'email'];
   var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  var tried = { 1: false, 2: false };
-  var current = 1;
+  var tried = false;
 
   /* ------------------------------------------------------------------ field helpers */
   function value(name) {
@@ -91,8 +77,8 @@
     el.hidden = !msg;
   }
   function validate(name) { var msg = check(name); setError(name, msg); return !msg; }
-  function invalid(step) {
-    return ORDER.filter(function (n) { return (!step || RULES[n].step === step) && !!check(n); });
+  function invalid() {
+    return ORDER.filter(function (n) { return !!check(n); });
   }
   function summaryText(bad) {
     if (!bad.length) return '';
@@ -113,79 +99,34 @@
       if (chip) chip.classList.toggle('is-on', r.checked);
     });
   }
-  function paintPicked() {
-    if (!pickedList) return;
-    var vals = CHOICES.map(value).filter(Boolean);
-    pickedList.innerHTML = '';
-    vals.forEach(function (v) {
-      var li = document.createElement('li');
-      li.className = 'lv-pill';
-      li.textContent = v;
-      pickedList.appendChild(li);
-    });
-    picked.hidden = !(form.classList.contains('is-stepped') && vals.length);
-  }
   function pick(name, val) {
     controls(name).forEach(function (r) { r.checked = r.value === val; });
     syncChips(name);
-    if (tried[1]) validate(name);
-    paintPicked();
+    if (tried) validate(name);
   }
-  CHOICES.forEach(function (n) {
-    controls(n).forEach(function (r) {
-      r.addEventListener('change', function () {
-        syncChips(n);
-        if (tried[1] || r.getAttribute('aria-invalid') === 'true') validate(n);
-        paintPicked();
-      });
+  controls('interest').forEach(function (r) {
+    r.addEventListener('change', function () {
+      syncChips('interest');
+      if (tried || r.getAttribute('aria-invalid') === 'true') validate('interest');
     });
-    syncChips(n);
   });
+  syncChips('interest');
 
   /* ------------------------------------------------------------------ text fields: errors update after an attempt */
   ['fullName', 'company', 'email'].forEach(function (n) {
     var f = form.elements[n];
     f.addEventListener('input', function () {
-      if (tried[2] || f.getAttribute('aria-invalid') === 'true') validate(n);
-      if (tried[2] && status.textContent) showSummary(summaryText(invalid()));
+      if (tried || f.getAttribute('aria-invalid') === 'true') validate(n);
+      if (tried && status.textContent) showSummary(summaryText(invalid()));
     });
     // Email format is checked when leaving a filled-in field.
     if (n === 'email') f.addEventListener('blur', function () { if (f.value.trim()) validate(n); });
   });
 
-  /* ------------------------------------------------------------------ steps */
   function bringIntoView() {
     var top = panel.getBoundingClientRect().top;
     if (top < 0 || top > window.innerHeight * 0.5) panel.scrollIntoView({ block: 'start', behavior: reduced() ? 'auto' : 'smooth' });
   }
-  function show(n, focus) {
-    current = n;
-    panes.forEach(function (p, i) { p.hidden = i + 1 !== n; });
-    stepItems.forEach(function (li, i) {
-      if (i + 1 === n) li.setAttribute('aria-current', 'step'); else li.removeAttribute('aria-current');
-      li.classList.toggle('is-done', i + 1 < n);
-    });
-    form.setAttribute('data-at', String(n));
-    if (focus) {
-      bringIntoView();
-      panes[n - 1].querySelector('.bp-pane__title').focus({ preventScroll: true });
-    }
-  }
-  function goNext() {
-    tried[1] = true;
-    var bad = invalid(1);
-    CHOICES.forEach(validate);
-    if (bad.length) { firstControl(bad[0]).focus(); return; }
-    paintPicked();
-    show(2, true);
-  }
-
-  // Enhance: one step at a time, with Continue / Back and the step indicator.
-  form.classList.add('is-stepped');
-  [nextRow, btnBack, stepper].forEach(function (el) { if (el) el.hidden = false; });
-  show(1);
-  btnNext.addEventListener('click', goNext);
-  btnBack.addEventListener('click', function () { show(1, true); });
 
   /* ------------------------------------------------------------------ ?interest= preselects (product pages carry intent) */
   var MAP = { 'instant-buybacks': 'Instant Buybacks', 'inventory-management': 'Inventory Management', 'streamiq': 'StreamIQ', 'licensed-repacks': 'Licensed Repacks' };
@@ -200,7 +141,6 @@
       if (form.hidden) return; // after submitting, the anchor simply returns to the confirmation
       e.preventDefault();
       pick('interest', a.getAttribute('data-pick'));
-      show(1);
       panel.scrollIntoView({ block: 'start', behavior: reduced() ? 'auto' : 'smooth' });
       firstControl('interest').focus({ preventScroll: true });
     });
@@ -209,23 +149,19 @@
   /* ------------------------------------------------------------------ submit */
   function pending(on) {
     submit.disabled = on;
-    btnBack.disabled = on;
     if (on) form.setAttribute('aria-busy', 'true'); else form.removeAttribute('aria-busy');
     submitLabel.textContent = on ? 'Submitting…' : 'Submit inquiry';
   }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    // Enter inside step 1 means Continue, not submit.
-    if (current === 1) { goNext(); return; }
-    tried[1] = tried[2] = true;
+    tried = true;
     var bad = [];
     ORDER.forEach(function (n) { if (!validate(n)) bad.push(n); });
     if (bad.length) {
       var text = summaryText(bad);
       showSummary(text);
       announce(text);
-      if (RULES[bad[0]].step === 1) show(1);
       firstControl(bad[0]).focus();
       return;
     }
@@ -259,7 +195,7 @@
   });
 
   function showDone(data) {
-    ['company', 'interest', 'volume', 'workflow'].forEach(function (k) {
+    ['company', 'interest'].forEach(function (k) {
       var dd = done.querySelector('[data-out="' + k + '"]');
       if (dd) dd.textContent = data[k];
     });
